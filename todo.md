@@ -2,8 +2,9 @@
 
 
 ## TODO: 
-
- *[ ] Setup folder structure.
+  * [x] Start empty project.
+  * [x] Setup folder structure.
+  * [ ] Add Required Plugins.
 
 
 ## WORKING:
