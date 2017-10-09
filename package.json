@@ -6,6 +6,7 @@
   "dependencies": {
     "gatsby": "^1.9.45",
     "gatsby-link": "^1.6.17",
+    "gatsby-plugin-i18n": "^0.3.2",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-sharp": "^1.6.9",
     "gatsby-remark-copy-linked-files": "^1.5.7",
@@ -15,7 +16,8 @@
     "gatsby-remark-smartypants": "^1.4.8",
     "gatsby-source-filesystem": "^1.5.2",
     "gatsby-transformer-remark": "^1.7.15",
-    "gatsby-transformer-sharp": "^1.6.8"
+    "gatsby-transformer-sharp": "^1.6.8",
+    "ptz-i18n": "^0.1.2"
   },
   "keywords": [
     "gatsby"

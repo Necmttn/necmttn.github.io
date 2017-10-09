@@ -158,4 +158,54 @@ let's create one component for list our blog posts
 
 ![blog list ](blog_list.png)
 
+yeah that's looking neat to me. 
+
+before start styling the page. I wanna create routes for single blog pages as well. but before head to that i wanna add one more plugin for i18n. thanks to [@ocanaangelo](https://twitter.com/ocanaangelo). Which is drop-in solution for gatsby.
+
+in order to make it 
+we need to add this to our config.
+
+```
+// in gatsby-config.js
+plugins: [
+  {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyForNull: 'any',
+        langKeyDefault: 'en',
+        useLangKeyLayout: false,
+        markdownRemark: {
+          postPage: 'src/templates/blog-post.js',
+          query: `
+          {
+              allMarkdownRemark {
+                  edges {
+                  node {
+                      fields {
+                      slug,
+                      langKey
+                      }
+                  }
+                  }
+              }
+          }
+          `
+        }
+      }
+    }
+]
+```
+<script src="https://gist.github.com/8a7c59af25ddfebfd15b43d39bbe4b02.js"></script>
+
+and we create our blog post page like below.
+
+<script src="https://gist.github.com/c642d48431f98cec2cfad23f9262dd2c.js"></script>
+
+once we restart dev server gatsby will recognize we have changed a config so it will remap all our markdown data. 
+
+
+!Yay 😎  already looking good.
+![first page render](single_post_first_render.png)
+
+
 

@@ -4,11 +4,11 @@ module.exports = {
   },
   plugins: [
     // React Helmet is a component which lets you control your document head using their React component.
-    // With this plugin, attributes you add in their component, e.g. title, meta attributes, etc. 
-    // will get added to the static HTML pages Gatsby builds.    
+    // With this plugin, attributes you add in their component, e.g. title, meta attributes, etc.
+    // will get added to the static HTML pages Gatsby builds.
     `gatsby-plugin-react-helmet`,
     //
-    
+
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -40,5 +40,30 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyForNull: 'any',
+        langKeyDefault: 'en',
+        useLangKeyLayout: false,
+        markdownRemark: {
+          postPage: 'src/templates/blog-post.js',
+          query: `
+          {
+              allMarkdownRemark {
+                  edges {
+                  node {
+                      fields {
+                      slug,
+                      langKey
+                      }
+                  }
+                  }
+              }
+          }
+          `
+        }
+      }
+    }
   ],
 }
