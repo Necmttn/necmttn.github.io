@@ -207,5 +207,15 @@ once we restart dev server gatsby will recognize we have changed a config so it 
 !Yay 😎  already looking good.
 ![first page render](single_post_first_render.png)
 
+Let's add some generator for keep our blog post structure same. instead of copying paste we can basicly run script for it. 
+
+the tool which i'm gonna use is [Plop](https://github.com/amwmedia/plop) it's awesome well knowing one.
+
+``` 
+yarn add plop
+```
+
+
+
 
 

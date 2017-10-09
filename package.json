@@ -17,6 +17,7 @@
     "gatsby-source-filesystem": "^1.5.2",
     "gatsby-transformer-remark": "^1.7.15",
     "gatsby-transformer-sharp": "^1.6.8",
+    "plop": "^1.9.0",
     "ptz-i18n": "^0.1.2"
   },
   "keywords": [
@@ -27,6 +28,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
+    "generate": "plop --plopfile internals/generators/index.js",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
