@@ -30,6 +30,7 @@
     "dev": "gatsby develop",
     "generate": "plop --plopfile internals/generators/index.js",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "deploy": "surge -d necmttn.surge.sh -p ./public/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
