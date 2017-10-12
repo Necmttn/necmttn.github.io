@@ -1,0 +1,26 @@
+{
+  "tags": [
+    {
+      "name": "javascript",
+      "slug": "js"
+    },
+    {
+      "name": "python",
+      "slug": "py"
+    },
+    {
+      "name": "tooling",
+      "slug": "tooling"
+    }
+  ],
+  "categories": [
+    {
+      "name": "tutorials",
+      "slug": "tutorials"
+    },
+    {
+      "name": "Random Toughts",
+      "slug": "random-toughts" 
+    }
+  ]
+}
