@@ -15,12 +15,16 @@
   ],
   "categories": [
     {
-      "name": "tutorials",
-      "slug": "tutorials"
+      "name": "Journal",
+      "slug": "journal" 
+    },
+    {
+      "name": "Software",
+      "slug": "software"
     },
     {
       "name": "Random Toughts",
       "slug": "random-toughts" 
-    }
+    },
   ]
 }
