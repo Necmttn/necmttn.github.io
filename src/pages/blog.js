@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 
 const Blog = (props) => {
   const posts = props.data.allMarkdownRemark.edges
@@ -8,11 +9,13 @@ const Blog = (props) => {
       <h1> blog pages </h1>
       <ul>
       {posts.map(post => {
+        console.log(post)
         const title = post.node.frontmatter.title
+        const link = post.node.fields.slug
         const excerpt = post.node.excerpt
         return (
         <li>
-          <h1>{title}</h1>
+          <Link to={link}>{title}</Link>
           <p>{excerpt}</p>
         </li>
         )
@@ -28,6 +31,11 @@ export const pageQuery = graphql`
     allMarkdownRemark{
       edges {
         node{
+          id
+          fields {
+            langKey
+            slug
+          }
           frontmatter{
             title,
           },
