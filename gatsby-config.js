@@ -1,5 +1,7 @@
-import { TRELLO } from 'secret';
+const { TRELLO } = require('secret');
 
+
+console.log('TRELOO', TRELLO)
 
 module.exports = {
   siteMetadata: {
