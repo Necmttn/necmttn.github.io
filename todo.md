@@ -2,6 +2,8 @@
 
 
 ## TODO: 
+  * [ ] Create Trello scrapper. ( it's turn out a plugin )
+  * [ ] Write article about how to manage secrets in OpenSourceRepos.
   * [ ] Create a blog post about Plop generators.
   * [ ] Collect Gif Images for use in front page.
   * [ ] Make a decision about front page navigation.

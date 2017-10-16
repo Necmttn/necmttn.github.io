@@ -18,7 +18,8 @@
     "gatsby-transformer-remark": "^1.7.15",
     "gatsby-transformer-sharp": "^1.6.8",
     "plop": "^1.9.0",
-    "ptz-i18n": "^0.1.2"
+    "ptz-i18n": "^0.1.2",
+    "secret": "git+ssh://necmttn@bitbucket.org:necmttn/secret.git"
   },
   "keywords": [
     "gatsby"

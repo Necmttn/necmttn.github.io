@@ -1,3 +1,6 @@
+import { TRELLO } from 'secret';
+
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -7,8 +10,14 @@ module.exports = {
     // With this plugin, attributes you add in their component, e.g. title, meta attributes, etc.
     // will get added to the static HTML pages Gatsby builds.
     `gatsby-plugin-react-helmet`,
-    //
-
+    {
+      resolve: 'gatsby-source-trello',
+      options: {
+        boardId: 'NecoIsTheKing',
+        apiKey: TRELLO.apiKey,
+        secret: TRELLO.secret
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
