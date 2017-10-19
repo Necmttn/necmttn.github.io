@@ -1,23 +1,28 @@
 const { TRELLO } = require('secret');
 
 
-console.log('TRELOO', TRELLO)
-
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
   },
   plugins: [
-    // React Helmet is a component which lets you control your document head using their React component.
-    // With this plugin, attributes you add in their component, e.g. title, meta attributes, etc.
-    // will get added to the static HTML pages Gatsby builds.
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `@necmttn`
+      }
+    },
     {
       resolve: 'gatsby-source-trello',
       options: {
-        boardId: 'NecoIsTheKing',
-        apiKey: TRELLO.apiKey,
-        secret: TRELLO.secret
+        boards: [
+          {
+            id: '571680f0c1a563f82af4b31f'
+          }
+        ],
+        apiKey: TRELLO.KEY,
+        secret: TRELLO.SECRET
       }
     },
     {
