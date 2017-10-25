@@ -16,7 +16,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-trello',
       options: {
-        teamId: 'necmttncom',
+        teamId: 'thebase3',
         apiKey: TRELLO.KEY,
         secret: TRELLO.SECRET
       }

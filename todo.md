@@ -24,4 +24,20 @@
   * [x] Start empty project.
 
 
- 
+querying single card by ID
+
+  ```
+query ($id: String!){
+  allTrelloCard(filter: {
+    id: {eq: $id}
+  }) {
+		edges {
+		  node {
+		    id
+        name
+		  }
+		}
+  }
+}
+
+  ```
