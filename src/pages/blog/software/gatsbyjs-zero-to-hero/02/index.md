@@ -207,15 +207,19 @@ once we restart dev server gatsby will recognize we have changed a config so it 
 !Yay 😎  already looking good.
 ![first page render](single_post_first_render.png)
 
-Let's add some generator for keep our blog post structure same. instead of copying paste we can basicly run script for it. 
-
-the tool which i'm gonna use is [Plop](https://github.com/amwmedia/plop) it's awesome well knowing one.
-
-``` 
-yarn add plop
-```
 
 
+  >  Let's add some generator for keep our blog post structure same. instead of copying paste we can basicly run script for it. 
+
+  >  the tool which i'm gonna use is [Plop](https://github.com/amwmedia/plop) it's awesome well knowing one.
+
+  the last quote i wrote about 2 weeks ago. and didn't had enough time write a blog post. currently i have somehow
+  running generator but it's not as good as i wanted. so i would like to postbone it.
+
+  that past 2 weeks on my free times i was working on [Gatsby Source Trello](https://github.com/Necmttn/gatsby-source-trello)
+  and just today i deploy working version. Yay ! 
+  
+  next will be about styling. because i wanna start styling my home page.
 
 
-
+  [NEXT](../03)
