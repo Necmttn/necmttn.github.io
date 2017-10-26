@@ -7,16 +7,10 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    // {
-    //   resolve: `gatsby-source-medium`,
-    //   options: {
-    //     username: `@necmttn`
-    //   }
-    // },
     {
       resolve: 'gatsby-source-trello',
       options: {
-        teamId: 'thebase3',
+        teamId: 'necmttncom',
         apiKey: TRELLO.KEY,
         secret: TRELLO.SECRET
       }

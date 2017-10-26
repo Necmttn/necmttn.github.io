@@ -16,7 +16,7 @@
   "categories": [
     {
       "name": "Journal",
-      "slug": "journal" 
+      "slug": "journal"
     },
     {
       "name": "Software",
@@ -24,7 +24,7 @@
     },
     {
       "name": "Random Toughts",
-      "slug": "random-toughts" 
-    },
+      "slug": "random-toughts"
+    }
   ]
 }
