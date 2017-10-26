@@ -1,5 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from "styled-components"
+
+
 const IndexPage = () => (
   <div>
     <h1>Hello</h1>
@@ -14,5 +17,8 @@ const IndexPage = () => (
     <Link to="/blog/">Go to my blog</Link>
   </div>
 )
+
+
+
 
 export default IndexPage
