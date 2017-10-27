@@ -42,7 +42,7 @@
     "prettier": "^1.6.1"
   },
   "jest": {
-    "projects": [
+    "roots": [
       "<rootDir>/src/"
     ]
   }
