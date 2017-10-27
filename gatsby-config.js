@@ -1,5 +1,4 @@
-const { TRELLO } = require('secret');
-
+// const { TRELLO } = require('secret');
 
 module.exports = {
   siteMetadata: {
@@ -11,8 +10,8 @@ module.exports = {
       resolve: 'gatsby-source-trello',
       options: {
         teamId: 'necmttncom',
-        apiKey: TRELLO.KEY,
-        secret: TRELLO.SECRET
+        apiKey: process.env.TRELLO_KEY,
+        secret: process.env.TRELLO_SECRET
       }
     },
     {
