@@ -15,12 +15,13 @@ before_install:
 
 install:
   - yarn
-
-build:
   - yarn run build
 
 deploy:
-  provider: surge
-  project: ./public/
-  domain: necmettn.surge.sh
-  skip_cleanup: true
+  - provider: surge
+    project: ./public/
+    domain: necmettn.surge.sh
+    skip_cleanup: true
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
