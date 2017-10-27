@@ -40,5 +40,10 @@
   "devDependencies": {
     "jest": "^21.2.1",
     "prettier": "^1.6.1"
+  },
+  "jest": {
+    "projects": [
+      "<rootDir>/src/"
+    ]
   }
 }
