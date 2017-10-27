@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - "6"
+  - "8"
+
+os: [linux]
+dist: trusty
+sudo: required
+cache:
+  yarn: true
+
+
+before_install:
+  - curl -o- -L yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
+
+install:
+  - yarn
+
+build:
+  - yarn run build
+
+deploy:
+  provider: surge
+  project: ./public/
+  domain: necmettn.surge.sh
+  skip_cleanup: true
