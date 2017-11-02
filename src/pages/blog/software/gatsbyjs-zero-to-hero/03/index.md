@@ -24,3 +24,14 @@ plugins: [
 
 ```
 
+currently my front page code look like this,
+
+<script src="https://gist.github.com/accdd0ac80b7bf4b6ca793619dbfe533.js"></script>
+
+let's start adding some styling ha, gatsby uses layout structure for rendering regular pages in default structure.
+that's why currently have a header. but it's not really my style tough so..
+
+src/layouts/index.js
+<script src="https://gist.github.com/f5948301bfcf9d87f523ffc4fda2395f.js"></script>
+
+let's start removing old style, css-in-javascript styled div.
