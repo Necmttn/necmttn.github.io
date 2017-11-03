@@ -9,36 +9,27 @@ const Header = () => (
   <HeaderContainer>
     <div>
       <FancyLink to="/">
-        <h1>
-        Software
-        </h1>
+          Journal
+      </FancyLink>
+      <FancyLink to="/Software">
+          Software
       </FancyLink>
       <FancyLink to="/">
-        <h1>
-        Software
-        </h1>
+          About
       </FancyLink>
       <FancyLink to="/">
-        <h1>
-        Software
-        </h1>
-      </FancyLink>
-      <FancyLink to="/">
-        <h1>
-        Software
-        </h1>
+          Email
       </FancyLink>
     </div>
   </HeaderContainer>
 )
-
 const FancyLink = styled(Link)`
   color: #42ab79;
   padding-left: 10px;
   &:after {
-    content: "º";
+    content: "-";
     padding-left: 10px;
-    color: red;
+    color: light-green;
     text-decoration: none;
   }
 `
@@ -57,7 +48,7 @@ const TemplateWrapper = ({ children }) => (
       title="Necmttn"
       meta={[
         { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'keywords', content: 'self-tought, software developer, javascript, python' },
       ]}
     />
     <Header />
@@ -68,7 +59,6 @@ const TemplateWrapper = ({ children }) => (
 )
 
 const Body = styled.div`
-  background: #21232d;
   width: 100vw;
   height: 100vh;
 `
