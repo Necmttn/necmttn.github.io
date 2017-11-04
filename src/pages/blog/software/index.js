@@ -6,7 +6,7 @@ const Software = (props) => {
   )
 }
 export const pageQuery = graphql`
-  query BlogEnQuery {
+  query BlogEnSoftware {
     allMarkdownRemark{
       edges {
         node{

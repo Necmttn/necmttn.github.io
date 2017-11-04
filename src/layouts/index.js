@@ -51,7 +51,6 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'self-tought, software developer, javascript, python' },
       ]}
     />
-    <Header />
     <Container>
       {children()}
     </Container>
@@ -64,8 +63,6 @@ const Body = styled.div`
 `
 
 const Container = styled.div`
-  max-width: 960px;
-  padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
 `
 TemplateWrapper.propTypes = {
