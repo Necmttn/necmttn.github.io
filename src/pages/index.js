@@ -36,14 +36,12 @@ class TextBody extends React.Component {
   }
 
   mouseEnter(name) {
-    console.log('mouse enter', name)
     this.setState({
       [name]: true
     })
   }
 
   mouseLeave(name) {
-    console.log('mouse leave', name)
     this.setState({
       [name]: false
     })
@@ -52,18 +50,15 @@ class TextBody extends React.Component {
   render() {
     return (
       <TextBodyContainer>
-        <p>
-          Hello <br/>
-          I am
-          <span className="neco">
-            Necmettin Karakaya
-          </span> <br/>
-
-          self-tought software <span onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </span> <br/>
-          Currently working at <a href="http://kiwiinc.net/"><span className="Mesh">Mesh</span></a> <br/>
-          building cross platform app for UAV devices.
-        </p>
-        <p> some highlighted text </p>
+        <div>
+          <p>
+            Hello, <br/>
+            I am Necmettin Karakaya <br />
+            self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </MagicWord> <br/>
+            Currently working at <a href="http://kiwiinc.net/"><span className="Mesh">Mesh</span></a> <br/>
+            building cross platform app for UAV devices. </p>
+          <p> Life-long learner, pure geek </p>
+        </div>
         <div className="gifArea">
             <GifWrapper src={coding} display={this.state.code}/>
         </div>
@@ -74,6 +69,9 @@ class TextBody extends React.Component {
 
 
 
+const MagicWord = styled.span`
+  border-bottom: 3px solid #9dffc8;
+`
 
 const GifWrapper = styled.img`
   display: ${props => props.display ? 'block' : 'none' }
@@ -82,22 +80,11 @@ const GifWrapper = styled.img`
 const TextBodyContainer = styled.div`
   padding: 20px;
   max-width: 1100px;
+  width: 70vw;
   display: flex;
-  align-items: flex-start;
-  flex-flow: column nowrap;
-  & .developer {
-    font-weight: 800;
-    & .coding {
-      position: absolute;
-      margin-left: 200px;
-      display: none;
-    }
-    &: hover {
-      & .coding {
-        display: block;
-      }
-    }
-  }
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
 `
 
 
