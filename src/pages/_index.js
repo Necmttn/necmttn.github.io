@@ -69,9 +69,6 @@ class TextBody extends React.Component {
 
 
 
-const MagicWord = styled.span`
-  border-bottom: 3px solid #9dffc8;
-`
 
 const GifWrapper = styled.img`
   display: ${props => props.display ? 'block' : 'none' }

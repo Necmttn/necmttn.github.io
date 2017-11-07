@@ -1,5 +1,5 @@
 import React from 'react'
-
+import styled from 'styled-components'
 
 
 class SplashScreen extends React.Component {
@@ -59,12 +59,18 @@ class SplashScreen extends React.Component {
       )
     };
   };
-  return (
-    <div>
-      {getWelcomeMsg()[currentLangKey]}
-    </div>
-  )
+  render() {
+    return (
+      <div>
+        {this.getWelcomeMsg()[this.props.currentLangKey]}
+      </div>
+    )
+  }
 }
 
+
+const MagicWord = styled.span`
+  border-bottom: 3px solid #9dffc8;
+`
 
 export default SplashScreen
