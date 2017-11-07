@@ -1,9 +1,8 @@
 // const { TRELLO } = require('secret');
+const siteMetadata = require('./data/siteMetadata')
 
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby Default Starter`,
-  },
+  siteMetadata,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
