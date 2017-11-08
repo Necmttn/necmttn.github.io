@@ -66,9 +66,6 @@ class SplashScreen extends React.Component {
   render() {
     return (
       <Section>
-        <Link to="/tr/">Turkce</Link>
-        <Link to="/en/">English</Link>
-        <Link to="/zh/">中文</Link>
         <FlickerText max={20}>
         {this.getWelcomeMsg()[this.props.currentLangKey]}
         </FlickerText>

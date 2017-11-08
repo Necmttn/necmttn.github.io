@@ -63,7 +63,9 @@ const Body = styled.div`
 `
 
 const Container = styled.div`
+  max-width: 960px;
   padding-top: 0;
+  display: flex;
 `
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
