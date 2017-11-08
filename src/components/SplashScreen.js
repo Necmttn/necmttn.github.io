@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import coding from '../pages/gifs/coding.gif'
 import Link from 'gatsby-link'
 import FlickerText from './FlickerText'
+// import FlickerText from 'react-flicker-text'
+
+
 class SplashScreen extends React.Component {
   constructor(props) {
     super(props)
@@ -31,7 +34,7 @@ class SplashScreen extends React.Component {
             Hello, <br/>
             I am Necmettin Karakaya <br />
             self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </MagicWord> <br/>
-            Currently working at <a href="http://kiwiinc.net/"><span className="Mesh">Mesh</span></a> <br/>
+            Currently hacking Drone & IOT at <MagicLink target="_blank" href="http://meshtech.co/"><span className="Mesh">Mesh</span></MagicLink> <br/>
             building cross platform app for UAV devices. </p>
           <p> Life-long learner, pure geek </p>
         </TextBodyContainer>
@@ -42,7 +45,7 @@ class SplashScreen extends React.Component {
             你好, <br/>
             I am Necmettin Karakaya <br />
             self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </MagicWord> <br/>
-            Currently working at <a href="http://kiwiinc.net/"><span className="Mesh">Mesh</span></a> <br/>
+            Currently working at <MagicLink target="_blank" href="http://kiwiinc.net/"><span className="Mesh">Mesh</span></MagicLink> <br/>
             building cross platform app for UAV devices. </p>
           <p> Life-long learner, pure geek </p>
         </TextBodyContainer>
@@ -53,7 +56,7 @@ class SplashScreen extends React.Component {
             Merhaba, <br/>
             I am Necmettin Karakaya <br />
             self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </MagicWord> <br/>
-            Currently working at <a href="http://kiwiinc.net/"><span className="Mesh">Mesh</span></a> <br/>
+            Currently working at <MagicLink target="_blank" href="http://kiwiinc.net/"><span className="Mesh">Mesh</span></MagicLink> <br/>
             building cross platform app for UAV devices. </p>
           <p> Life-long learner, pure geek </p>
         </TextBodyContainer>
@@ -107,6 +110,13 @@ const GifWrapper = styled.img`
 
 const MagicWord = styled.span`
   border-bottom: 3px solid #9dffc8;
+  margin-left: 5px;
 `
 
+const MagicLink = styled.a`
+  border-bottom: 3px solid #9dffc8;
+  margin-left: 5px;
+  text-decoration: none;
+  color: #fff
+`
 export default SplashScreen

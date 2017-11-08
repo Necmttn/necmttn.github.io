@@ -382,7 +382,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  white-space: pre-line;
 }
 figure {
   margin-left: 0;
