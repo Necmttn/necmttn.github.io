@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import coding from '../pages/gifs/coding.gif'
 import Link from 'gatsby-link'
-
+import FlickerText from './FlickerText'
 class SplashScreen extends React.Component {
   constructor(props) {
     super(props)
@@ -66,7 +66,9 @@ class SplashScreen extends React.Component {
         <Link to="/tr/">Turkce</Link>
         <Link to="/en/">English</Link>
         <Link to="/zh/">中文</Link>
+        <FlickerText max={20}>
         {this.getWelcomeMsg()[this.props.currentLangKey]}
+        </FlickerText>
         <GifBodyContainer>
           <GifWrapper src={coding} display={this.state.code}/>
         </GifBodyContainer>

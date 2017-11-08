@@ -5,7 +5,7 @@ import graphql from 'graphql'
 export default (props) => <Index {...props} />
 
 export const pageQuery = graphql`
-  query IndexEnQuery {
+  query IndexTrQuery {
     allMarkdownRemark(
       limit: 3
       sort: { fields: [frontmatter___date], order: DESC }
