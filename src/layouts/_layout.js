@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import styled, { ThemeProvider } from 'styled-components'
-
+import theme from '../themes/dark'
 import {IntlProvider} from 'react-intl'
 
 import {
@@ -35,14 +35,20 @@ const Wrapper = (props) => {
 
   const {menu, author, sourceCodeLink} = props.data.site.siteMetadata;
 
+  console.log(langKey)
+  console.log(props.i18nMessages)
   return (
     <ThemeProvider theme={theme}>
       <IntlProvider
         locale={langKey}
         messages={props.i18nMessages}>
         <Background>
+          {children()}
         </Background>
       </IntlProvider>
     </ThemeProvider>
   )
 }
+
+
+export default Wrapper

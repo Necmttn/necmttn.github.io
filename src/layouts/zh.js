@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import { addLocaleData } from 'react-intl'
 import Layout from './_layout'
 
-import messages from '../i18n/en'
+import messages from '../i18n/zh'
+import zh from 'react-intl/locale-data/zh'
+
+addLocaleData(zh)
 
 export default (props) => (
 	<Layout
@@ -11,9 +14,8 @@ export default (props) => (
 		i18nMessages={messages} />
 )
 
-
 export const pageQuery = graphql`
-  query Layout {
+  query LayoutZh {
     site {
       siteMetadata {
         languages {
@@ -42,4 +44,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
 

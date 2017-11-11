@@ -5,14 +5,14 @@ module.exports = {
   siteMetadata,
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: 'gatsby-source-trello',
-      options: {
-        teamId: 'necmttncom',
-        apiKey: process.env.TRELLO_KEY,
-        secret: process.env.TRELLO_SECRET
-      }
-    },
+    // {
+    //   resolve: 'gatsby-source-trello',
+    //   options: {
+    //     teamId: 'necmttncom',
+    //     apiKey: process.env.TRELLO_KEY,
+    //     secret: process.env.TRELLO_SECRET
+    //   }
+    // },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -49,7 +49,7 @@ module.exports = {
       options: {
         langKeyForNull: 'any',
         langKeyDefault: 'en',
-        useLangKeyLayout: false,
+        useLangKeyLayout: true,
         markdownRemark: {
           postPage: 'src/templates/blog-post.js',
           query: `
