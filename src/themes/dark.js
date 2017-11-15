@@ -16,7 +16,7 @@ const colors = {
   yellow: '#E2C044',
   red: '#FF0000',
   darkBlue: '#587B7F',
-  blue: '#85B9BF',
+  blue: '#1E92CE', //monzilla
   green: '#9FE80C',
   gray: '#393E41',
 
@@ -38,7 +38,7 @@ const theme = {
   margin: '0 auto',
   maxWidth: '60rem',
   borderRadius: '0.2rem',
-  lineHeight: 1.5,
+  lineHeight: '1.5px',
   focus: {
     border: '0.4rem red solid'
   },

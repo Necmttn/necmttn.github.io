@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import coding from '../pages/gifs/coding.gif'
 import Link from 'gatsby-link'
 import FlickerText from './FlickerText'
-// import FlickerText from 'react-flicker-text'
 
 
 class SplashScreen extends React.Component {
@@ -80,12 +79,11 @@ class SplashScreen extends React.Component {
 
 
 const TextBodyContainer = styled.div`
-  padding: 20px;
-  max-width: 1100px;
-  width: 70vw;
+  margin-left: 10vw;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  line-height: 25px;
   flex-flow: column nowrap;
 `
 
@@ -100,6 +98,7 @@ const Section = styled.section`
 
 const GifBodyContainer = styled.div`
   margin-left: auto;
+	margin-right: 10vw;
 `
 const GifWrapper = styled.img`
   display: ${props => props.display ? 'block' : 'none' }

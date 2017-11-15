@@ -6,9 +6,11 @@ import Link from 'gatsby-link'
 const LangNav = () => {
   return (
     <Wrapper>
-        <Link to="/tr/">Turkce</Link>
-        <Link to="/en/">English</Link>
-        <Link to="/zh/">中文</Link>
+        <WhiteLink to="/tr/">TR</WhiteLink>
+				<Sep />
+        <WhiteLink to="/en/">ENG</WhiteLink>
+				<Sep />
+        <WhiteLink to="/zh/">中文</WhiteLink>
     </Wrapper>
   )
 }
@@ -16,6 +18,21 @@ const LangNav = () => {
 const Wrapper = styled.div`
   position: absolute;
   top: 0;
+	text-decoration: none;
+	color: white;
+`
+
+const WhiteLink = styled(Link)`
+	text-decoration: none;
+	color: white;
+	margin-right: 10px;
+	margin-left: 10px;
+`
+const Sep = styled.span`
+	width: 10px;
+	height: 10px;
+	background: white;
+	border-left: 1px solid white;
 `
 
 export default LangNav

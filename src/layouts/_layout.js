@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styled, { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider, injectGlobal } from 'styled-components'
+import reset from 'styled-reset'
 import theme from '../themes/dark'
 import {IntlProvider} from 'react-intl'
 
@@ -11,6 +12,12 @@ import {
   getCurrentLangKey,
   isHomePage
 } from 'ptz-i18n'
+
+
+const baseStyles = () => injectGlobal`
+  ${reset}
+  // if you have another global style add here.
+`
 
 const Background = styled.div`
   background-color: ${props => props.theme.bg};
@@ -35,8 +42,7 @@ const Wrapper = (props) => {
 
   const {menu, author, sourceCodeLink} = props.data.site.siteMetadata;
 
-  console.log(langKey)
-  console.log(props.i18nMessages)
+  baseStyles() //init reset.css
   return (
     <ThemeProvider theme={theme}>
       <IntlProvider
