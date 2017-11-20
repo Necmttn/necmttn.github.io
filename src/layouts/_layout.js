@@ -17,6 +17,27 @@ import {
 const baseStyles = () => injectGlobal`
   ${reset}
   // if you have another global style add here.
+
+  h1 {
+    font-size: 2.0rem;
+    line-height: 2.4rem;
+    padding-bottom: 0.1rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    line-height: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
 `
 
 const Background = styled.div`
@@ -27,6 +48,7 @@ const Background = styled.div`
   bottom: 0;
   min-height: 100%;
   overflow-x: hidden;
+  color: white;
 `
 
 const Wrapper = (props) => {
