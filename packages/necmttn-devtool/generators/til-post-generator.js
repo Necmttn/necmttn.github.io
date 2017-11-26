@@ -19,23 +19,10 @@ module.exports = plop => {
         choices: authors.map(author => ({name: author.id, value: author.id}))
       },
       {
-        type: 'list',
+        type: 'checkbox',
         name: 'tags',
         message: 'tags ?',
         choices: tags.map(tag => ({name: tag.name, value: tag.slug}))
-      },
-      {
-        type: 'confirm',
-        name: 'addTag',
-        message: 'Do you wanna add more ?'
-      },
-      {
-        when: function (re)
-        type: 'autocomplete',
-        name: 'tags',
-        message: 'tags?',
-        source: Store.getTags,
-        suggestOnly: true
       },
       {
         type: 'list',

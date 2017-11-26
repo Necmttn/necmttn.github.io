@@ -15,7 +15,7 @@
     "blog:build": "cd packages/necmttn-gatsby && yarn build",
     "blog:dev": "cd packages/necmttn-gatsby && yarn dev",
     "comp:dev": "cd packages/necmttn-component && npm run storybook",
-    "generate": "plop --plopfile internals/generators/index.js",
+    "generate": "cd packages/necmttn-devtool && yarn generate",
     "deploy": "cd packages/necmttn-gatsby && surge -d necmttn.surge.sh -p ./public/",
     "test": "jest"
   },
