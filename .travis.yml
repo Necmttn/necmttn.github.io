@@ -12,10 +12,11 @@ cache:
 before_install:
   - curl -o- -L yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
+  - npm install --global lerna
 
 install:
+  - lerna bootstrap
   - cd packages/necmttn-gatsby
-  - yarn
   - yarn run build
 
 deploy:
