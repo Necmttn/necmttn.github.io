@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "name": "Journal",
+      "slug": "journal"
+    },
+    {
+      "name": "Software",
+      "slug": "software"
+    },
+    {
+      "name": "Random Toughts",
+      "slug": "random-toughts"
+    }
+  ],
+  "langs": [
+    "en",
+    "zh",
+    "tr"
+  ],
+  "tags": [
+    {
+      "name": "javascript",
+      "slug": "js"
+    },
+    {
+      "name": "python",
+      "slug": "py"
+    },
+    {
+      "name": "tooling",
+      "slug": "tooling"
+    }
+  ],
+  "authors": [
+    {
+      "id": "Necmettin Karakaya",
+      "bio": "JavaScript Developer with ♥ ",
+      "avatar": "avatars/neco.jpg",
+      "twitter": "@necmttn",
+      "github": "@necmttn",
+      "instagram": "necmettinkarakaya",
+      "email": "necmettin.karakaya@gmail.com"
+    }
+  ]
+}

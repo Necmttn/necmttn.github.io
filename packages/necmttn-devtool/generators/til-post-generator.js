@@ -1,15 +1,15 @@
 const fs = require('fs');
 const {inputRequired} = require('../utils');
-
 const { authors, tags, categories } = JSON.parse(fs.readFileSync('./data/db.json'))
-
+console.log(authors, tags, categories)
+const { Store } = require('../db')
 module.exports = plop => {
-  plop.setGenerator('blog post', {
+  plop.setGenerator('TIL post', {
     prompts: [
       {
         type: 'input',
         name: 'title',
-        message: 'Blog post title?',
+        message: 'TIL post title?',
         validate: inputRequired('title')
       },
       {
@@ -19,10 +19,23 @@ module.exports = plop => {
         choices: authors.map(author => ({name: author.id, value: author.id}))
       },
       {
-        type: 'checkbox',
+        type: 'list',
         name: 'tags',
-        message: 'tags? (separate with coma)',
+        message: 'tags ?',
         choices: tags.map(tag => ({name: tag.name, value: tag.slug}))
+      },
+      {
+        type: 'confirm',
+        name: 'addTag',
+        message: 'Do you wanna add more ?'
+      },
+      {
+        when: function (re)
+        type: 'autocomplete',
+        name: 'tags',
+        message: 'tags?',
+        source: Store.getTags,
+        suggestOnly: true
       },
       {
         type: 'list',
@@ -40,10 +53,11 @@ module.exports = plop => {
       // Get current date
       data.createdDate = new Date().toISOString().split('T')[0];
 
+      console.log(data.tags)
       // Parse tags as yaml array
-      if (data.tags) {
-        data.tags = `\ntags:\n  - ${data.tags.join('\n  - ')}`;
-      }
+      // if (data.tags) {
+      //   data.tags = `\ntags:\n  - ${data.tags.join('\n  - ')}`;
+      // }
 
       return [
         {
