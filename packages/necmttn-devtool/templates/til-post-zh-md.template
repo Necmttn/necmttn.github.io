@@ -1,14 +1,10 @@
 ---
 title: {{title}}
 createdDate: "{{createdDate}}"
-author: {{author}}{{tags}}
+author: {{author}}
+tags: {{tags}}
 image: welcoming.png
-draft: {{draft}}
 ---
 
-My awesome article
-
-## TODO
-
--   [ ] Replace image
--   [ ] Write an awesome article
+这是一个存根。 最可能我没有时间来翻译它.  
+你为什么不帮我翻译呢？ 它可以是 [@yourfirstpr](https://twitter.com/yourfirstpr

@@ -54,7 +54,7 @@ class Store {
     })
   }
 
-  static addCategories(name) {
+  static addCategory(name) {
     const slug = generateSlug(name)
     db.get('categories')
       .insert({name: name, slug: slug})
@@ -78,10 +78,6 @@ class Store {
       .write()
   }
 }
-
-
-
-console.log(Store.findElement('tags', {slug: 'JavaScript'}))
 
 module.exports = {
   Store

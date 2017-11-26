@@ -2,19 +2,20 @@ const { Store } = require('../db')
 const { generateSlug } = require('../utils')
 
 module.exports = {
-  description: 'Add a Tag',
+  description: 'Add a category',
+
   prompts: [
     {
       type: 'autocomplete',
-      name: 'tag',
+      name: 'category',
       message: 'how should i call it ?',
-      source: Store.getTags,
+      source: Store.getCategories,
       suggestOnly: true,
       validate: (val) => {
         if (val) {
           // check is this exist or not before
           const tempSlug = generateSlug(val)
-          const isExist = Store.findElement('tags', {slug: tempSlug})
+          const isExist = Store.findElement('categories', {slug: tempSlug})
           if (isExist !== undefined) {
             return 'Already Exist'
           } else {
@@ -26,11 +27,13 @@ module.exports = {
       }
     },
   ],
+
   actions: [
     (data) => {
-      const message = `adding ${data.tag}`
-      Store.addTag(data.tag)
+      const message = `adding ${data.category}`
+      Store.addCategory(data.category)
       return message
     }
   ]
 }
+

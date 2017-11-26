@@ -1,14 +1,12 @@
 ---
 title: {{title}}
 createdDate: "{{createdDate}}"
-author: {{author}}{{tags}}
+author: {{author}}
+tags: {{tags}}
 image: welcoming.png
-draft: {{draft}}
 ---
 
-My awesome article
+This is a stub. Most Probably i haven't got a time to translate it.  
+Why not you help me to translate it. it's can be [@yourfirstpr](https://twitter.com/yourfirstpr)
 
-## TODO
 
--   [ ] Replace image
--   [ ] Write an awesome article

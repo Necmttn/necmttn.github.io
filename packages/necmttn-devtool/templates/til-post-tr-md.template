@@ -1,14 +1,10 @@
 ---
 title: {{title}}
 createdDate: "{{createdDate}}"
-author: {{author}}{{tags}}
+author: {{author}}
+tags: {{tags}}
 image: welcoming.png
-draft: {{draft}}
 ---
 
-My awesome article
-
-## TODO
-
--   [ ] Replace image
--   [ ] Write an awesome article
+Bu bir taslak. Muhtemelen çevirmek için vaktim yok.  
+Neden bana çevirmeme yardım etmiyorsun? Senin [@yourfirstpr] (https://twitter.com/yourfirstpr)'in olabilir.

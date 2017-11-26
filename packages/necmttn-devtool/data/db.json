@@ -28,6 +28,11 @@
       "name": "Python",
       "slug": "python",
       "id": "27d459ad-d975-4be6-9c28-52ed35179d30"
+    },
+    {
+      "name": "GoLang",
+      "slug": "golang",
+      "id": "d43764cb-f4e1-4de8-b5d7-c096a4f0c64a"
     }
   ],
   "authors": [
