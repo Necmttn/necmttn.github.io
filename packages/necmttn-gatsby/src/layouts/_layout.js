@@ -2,9 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
+import LangNav from '../components/LangNav'
 import reset from 'styled-reset'
 import theme from '../themes/dark'
 import {IntlProvider} from 'react-intl'
+require('../themes/prism-darcula.css')
 
 import {
   getLangs,
@@ -59,7 +61,9 @@ const Wrapper = (props) => {
   const {langs, defaultLangKey} = props.data.site.siteMetadata.languages;
   const langKey = getCurrentLangKey(langs, defaultLangKey, url);
 
-  const homeLink = `${langKey}`
+  const homeLink = `/${langKey}/`
+
+  console.log(langs, langKey, homeLink, url)
   const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url))
 
   const {menu, author, sourceCodeLink} = props.data.site.siteMetadata;
@@ -71,7 +75,13 @@ const Wrapper = (props) => {
         locale={langKey}
         messages={props.i18nMessages}>
         <Background>
-          {children()}
+          <LangNav
+						langs={langsMenu}
+						homeLink={homeLink}
+						url={url}
+						menu={menu}
+						isHome={isHome}/>
+					{children()}
         </Background>
       </IntlProvider>
     </ThemeProvider>

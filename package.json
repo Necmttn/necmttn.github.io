@@ -1,5 +1,32 @@
 {
-	"devDependencies": {
-		"lerna": "^2.5.1"
-	}
+  "name": "Necmttn.com",
+  "description": "Source code of personal website",
+  "version": "1.0.0",
+  "author": "Necmettin Karakaya",
+  "keywords": [
+    "gatsby",
+    "styled-components",
+    "graphql",
+    "storybook"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "blog:build": "cd packages/necmttn-gatsby && yarn build",
+    "blog:dev": "cd packages/necmttn-gatsby && yarn dev",
+    "comp:dev": "cd packages/necmttn-component && npm run storybook",
+    "generate": "plop --plopfile internals/generators/index.js",
+    "deploy": "cd packages/necmttn-gatsby && surge -d necmttn.surge.sh -p ./public/",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^21.2.1",
+		"lerna": "^2.5.1",
+    "prettier": "^1.6.1"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src/"
+    ]
+  }
 }

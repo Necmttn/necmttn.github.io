@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const BlogPostRoute = (props) => {
   const data = props.data.markdownRemark
-  console.log(data)
   return (
     <BlogContainer>
       <h1> {data.frontmatter.title} </h1>
@@ -19,6 +18,8 @@ const BlogContainer = styled.div`
   flex-flow: column nowrap;
   padding: 30px 10vw;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
 `
 
 export default BlogPostRoute

@@ -23,7 +23,7 @@
     "gatsby-transformer-sharp": "1.6.8",
     "necmttn-component": "^0.0.0",
     "plop": "^1.9.0",
-    "ptz-i18n": "^0.2.2",
+    "ptz-i18n": "^0.2.5",
     "react-intl": "^2.4.0",
     "styled-reset": "^0.1.3"
   },

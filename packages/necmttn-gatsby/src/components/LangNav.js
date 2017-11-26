@@ -3,14 +3,16 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 
 
-const LangNav = () => {
-  return (
+const LangNav = (props) => {
+	console.log(props)
+	const links = props.langs.map((lang) => {
+		return (
+    	<WhiteLink to={lang.link} active={lang.selected}>{lang.langKey}</WhiteLink>
+		)
+	})
+	 return (
     <Wrapper>
-        <WhiteLink to="/tr/">TR</WhiteLink>
-				<Sep />
-        <WhiteLink to="/en/">ENG</WhiteLink>
-				<Sep />
-        <WhiteLink to="/zh/">中文</WhiteLink>
+			{links}
     </Wrapper>
   )
 }

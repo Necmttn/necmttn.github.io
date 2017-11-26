@@ -1,14 +1,12 @@
 import React from 'react'
 import SplashScreen from './SplashScreen'
 import styled from 'styled-components'
-import LangNav from './LangNav'
 import Quote from './Quote'
 
 const Index = (props) => {
   const { langKey }  = props.pathContext;
   return (
     <Intro>
-      <LangNav />
       <SplashScreen currentLangKey={langKey}/>
       <Quote currentLangKey={langKey} />
     </Intro>
