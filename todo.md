@@ -2,15 +2,16 @@
 
 
 ## TODO: 
-  * [ ] Create a blog post about Plop generators.
-  * [ ] Collect Gif Images for use in front page.
-  * [ ] Make a decision about front page navigation.
+  * [ ] add auto commit after generate #TIL && push
   * [ ] Make a decision about color pallette. 
   * [ ] Fix Image size issue. (BUG) all the images converted to link to somewhere.
-  * [ ] add gatsby-styled-components plugin for styling
-## WORKING:
-  * [ ] Blog post about how use generators.
+
 ## DONE:
+  * [ ] Blog post about how use generators.
+  * [x] add gatsby-styled-components plugin for styling
+  * [x] Create a blog post about Plop generators.
+  * [x] Collect Gif Images for use in front page.
+  * [x] Make a decision about front page navigation.
   * [x] Write article about how to manage secrets in OpenSourceRepos.
   * [x] Create Trello scrapper. ( it's turn out a plugin )
   * [x] create navigation for blog. 
