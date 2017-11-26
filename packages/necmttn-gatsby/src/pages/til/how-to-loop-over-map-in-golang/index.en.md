@@ -1,5 +1,5 @@
 ---
-title: How to Loop over map in GoLang
+title: How to loop over map in GoLang
 tags: golang
 
 ---

@@ -22,7 +22,7 @@ install:
 deploy:
   - provider: surge
     project: ./packages/necmttn-gatsby/public/
-    domain: necmettn.surge.sh
+    domain: necmttn.surge.sh
     skip_cleanup: true
   - provider: pages
     skip_cleanup: true

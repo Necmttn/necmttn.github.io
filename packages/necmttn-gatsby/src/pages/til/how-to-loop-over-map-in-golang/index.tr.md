@@ -1,11 +1,11 @@
 ---
-title: How to Loop over map in GoLang
+title: GoLang'de Objenin keyleri maplenir ?
+
 tags: golang
 
 ---
 
-
-you can use builtn took range for it. Check the example;
+Golang'in icinde bulunan  `range` i kullanabilirsiniz. Ornegin ;
 
 ```go
 import (
@@ -23,7 +23,7 @@ func main() {
 	}
 }
 ```
-will log
+konsoldan bunu cikti vericektir.
 
 ```bash
 key %!d(string=puz) | value 66
