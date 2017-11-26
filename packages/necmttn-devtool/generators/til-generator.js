@@ -3,7 +3,7 @@ const {inputRequired} = require('../utils');
 const { authors, tags, categories } = JSON.parse(fs.readFileSync('./data/db.json'))
 const { Store } = require('../db')
 const { PAGES_DIR } = require('../utils/constants')
-
+const { generateSlug } = require('../utils')
 module.exports = {
   description: 'Today I learner micro post',
   prompts: [
@@ -55,8 +55,13 @@ module.exports = {
         templateFile: '../templates/til-post-zh-md.template'
       },
       {
-        type: 'edit'
-        path: `${PAGES_DIR}/til/{{dashCase title}}/index.en.md`,
+        type: 'edit',
+        path: `${PAGES_DIR}/til/${ generateSlug(data.title) }/index.en.md`
+      },
+      {
+        type: 'commit',
+        path: `${PAGES_DIR}/til/${ generateSlug(data.title) }`,
+        starter: 'New #TIL'
       }
     ];
   }
