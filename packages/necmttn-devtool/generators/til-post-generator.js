@@ -1,7 +1,6 @@
 const fs = require('fs');
 const {inputRequired} = require('../utils');
 const { authors, tags, categories } = JSON.parse(fs.readFileSync('./data/db.json'))
-console.log(authors, tags, categories)
 const { Store } = require('../db')
 module.exports = plop => {
   plop.setGenerator('TIL post', {

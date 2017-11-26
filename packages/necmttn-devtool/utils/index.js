@@ -11,4 +11,11 @@ const inputRequired = name => {
 };
 
 
-module.exports = {inputRequired};
+const generateSlug = (name) => {
+	return name.toLowerCase().split(' ').join('-')
+}
+
+module.exports = {
+  inputRequired,
+  generateSlug
+};

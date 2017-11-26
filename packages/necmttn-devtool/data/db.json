@@ -20,16 +20,14 @@
   ],
   "tags": [
     {
-      "name": "javascript",
-      "slug": "js"
+      "name": "JavaScript",
+      "slug": "javascript",
+      "id": "da615287-0989-45e6-a054-80bcfbc380fe"
     },
     {
-      "name": "python",
-      "slug": "py"
-    },
-    {
-      "name": "tooling",
-      "slug": "tooling"
+      "name": "Python",
+      "slug": "python",
+      "id": "27d459ad-d975-4be6-9c28-52ed35179d30"
     }
   ],
   "authors": [

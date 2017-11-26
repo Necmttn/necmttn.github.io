@@ -4,6 +4,7 @@ const lodashId = require('lodash-id')
 const FileSync = require('lowdb/adapters/FileSync')
 const adapter = new FileSync('./data/db.json')
 const db = low(adapter)
+const { generateSlug } = require('./utils')
 
 db._.mixin(lodashId)
 
@@ -30,13 +31,20 @@ db.defaults(defaultDatabase)
   .write()
 
 class Store {
+  static findElement(table, query) {
+    return db.get(table)
+      .find(query)
+      .value()
+  }
   static addTag(name) {
+    const slug =  generateSlug(name)
     db.get('tags')
-      .push({name: name})
+      .insert({name: name, slug: slug})
       .write()
   }
 
-  static getTags(answers, input = '') {
+  static getTags(answers, input) {
+    input = input || ''
     const tags = db.get('tags')
       .map('name')
       .value()
@@ -47,9 +55,21 @@ class Store {
   }
 
   static addCategories(name) {
+    const slug = generateSlug(name)
     db.get('categories')
-      .push({name: name})
+      .insert({name: name, slug: slug})
       .write()
+  }
+
+  static getCategories(answers, input) {
+    input = input || ''
+    const tags = db.get('categories')
+      .map('name')
+      .value()
+    return new Promise(function(resolve) {
+      const fuzzyResult = fuzzy.filter(input, tags)
+      resolve(fuzzyResult.map((el) => el.original))
+    })
   }
 
   static addLang(key) {
@@ -61,7 +81,7 @@ class Store {
 
 
 
-
+console.log(Store.findElement('tags', {slug: 'JavaScript'}))
 
 module.exports = {
   Store
