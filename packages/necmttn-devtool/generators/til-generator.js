@@ -53,6 +53,10 @@ module.exports = {
         type: 'add',
         path: `${PAGES_DIR}/til/{{dashCase title}}/index.zh.md`,
         templateFile: '../templates/til-post-zh-md.template'
+      },
+      {
+        type: 'edit'
+        path: `${PAGES_DIR}/til/{{dashCase title}}/index.en.md`,
       }
     ];
   }

@@ -4,6 +4,7 @@ createdDate: "{{createdDate}}"
 author: {{author}}
 tags: {{tags}}
 image: welcoming.png
+draft: {{draft}}
 ---
 
 这是一个存根。 最可能我没有时间来翻译它.  

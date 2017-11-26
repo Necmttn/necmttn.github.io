@@ -4,6 +4,7 @@ createdDate: "{{createdDate}}"
 author: {{author}}
 tags: {{tags}}
 image: welcoming.png
+draft: {{draft}}
 ---
 
 Bu bir taslak. Muhtemelen çevirmek için vaktim yok.  
