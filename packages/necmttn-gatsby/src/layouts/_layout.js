@@ -63,12 +63,12 @@ const Wrapper = (props) => {
 
   const homeLink = `/${langKey}/`
 
-  console.log(langs, langKey, homeLink, url)
   const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url))
 
   const {menu, author, sourceCodeLink} = props.data.site.siteMetadata;
 
   baseStyles() //init reset.css
+  console.log(props)
   return (
     <ThemeProvider theme={theme}>
       <IntlProvider

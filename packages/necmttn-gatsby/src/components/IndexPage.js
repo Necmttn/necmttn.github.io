@@ -5,6 +5,7 @@ import Quote from './Quote'
 
 const Index = (props) => {
   const { langKey }  = props.pathContext;
+  console.log(props)
   return (
     <Intro>
       <SplashScreen currentLangKey={langKey}/>
