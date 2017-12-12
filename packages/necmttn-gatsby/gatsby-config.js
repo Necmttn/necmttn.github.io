@@ -51,7 +51,7 @@ module.exports = {
         langKeyDefault: 'en',
         useLangKeyLayout: true,
         markdownRemark: {
-          postPage: 'src/templates/blog-post.js',
+          postPage: 'src/templates/post.js',
           query: `
           {
               allMarkdownRemark {

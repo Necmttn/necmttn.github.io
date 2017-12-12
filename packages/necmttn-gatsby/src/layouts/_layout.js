@@ -68,7 +68,6 @@ const Wrapper = (props) => {
   const {menu, author, sourceCodeLink} = props.data.site.siteMetadata;
 
   baseStyles() //init reset.css
-  console.log(props)
   return (
     <ThemeProvider theme={theme}>
       <IntlProvider

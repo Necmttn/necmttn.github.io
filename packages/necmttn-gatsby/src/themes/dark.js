@@ -19,7 +19,7 @@ const colors = {
   blue: '#1E92CE', //monzilla
   green: '#9FE80C',
   gray: '#393E41',
-
+  darkGray: '#252423', //http://www.theworkshop.ch
   blackShades: [
     '#32342D'
   ]

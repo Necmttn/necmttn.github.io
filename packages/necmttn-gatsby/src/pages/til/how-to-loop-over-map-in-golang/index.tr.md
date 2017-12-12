@@ -2,7 +2,7 @@
 title: GoLang'de Objenin keyleri maplenir ?
 
 tags: golang
-
+til: true
 ---
 
 Golang'in icinde bulunan  `range` i kullanabilirsiniz. Ornegin ;

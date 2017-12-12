@@ -7,7 +7,7 @@ const LangNav = (props) => {
 	console.log(props)
 	const links = props.langs.map((lang) => {
 		return (
-    	<WhiteLink to={lang.link} active={lang.selected}>{lang.langKey}</WhiteLink>
+      <WhiteLink key={lang.link} to={lang.link} Active={lang.selected}>{lang.langKey}</WhiteLink>
 		)
 	})
 	 return (
@@ -26,7 +26,7 @@ const Wrapper = styled.div`
 
 const WhiteLink = styled(Link)`
 	text-decoration: none;
-	color: white;
+	color: ${props => (props.Active) ? 'red' : 'white'};
 	margin-right: 10px;
 	margin-left: 10px;
 `
