@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
+import { Card } from 'necmttn-component'
+
 
 const TIL = (props) => {
   const posts = props.data.allMarkdownRemark.edges
@@ -15,6 +17,7 @@ const TIL = (props) => {
         const excerpt = post.node.excerpt
         return (
         <li>
+          <Card  />
           <Link to={link}>{title}</Link>
           <p>{excerpt}</p>
         </li>
