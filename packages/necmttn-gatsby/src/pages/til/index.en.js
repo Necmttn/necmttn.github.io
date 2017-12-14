@@ -5,7 +5,7 @@ import Link from 'gatsby-link'
 const TIL = (props) => {
   const posts = props.data.allMarkdownRemark.edges
   return (
-    <div>
+    <Wrapper>
       Til Posts
       <ul>
       {posts.map(post => {
@@ -21,9 +21,19 @@ const TIL = (props) => {
         )
       })}
       </ul>
-    </div>
+    </Wrapper>
   )
 }
+
+
+const Wrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  padding: 50px 30px;
+`
 
 
 export const tilEnQuery = graphql`
