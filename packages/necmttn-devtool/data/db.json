@@ -11,6 +11,10 @@
     {
       "name": "Random Toughts",
       "slug": "random-toughts"
+    },
+    {
+      "name": "Insights",
+      "slug": "insights"
     }
   ],
   "langs": [

@@ -2,9 +2,10 @@
 title: {{title}}
 createdDate: "{{createdDate}}"
 author: {{author}}
-tags: {{tags}}
+{{tags}}
 image: welcoming.png
 draft: {{draft}}
+til: true
 ---
 
 This is a stub. Most Probably i haven't got a time to translate it.  
