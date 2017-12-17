@@ -4,10 +4,13 @@ import PropTypes from 'prop-types'
 
 import CardContent from './CardContent'
 import CardHeader from './CardHeader'
+import CardFooter from './CardFooter'
 
 export default class Card extends React.Component {
   static Content = CardContent
   static Header = CardHeader
+  static Footer = CardFooter
+
   static propTypes = {
     /** Button can show it is currently the active user selection */
     active: PropTypes.bool,
@@ -61,9 +64,9 @@ const CardWrapper = styled.figure`
   min-width: 600px;
   max-height: 600px;
   padding: 3em 1em;
-  border: 1px solid black;
+  border: 1px solid white;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  color: ${props => props.color ? props.color : 'black'}
+  margin: 2em 0;
 `
