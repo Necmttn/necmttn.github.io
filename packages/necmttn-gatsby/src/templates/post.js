@@ -26,7 +26,6 @@ const BlogContainer = styled.div`
 
 const TILContainer = styled.div`
   display: flex;
-  background: red;
   flex-flow: column nowrap;
   padding: 30px 10vw;
   height: 100vh;

@@ -2,24 +2,34 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import { Card } from 'necmttn-component'
-
+import { H1 } from '../../components/Text'
 
 const TIL = (props) => {
   const posts = props.data.allMarkdownRemark.edges
+  const data = props.data.markdownRemark
   return (
     <Wrapper>
-      Til Posts
+      <BigHeader>
+        TODAY I LEARNED
+      </BigHeader>
       <ul>
       {posts.map(post => {
         console.log(post)
+        const content = post.node.html
         const title = post.node.frontmatter.title
         const link = post.node.fields.slug
         const excerpt = post.node.excerpt
         return (
         <li>
-          <Card  />
-          <Link to={link}>{title}</Link>
-          <p>{excerpt}</p>
+          <Card>
+            <Card.Header LinkComp={Link} to={link}>
+              <H1>{title}</H1>
+            </Card.Header>
+            <Card.Content>
+              <div dangerouslySetInnerHTML={{ __html: content }}>
+              </div>
+            </Card.Content>
+          </Card>
         </li>
         )
       })}
@@ -38,6 +48,11 @@ const Wrapper = styled.div`
   padding: 50px 30px;
 `
 
+const BigHeader = styled.h1`
+  font-size: 7vw;
+  text-transform: uppercase;
+`
+
 
 export const tilEnQuery = graphql`
 query tilEnQuery{
@@ -49,7 +64,8 @@ query tilEnQuery{
   ) {
 	  edges {
 	    node {
-	      id
+        id
+        html
         fields {
           langKey
           slug
