@@ -29,8 +29,8 @@ const TILContainer = styled.div`
   flex-flow: column nowrap;
   padding: 30px 10vw;
   height: 100vh;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 `
 
 export default PostRoute
