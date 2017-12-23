@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Header = ({children, LinkComp, to}) => (
   <Wrapper>
-    <LinkComp to={to}><h1>{children}</h1></LinkComp>
+    <LinkComp to={to}>{children}</LinkComp>
   </Wrapper>
 )
 

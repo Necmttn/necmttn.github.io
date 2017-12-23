@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FormattedMessage } from 'react-intl'
-import { FlagIcon } from './Icon'
+import { Icon } from 'necmttn-component'
 
 const Quote = ({currentLangKey}) => {
   return (
     <ThickContainer>
-			<FlagIcon	width="64" height="64" />
+      <Icon.Flag	width="64" height="64">
+      </Icon.Flag>
 
 			<FormattedMessage id="index.quote" >
 				{

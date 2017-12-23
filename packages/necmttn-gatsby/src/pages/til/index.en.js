@@ -20,7 +20,7 @@ const TIL = (props) => {
         const link = post.node.fields.slug
         const excerpt = post.node.excerpt
         return (
-        <li>
+        <li key={link}>
           <Card>
             <Card.Header LinkComp={Link} to={link}>
               <H1>{title}</H1>

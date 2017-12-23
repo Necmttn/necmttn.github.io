@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 import LangNav from '../components/LangNav'
 import reset from 'styled-reset'
-import theme from '../themes/dark'
+import darkTheme from '../themes/dark'
+import lightTheme from '../themes/light'
 import {IntlProvider} from 'react-intl'
 require('../themes/prism-darcula.css')
 
@@ -48,46 +49,49 @@ const Background = styled.div`
   right: 0;
   left: 0;
   bottom: 0;
-  width: 100vw;
-  height: 100vh;
   min-height: 100%;
   overflow-x: hidden;
-  color: white;
+  color: #222222;
 `
 
-const Wrapper = (props) => {
-  const { children, location } = props;
-  const url = location.pathname;
-  const isHome = isHomePage(url)
+export default class Wrapper extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      nightMode: true
+    }
+  }
 
-  const {langs, defaultLangKey} = props.data.site.siteMetadata.languages;
-  const langKey = getCurrentLangKey(langs, defaultLangKey, url);
+  render() {
+    const { children, location } = this.props
+    const url = location.pathname;
+    const isHome = isHomePage(url)
 
-  const homeLink = `/${langKey}/`
+    const {langs, defaultLangKey} = this.props.data.site.siteMetadata.languages;
+    const langKey = getCurrentLangKey(langs, defaultLangKey, url);
 
-  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url))
+    const homeLink = `${langKey}`
+    const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url))
+    const {menu, author, sourceCodeLink} = this.props.data.site.siteMetadata;
+    const siteTheme = (this.state.nightMode) ? darkTheme : lightTheme;
+    return (
+      <ThemeProvider theme={siteTheme}>
+        <IntlProvider
+          locale={langKey}
+          messages={this.props.i18nMessages}>
+          <Background>
+            <LangNav
+              langs={langsMenu}
+              homeLink={homeLink}
+              url={url}
+              menu={menu}
+              theme={this.state.theme}
 
-  const {menu, author, sourceCodeLink} = props.data.site.siteMetadata;
-
-  baseStyles() //init reset.css
-  return (
-    <ThemeProvider theme={theme}>
-      <IntlProvider
-        locale={langKey}
-        messages={props.i18nMessages}>
-        <Background>
-          <LangNav
-						langs={langsMenu}
-						homeLink={homeLink}
-						url={url}
-						menu={menu}
-						isHome={isHome}/>
-					{children()}
-        </Background>
-      </IntlProvider>
-    </ThemeProvider>
-  )
+              isHome={isHome}/>
+            {children()}
+          </Background>
+        </IntlProvider>
+      </ThemeProvider>
+    )
+  }
 }
-
-
-export default Wrapper

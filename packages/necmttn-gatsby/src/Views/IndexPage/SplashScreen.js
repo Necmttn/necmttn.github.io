@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import coding from '../pages/gifs/coding.gif'
+import coding from '../../pages/gifs/coding.gif'
 import Link from 'gatsby-link'
-import FlickerText from './FlickerText'
+import { FlickerText } from 'necmttn-component'
 
 
 class SplashScreen extends React.Component {

@@ -4,37 +4,64 @@ import Link from 'gatsby-link'
 
 
 const LangNav = (props) => {
-	console.log(props)
-	const links = props.langs.map((lang) => {
-		return (
-      <WhiteLink key={lang.link} to={lang.link} Active={lang.selected}>{lang.langKey}</WhiteLink>
+  const links = props.langs.map((lang) => {
+    const lanKeys = {
+      tr: 'TR',
+      en: 'EN',
+      zh: '中文'
+    }
+    return (
+      <Item key={lang.link} Active={lang.selected}>
+        <WhiteLink key={lang.link} to={lang.link} >{lanKeys[lang.langKey]}</WhiteLink>
+      </Item>
 		)
-	})
+  })
+  const activeTheme = props.theme
 	 return (
     <Wrapper>
-			{links}
+      <LangContainer>
+			  {links}
+      </LangContainer>
+      <ThemeContainer>
+        <span>
+          {props.theme}
+        </span>
+      </ThemeContainer>
     </Wrapper>
   )
 }
 
-const Wrapper = styled.div`
-  position: absolute;
-  top: 0;
-	text-decoration: none;
-	color: white;
-`
 
 const WhiteLink = styled(Link)`
 	text-decoration: none;
-	color: ${props => (props.Active) ? 'red' : 'white'};
-	margin-right: 10px;
-	margin-left: 10px;
+  padding: 0 5px;
 `
-const Sep = styled.span`
-	width: 10px;
-	height: 10px;
-	background: white;
-	border-left: 1px solid white;
+const Item = styled.div`
+  padding: 15px 5px;
+  & a {
+    color: ${props => (props.Active) ? '#006400' : 'white'};
+    border-bottom: ${props => (props.Active) ? '3px solid #9dffc8' : 'none'};
+  }
+`
+
+const LangContainer = styled.div`
+  margin-bottom: 20px;
+	text-decoration: none;
+  background: ${props => props.theme.colors.firstDark}
+`
+
+const ThemeContainer = styled.div`
+  margin-bottom: 20px;
+	text-decoration: none;
+  background: ${props => props.theme.colors.blue}
+`
+
+const Wrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow:column nowrap;
 `
 
 export default LangNav

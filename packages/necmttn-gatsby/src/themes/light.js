@@ -111,6 +111,6 @@ export default {
   fontFamily,
   mediaQuery,
   topBar,
-  color: colors.white,
-  bg: colors.black,
+  color: colors.black,
+  bg: colors.white,
 };

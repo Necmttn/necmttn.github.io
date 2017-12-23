@@ -62,7 +62,6 @@ export default class Card extends React.Component {
 const CardWrapper = styled.figure`
   max-width: 1200px;
   min-width: 600px;
-  max-height: 600px;
   padding: 3em 1em;
   border: 1px solid white;
   display: flex;

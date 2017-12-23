@@ -1,39 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import * as Icons from './Icons'
 
-export default Icons[name]
+const FlagIcon = () => (
+  <span>
+    <svg id="i-flag" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
+        <path d="M6 2 L6 30 M6 6 L26 6 20 12 26 18 6 18" />
+    </svg>
+  </span>
+)
 
-// export default class Icon extends React.Component {
-//   static propTypes = {
-//     /** Button text color */
-//     color: PropTypes.string,
-//     /** Disables functionalty of the Icon. */
-//     disabled: PropTypes.bool,
-//     /** Name of the icon */
-//     name: PropTypes.string,
-//     /** Scale of the icon */
-// 		stroke: PropTypes.string,
 
-//     scale: PropTypes.number
-//   }
+export default class Icon extends React.Component {
+  static Flag = FlagIcon
 
-//   static defaultProps = {
-//     scale: 1
-//   }
-//   render() {
-//     const {
-//       color,
-//       disabled,
-//       name,
-//       scale,
-// 			stroke
-//     } = this.props
-// 		const Icon = Icons[name]
-//     return (
-// 			<Icon {...this.props} />
-//     )
-//   }
-// }
+  render() {
+    return (
+      <h1>icon</h1>
+    )
+  }
+}
 

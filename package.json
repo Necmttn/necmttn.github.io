@@ -29,5 +29,7 @@
       "<rootDir>/src/"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "styled-theming": "^2.2.0"
+  }
 }

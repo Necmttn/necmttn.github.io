@@ -1,5 +1,5 @@
 import React from 'react'
-import Index from '../components/IndexPage'
+import Index from '../Views/IndexPage'
 import graphql from 'graphql'
 
 export default (props) => <Index {...props} />
