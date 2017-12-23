@@ -14,7 +14,6 @@ const TIL = (props) => {
       </BigHeader>
       <ul>
       {posts.map(post => {
-        console.log(post)
         const content = post.node.html
         const title = post.node.frontmatter.title
         const link = post.node.fields.slug

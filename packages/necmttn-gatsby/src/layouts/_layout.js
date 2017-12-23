@@ -77,9 +77,8 @@ export default class Wrapper extends React.Component {
     const {langs, defaultLangKey} = this.props.data.site.siteMetadata.languages;
     const langKey = getCurrentLangKey(langs, defaultLangKey, url);
 
-    const homeLink = `${langKey}`
+    const homeLink = `/${langKey}/`
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url))
-    console.log(getUrlForLang(homeLink, url))
     const {menu, author, sourceCodeLink} = this.props.data.site.siteMetadata;
     const siteTheme = (this.state.nightMode) ? darkTheme : lightTheme;
     return (
