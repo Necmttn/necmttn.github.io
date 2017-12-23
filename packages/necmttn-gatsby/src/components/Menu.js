@@ -2,29 +2,29 @@ import React from 'react'
 import { Menu } from 'necmttn-component'
 import Link from 'gatsby-link'
 
-const MainMenu = ({menu}) => {
+const MainMenu = ({menu, langKey}) => {
   return (
     <Menu>
-      <Link to="/blog">
+      <Link to={`/${langKey}/blog/`}>
         <Menu.Item>
           Journal
         </Menu.Item>
       </Link>
-      <Link>
+      <Link to={`/${langKey}/til/`}>
         <Menu.Item>
           #TIL
         </Menu.Item>
       </Link>
-      <Link>
+      <Link to={`/${langKey}/photography/`}>
         <Menu.Item>
-          About
+          Photography
         </Menu.Item>
       </Link>
-      <Link>
+      <a href="mailto:necmettin.karakaya@gmail.com">
         <Menu.Item>
-          Contact
+          Email
         </Menu.Item>
-      </Link>
+      </a>
     </Menu>
   )
 }

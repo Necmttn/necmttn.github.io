@@ -27,7 +27,7 @@ const Blog = (props) => {
 
 
 export const pageQuery = graphql`
-  query BlogEnQuery {
+  query BlogZHQuery {
     allMarkdownRemark{
       edges {
         node{

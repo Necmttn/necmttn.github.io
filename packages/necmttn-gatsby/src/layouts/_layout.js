@@ -63,7 +63,8 @@ export default class Wrapper extends React.Component {
           messages={this.props.i18nMessages}>
           <Background>
             <Menu
-              menu={menu}/>
+              menu={menu}
+              langKey={langKey}/>
             <LangNav
               langs={langsMenu}
               homeLink={homeLink}

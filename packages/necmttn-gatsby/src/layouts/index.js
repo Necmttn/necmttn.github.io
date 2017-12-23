@@ -29,15 +29,6 @@ export const pageQuery = graphql`
           email
           defaultLink
         }
-        menu {
-          label
-          slug
-          link
-          items {
-            label
-            slug
-          }
-        }
       }
     }
   }
