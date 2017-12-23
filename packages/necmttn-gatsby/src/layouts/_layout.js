@@ -63,7 +63,6 @@ export default class Wrapper extends React.Component {
   }
 
   changeTheme() {
-    console.log('change theme')
     this.setState({
       nightMode: !this.state.nightMode
     })
@@ -81,6 +80,9 @@ export default class Wrapper extends React.Component {
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url))
     const {menu, author, sourceCodeLink} = this.props.data.site.siteMetadata;
     const siteTheme = (this.state.nightMode) ? darkTheme : lightTheme;
+
+
+    baseStyles() //  Reset CSS
     return (
       <ThemeProvider theme={siteTheme}>
         <IntlProvider

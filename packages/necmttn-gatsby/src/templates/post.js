@@ -28,7 +28,6 @@ const Wrapper = styled.main`
   bottom: 0;
   left: 0;
   opacity: 1;
-  margin-top: ${props => props.theme.topBar.sizes.height}px;
   overflow: auto;
   padding: 1.5em 1.5em 5.5em;
   position: absolute;
