@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import invoke from 'lodash.invoke'
 
 import CardContent from './CardContent'
 import CardHeader from './CardHeader'

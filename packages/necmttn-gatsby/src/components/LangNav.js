@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
-
 const LangNav = (props) => {
   const links = props.langs.map((lang) => {
     const lanKeys = {
@@ -23,8 +22,8 @@ const LangNav = (props) => {
 			  {links}
       </LangContainer>
       <ThemeContainer>
-        <span>
-          {props.theme}
+        <span onClick={() => props.changeTheme()}>
+          {(props.theme)? 'dark' : 'light'}
         </span>
       </ThemeContainer>
     </Wrapper>
@@ -62,6 +61,7 @@ const Wrapper = styled.div`
   left: 0;
   display: flex;
   flex-flow:column nowrap;
+  z-index: 10;
 `
 
 export default LangNav

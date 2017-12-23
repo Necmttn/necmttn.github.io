@@ -62,6 +62,13 @@ export default class Wrapper extends React.Component {
     }
   }
 
+  changeTheme() {
+    console.log('change theme')
+    this.setState({
+      nightMode: !this.state.nightMode
+    })
+  }
+
   render() {
     const { children, location } = this.props
     const url = location.pathname;
@@ -72,6 +79,7 @@ export default class Wrapper extends React.Component {
 
     const homeLink = `${langKey}`
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url))
+    console.log(getUrlForLang(homeLink, url))
     const {menu, author, sourceCodeLink} = this.props.data.site.siteMetadata;
     const siteTheme = (this.state.nightMode) ? darkTheme : lightTheme;
     return (
@@ -85,8 +93,8 @@ export default class Wrapper extends React.Component {
               homeLink={homeLink}
               url={url}
               menu={menu}
-              theme={this.state.theme}
-
+              theme={this.state.nightMode}
+              changeTheme={() => this.changeTheme()}
               isHome={isHome}/>
             {children()}
           </Background>
