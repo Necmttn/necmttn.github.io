@@ -1,0 +1,2 @@
+webpackJsonp([0x5fb65b68e311],{"./node_modules/json-loader/index.js!./.cache/json/zh.json":function(e,t){e.exports={data:{allMarkdownRemark:{edges:[{node:{frontmatter:{title:"Social Media post image sizes.",date:null},fields:{slug:"/zh/til/social-media-post-image-sizes/",langKey:"zh"},excerpt:"这是一个存根。 最可能我没有时间来翻译它. 你为什么不帮我翻译呢？ 它可以是  @yourfirstpr ( https://twitter.com/yourfirstpr"}}]},site:{siteMetadata:{title:"Necmttn"}}},pathContext:{slug:"/zh/",langKey:"zh"}}}});
+//# sourceMappingURL=path---zh-f7da2279f51d9f21f0a0.js.map

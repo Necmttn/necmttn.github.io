@@ -1,0 +1,182 @@
+{
+  "assetsByChunkName": {
+    "path---tr": [
+      "path---tr-231f49eb30675be3d8fa.js",
+      "path---tr-231f49eb30675be3d8fa.js.map"
+    ],
+    "path---en-til-leet-code-add-two-numbers-js": [
+      "path---en-til-leet-code-add-two-numbers-js-fc4f96e71bdbf9b5aefb.js",
+      "path---en-til-leet-code-add-two-numbers-js-fc4f96e71bdbf9b5aefb.js.map"
+    ],
+    "component---src-layouts-en-js": [
+      "component---src-layouts-en-js-21177718d45faaee9bba.js",
+      "component---src-layouts-en-js-21177718d45faaee9bba.js.map"
+    ],
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-330e0ccde19cb1b59f17.js",
+      "component---src-pages-index-js-330e0ccde19cb1b59f17.js.map"
+    ],
+    "component---src-pages-blog-index-en-js": [
+      "component---src-pages-blog-index-en-js-30bfd99515d7dad17eda.js",
+      "component---src-pages-blog-index-en-js-30bfd99515d7dad17eda.js.map"
+    ],
+    "path---en-blog": [
+      "path---en-blog-05624365a88dba80e7c1.js",
+      "path---en-blog-05624365a88dba80e7c1.js.map"
+    ],
+    "path---cv": [
+      "path---cv-cfc3e60f0e8dd8fb06dc.js",
+      "path---cv-cfc3e60f0e8dd8fb06dc.js.map"
+    ],
+    "path---zh-til-social-media-post-image-sizes": [
+      "path---zh-til-social-media-post-image-sizes-ee3e1380aa9db5e9edb6.js",
+      "path---zh-til-social-media-post-image-sizes-ee3e1380aa9db5e9edb6.js.map"
+    ],
+    "path---en-til-how-to-loop-over-map-in-golang": [
+      "path---en-til-how-to-loop-over-map-in-golang-38e7175541a8753de750.js",
+      "path---en-til-how-to-loop-over-map-in-golang-38e7175541a8753de750.js.map"
+    ],
+    "path---": [
+      "path----3e31fcf384684da07de7.js",
+      "path----3e31fcf384684da07de7.js.map"
+    ],
+    "path---en-til-social-media-post-image-sizes": [
+      "path---en-til-social-media-post-image-sizes-8701fe67ca21a617e9dd.js",
+      "path---en-til-social-media-post-image-sizes-8701fe67ca21a617e9dd.js.map"
+    ],
+    "component---src-pages-blog-index-tr-js": [
+      "component---src-pages-blog-index-tr-js-30bfd99515d7dad17eda.js",
+      "component---src-pages-blog-index-tr-js-30bfd99515d7dad17eda.js.map"
+    ],
+    "path---tr-til-how-to-loop-over-map-in-golang": [
+      "path---tr-til-how-to-loop-over-map-in-golang-1acdb82d5cfc4ef543c9.js",
+      "path---tr-til-how-to-loop-over-map-in-golang-1acdb82d5cfc4ef543c9.js.map"
+    ],
+    "path---blog-random-toughts-breakfeast": [
+      "path---blog-random-toughts-breakfeast-51c439845c79282168b8.js",
+      "path---blog-random-toughts-breakfeast-51c439845c79282168b8.js.map"
+    ],
+    "path---zh-blog": [
+      "path---zh-blog-c7ffd9ca532e79219c0a.js",
+      "path---zh-blog-c7ffd9ca532e79219c0a.js.map"
+    ],
+    "path---zh": [
+      "path---zh-f7da2279f51d9f21f0a0.js",
+      "path---zh-f7da2279f51d9f21f0a0.js.map"
+    ],
+    "component---src-pages-blog-index-zh-js": [
+      "component---src-pages-blog-index-zh-js-30bfd99515d7dad17eda.js",
+      "component---src-pages-blog-index-zh-js-30bfd99515d7dad17eda.js.map"
+    ],
+    "component---src-pages-blog-software-index-js": [
+      "component---src-pages-blog-software-index-js-d10bc32762ea0d216e25.js",
+      "component---src-pages-blog-software-index-js-d10bc32762ea0d216e25.js.map"
+    ],
+    "path---blog-software-plop-micro-generator-for-boilerplate-code": [
+      "path---blog-software-plop-micro-generator-for-boilerplate-code-10efe9138e93bf989959.js",
+      "path---blog-software-plop-micro-generator-for-boilerplate-code-10efe9138e93bf989959.js.map"
+    ],
+    "path---blog-software": [
+      "path---blog-software-654d833dfc2d4108d6fa.js",
+      "path---blog-software-654d833dfc2d4108d6fa.js.map"
+    ],
+    "path---page-2": [
+      "path---page-2-3cff5bbdaa10cbe72f9a.js",
+      "path---page-2-3cff5bbdaa10cbe72f9a.js.map"
+    ],
+    "component---src-layouts-zh-js": [
+      "component---src-layouts-zh-js-5adb23a9044bc961e54a.js",
+      "component---src-layouts-zh-js-5adb23a9044bc961e54a.js.map"
+    ],
+    "path---index": [
+      "path---index-d1eea2b6e7001164e202.js",
+      "path---index-d1eea2b6e7001164e202.js.map"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
+      "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
+    ],
+    "commons": [
+      "commons-d50c39cf6fa46a731691.js",
+      "commons-d50c39cf6fa46a731691.js.map"
+    ],
+    "path---en-til": [
+      "path---en-til-35c0b2e2d391c9719c4b.js",
+      "path---en-til-35c0b2e2d391c9719c4b.js.map"
+    ],
+    "path---blog-random-toughts-growing-up-fast": [
+      "path---blog-random-toughts-growing-up-fast-b9a4e2bf2e4357bee4a3.js",
+      "path---blog-random-toughts-growing-up-fast-b9a4e2bf2e4357bee4a3.js.map"
+    ],
+    "component---src-pages-index-en-js": [
+      "component---src-pages-index-en-js-95a985b0655d8fd66851.js",
+      "component---src-pages-index-en-js-95a985b0655d8fd66851.js.map"
+    ],
+    "path---blog-software-gatsbyjs-zero-to-hero-02": [
+      "path---blog-software-gatsbyjs-zero-to-hero-02-79028e5336fb0480e2f3.js",
+      "path---blog-software-gatsbyjs-zero-to-hero-02-79028e5336fb0480e2f3.js.map"
+    ],
+    "component---src-templates-post-js": [
+      "component---src-templates-post-js-fbd03ff4983a67d87d6a.js",
+      "component---src-templates-post-js-fbd03ff4983a67d87d6a.js.map"
+    ],
+    "path---blog-software-gatsbyjs-zero-to-hero-03": [
+      "path---blog-software-gatsbyjs-zero-to-hero-03-911bff3bf3e2161aca30.js",
+      "path---blog-software-gatsbyjs-zero-to-hero-03-911bff3bf3e2161aca30.js.map"
+    ],
+    "component---src-pages-index-zh-js": [
+      "component---src-pages-index-zh-js-95a985b0655d8fd66851.js",
+      "component---src-pages-index-zh-js-95a985b0655d8fd66851.js.map"
+    ],
+    "component---src-pages-page-2-js": [
+      "component---src-pages-page-2-js-f59fe71baea7dfb9c25a.js",
+      "component---src-pages-page-2-js-f59fe71baea7dfb9c25a.js.map"
+    ],
+    "path---tr-blog": [
+      "path---tr-blog-13d1b7f4af8dfe312357.js",
+      "path---tr-blog-13d1b7f4af8dfe312357.js.map"
+    ],
+    "path---tr-til-social-media-post-image-sizes": [
+      "path---tr-til-social-media-post-image-sizes-2ce5520cd37baba6b06e.js",
+      "path---tr-til-social-media-post-image-sizes-2ce5520cd37baba6b06e.js.map"
+    ],
+    "path---blog-software-gatsbyjs-zero-to-hero-01": [
+      "path---blog-software-gatsbyjs-zero-to-hero-01-246c0126e3dc5ce9bd63.js",
+      "path---blog-software-gatsbyjs-zero-to-hero-01-246c0126e3dc5ce9bd63.js.map"
+    ],
+    "app": [
+      "app-06f806c99aa0076cff79.js",
+      "build-js-styles.css",
+      "app-06f806c99aa0076cff79.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---zh-til-leet-code-add-two-numbers-js": [
+      "path---zh-til-leet-code-add-two-numbers-js-60c234526110ac444b62.js",
+      "path---zh-til-leet-code-add-two-numbers-js-60c234526110ac444b62.js.map"
+    ],
+    "path---tr-til-leet-code-add-two-numbers-js": [
+      "path---tr-til-leet-code-add-two-numbers-js-62e778b966390f1516e7.js",
+      "path---tr-til-leet-code-add-two-numbers-js-62e778b966390f1516e7.js.map"
+    ],
+    "component---src-pages-til-index-en-js": [
+      "component---src-pages-til-index-en-js-ef0734f6de9ae5d57d97.js",
+      "component---src-pages-til-index-en-js-ef0734f6de9ae5d57d97.js.map"
+    ],
+    "path---en": [
+      "path---en-45b93542eec25104197e.js",
+      "path---en-45b93542eec25104197e.js.map"
+    ],
+    "path---404": [
+      "path---404-9afb230f4d1be55068f6.js",
+      "path---404-9afb230f4d1be55068f6.js.map"
+    ],
+    "component---src-layouts-tr-js": [
+      "component---src-layouts-tr-js-b10198d3616dfdab94d1.js",
+      "component---src-layouts-tr-js-b10198d3616dfdab94d1.js.map"
+    ],
+    "component---src-pages-index-tr-js": [
+      "component---src-pages-index-tr-js-95a985b0655d8fd66851.js",
+      "component---src-pages-index-tr-js-95a985b0655d8fd66851.js.map"
+    ]
+  }
+}

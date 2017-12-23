@@ -1,0 +1,2 @@
+webpackJsonp([0x7b71d9db271c],{"./node_modules/json-loader/index.js!./.cache/json/page-2.json":function(e,n){e.exports={pathContext:{slug:"/page-2/",langKey:"en"}}}});
+//# sourceMappingURL=path---page-2-3cff5bbdaa10cbe72f9a.js.map
