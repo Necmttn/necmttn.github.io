@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
+import { Dark, Light, baseStyles } from 'necmttn-component'
+
 import LangNav from '../components/LangNav'
-import reset from 'styled-reset'
-import darkTheme from '../themes/dark'
-import lightTheme from '../themes/light'
+import Menu from '../components/Menu'
 import {IntlProvider} from 'react-intl'
-require('../themes/prism-darcula.css')
+require('necmttn-component/src/style/prism-darcula.css')
 
 import {
   getLangs,
@@ -15,33 +15,6 @@ import {
   getCurrentLangKey,
   isHomePage
 } from 'ptz-i18n'
-
-
-const baseStyles = () => injectGlobal`
-  ${reset}
-  // if you have another global style add here.
-
-  h1 {
-    font-size: 2.0rem;
-    line-height: 2.4rem;
-    padding-bottom: 0.1rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-    line-height: 1.6rem;
-  }
-
-  h3 {
-    font-size: 1.6rem;
-    line-height: 1.6rem;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.6rem;
-  }
-`
 
 const Background = styled.div`
   background-color: ${props => props.theme.bg};
@@ -79,7 +52,7 @@ export default class Wrapper extends React.Component {
     const homeLink = `/${langKey}/`
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url))
     const {menu, author, sourceCodeLink} = this.props.data.site.siteMetadata;
-    const siteTheme = (this.state.nightMode) ? darkTheme : lightTheme;
+    const siteTheme = (this.state.nightMode) ? Dark : Light;
 
 
     baseStyles() //  Reset CSS
@@ -89,6 +62,8 @@ export default class Wrapper extends React.Component {
           locale={langKey}
           messages={this.props.i18nMessages}>
           <Background>
+            <Menu
+              menu={menu}/>
             <LangNav
               langs={langsMenu}
               homeLink={homeLink}

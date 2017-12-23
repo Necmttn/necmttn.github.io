@@ -27,7 +27,7 @@ const colors = {
   red: '#FF0000',
   darkBlue: '#587B7F',
   blue: '#1E92CE', //monzilla
-  green: '#9FE80C',
+  green: '#9dffc8',
   gray: '#393E41',
   darkGray: '#252423', //http://www.theworkshop.ch
   blackShades: [
