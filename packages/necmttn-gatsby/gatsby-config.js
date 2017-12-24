@@ -49,21 +49,23 @@ module.exports = {
       options: {
         langKeyForNull: 'any',
         langKeyDefault: 'en',
+        langKeys: siteMetadata.languages,
         useLangKeyLayout: true,
         markdownRemark: {
           postPage: 'src/templates/post.js',
           query: `
           {
-              allMarkdownRemark {
-                  edges {
-                  node {
-                      fields {
-                      slug,
-                      langKey
-                      }
+            allMarkdownRemark {
+              edges {
+                node {
+                  fields {
+                    slug,
+                    langKey
+                    path
                   }
-                  }
+                }
               }
+            }
           }
           `
         }

@@ -1,16 +1,10 @@
 ---
-title: Social Media post image sizes.
-createdDate: "2017-12-17"
-author: Necmettin Karakaya
-tags:
-- socialmedia
-- facebook
-- twitter
-- instagram
-image: welcoming.png
-draft: false
-til: true
+title: GoLang'de Objenin keyleri maplenir ?
 
+tags:
+  - golang
+til: true
+draft: true
 ---
 
 这是一个存根。 最可能我没有时间来翻译它.  

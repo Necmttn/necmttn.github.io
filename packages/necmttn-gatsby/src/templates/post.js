@@ -1,13 +1,32 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Article } from 'necmttn-component'
-
+import TranslateMe from '../components/TranslateMe'
 const PostRoute = (props) => {
-  const data = props.data.markdownRemark
+  console.log(props)
+  const allPost = props.data.allMarkdownRemark.edges
+  let curLocationData = allPost.filter(post => post.node.fields.slug === props.location.pathname)
+  const fallBackData = allPost.filter(post => {
+    if(post.node.fields.slug === post.node.fields.path) {
+      return post // if no langkey exist
+    }else {
+      return post.node.fields.slug.includes('/en/')
+    }
+  })[0].node
+  let data, draft
+  if (curLocationData.length > 0) {
+    data = curLocationData[0].node
+    draft = data.frontmatter.draft
+  } else {
+    data = fallBackData
+    draft = true
+  }
+  const { langKey, regexPath }  = props.pathContext;
+  const relativePath = `${regexPath}index.${langKey}.md`
   const isTIL = data.frontmatter.til
-  // const Wrapper = (isTIL) ? TILContainer : BlogContainer
   return (
     <Wrapper>
+      {(draft) ? <TranslateMe currentLangKey={langKey} relativePath={relativePath} /> : '' }
       <Article post={data}></Article>
     </Wrapper>
   )
@@ -45,37 +64,55 @@ const Wrapper = styled.main`
   }
 `;
 
-
-const BlogContainer = styled.div`
-  flex-flow: column nowrap;
-  padding: 30px 10vw;
-  width: 600px;
-  justify-content: center;
-  align-items: center;
-`
-
-
-const TILContainer = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 30px 10vw;
-  height: 100vh;
-  justify-content: flex-start;
-  align-items: flex-start;
-`
-
 export default PostRoute
 
+// export const pageQuery = graphql`
+//   query blogpostbypath($path: String!) {
+//     markdownRemark(fields: {slug: {eq: $path}}) {
+//       html
+//       excerpt
+//       fields {
+//         langKey
+//         path
+//         slug
+//       }
+//       frontmatter {
+//         title
+//         til
+//         draft
+//       }
+//     }
+//   }
+// `;
+
+
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(fields: {slug: {eq: $path}}) {
-      fileAbsolutePath
-      html
-      excerpt
-      frontmatter {
-        title
-        til
+  query blogpostbypath($regexPath: String!) {
+    allMarkdownRemark(
+      filter: {
+        fields: {
+          path: {
+            regex: $regexPath
+          }
+        }
+      }
+    ) {
+    	edges{
+        node {
+      		fields {
+            langKey
+            slug
+            path
+          }
+          html
+          excerpt
+          frontmatter {
+            title
+            til
+            draft
+          }
+        }
       }
     }
   }
-`;
+`
