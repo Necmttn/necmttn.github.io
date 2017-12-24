@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl'
 import { Button } from 'necmttn-component'
 
 const TranslateMe = (props) => {
-  const  {currentLangKey, relativePath} = props
+  const {currentLangKey, relativePath, fileExist} = props
   const message = () => {
     switch (currentLangKey) {
       case 'en':
@@ -24,12 +24,18 @@ const TranslateMe = (props) => {
                 Why don't you help me to translate it.`
     }
   }
+
+  // edit link
+  let editLink
+  if (fileExist) {
+    editLink = `https://github.com/necmttn/necmttn.github.io/blob/dev/packages/necmttn-gatsby/src/pages/${relativePath}/index.${currentLangKey}.md`
+  } else {
+    editLink = `https://github.com/Necmttn/necmttn.github.io/new/dev/packages/necmttn-gatsby/src/pages?filename=${relativePath}/index.${currentLangKey}.md`
+  }
   return (
     <Wrapper>
       <h2>{message()}</h2>
-      <a href={`https://github.com/necmttn/necmttn.github.io/blob/dev/packages/necmttn-gatsby/src/pages${
-        relativePath
-      }`}> Edit On Github </a>
+      <a href={editLink}> Edit On Github </a>
     </Wrapper>
   )
 }

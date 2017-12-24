@@ -13,25 +13,26 @@ const PostRoute = (props) => {
       return post.node.fields.slug.includes('/en/')
     }
   })[0].node
-  let data, draft
+  let data, draft, fileExist
   if (curLocationData.length > 0) {
     data = curLocationData[0].node
     draft = data.frontmatter.draft
+    fileExist = true
   } else {
     data = fallBackData
     draft = true
+    fileExist = false
   }
   const { langKey, regexPath }  = props.pathContext;
-  const relativePath = `${regexPath}index.${langKey}.md`
+  const relativePath = regexPath.slice(0, -1).substr(1)
   const isTIL = data.frontmatter.til
   return (
     <Wrapper>
-      {(draft) ? <TranslateMe currentLangKey={langKey} relativePath={relativePath} /> : '' }
+      {(draft) ? <TranslateMe currentLangKey={langKey} relativePath={relativePath} fileExist={fileExist} /> : '' }
       <Article post={data}></Article>
     </Wrapper>
   )
 }
-
 
 const wrapperShowUp = keyframes`
   0% {
