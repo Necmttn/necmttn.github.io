@@ -49,7 +49,7 @@ module.exports = {
       options: {
         langKeyForNull: 'any',
         langKeyDefault: 'en',
-        langKeys: siteMetadata.languages,
+        langKeys: siteMetadata.languages.langs,
         useLangKeyLayout: true,
         markdownRemark: {
           postPage: 'src/templates/post.js',
