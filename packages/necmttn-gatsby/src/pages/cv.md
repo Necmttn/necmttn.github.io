@@ -12,7 +12,7 @@ href="https://github.com/Necmttn">@necmttn</a>
 </div>
 
 
-## ~$ whoaminm
+## ~$ whoami
 Life long learner, Wannabe polyglot, self-taught software engineer. Early riser. Currently working at [Mesh](http://meshtech.co).  Meanwhile he is creator and organizator of local Events like *Idea Exchange*(weekly event) , *Guangzhou Software Developers Meetup* (monthly),  *Guangzhou Outdoor Sports Club*. 
 ### Specialized in
  - ReactjS,
