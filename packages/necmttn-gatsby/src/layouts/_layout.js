@@ -31,14 +31,38 @@ export default class Wrapper extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      nightMode: true
+      darkMode: false
     }
   }
 
   changeTheme() {
-    this.setState({
-      nightMode: !this.state.nightMode
-    })
+    const pref = this.getPref()
+    const temp = {
+      darkMode: !pref.darkMode
+    }
+    this.setState(temp)
+    this.setPref(temp)
+  }
+
+  setDefaultPref() {
+    const defaultPref = {
+      darkMode: false
+    }
+    this.setPref(defaultPref)
+  }
+  getPref() {
+    return JSON.parse(localStorage.getItem('pref'))
+  }
+
+  setPref(jsObject) {
+    localStorage.setItem('pref', JSON.stringify(jsObject))
+  }
+
+  componentWillMount() {
+    const pref = JSON.parse(localStorage.getItem('pref'))
+    if(pref === null) {
+      this.setDefaultPref()
+    }
   }
 
   render() {
@@ -51,7 +75,8 @@ export default class Wrapper extends React.Component {
     const homeLink = `/${langKey}/`
     const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url))
     const {menu, author, sourceCodeLink} = this.props.data.site.siteMetadata;
-    const siteTheme = (this.state.nightMode) ? Dark : Light;
+    const pref = this.getPref()
+    const siteTheme = (pref.darkMode) ? Dark : Light;
 
 
     baseStyles() //  Reset CSS
@@ -69,7 +94,7 @@ export default class Wrapper extends React.Component {
               homeLink={homeLink}
               url={url}
               menu={menu}
-              theme={this.state.nightMode}
+              theme={pref.darkMode}
               changeTheme={() => this.changeTheme()}
               isHome={isHome}/>
             {children()}

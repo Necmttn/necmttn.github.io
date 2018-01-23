@@ -58,8 +58,8 @@ module.exports = {
                   edges {
                   node {
                       fields {
-                      slug,
-                      langKey
+                        slug,
+                        langKey
                       }
                   }
                   }
