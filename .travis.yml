@@ -32,5 +32,9 @@ deploy:
     on:
       branch: dev
 
+branches:
+  only:
+  - dev
+
 notifications:
   slack: baseglobal:KxtArmRFfzZ7DGi1zVABMJ9s:KxtArmRFfzZ7DGi1zVABMJ9s#deployment
