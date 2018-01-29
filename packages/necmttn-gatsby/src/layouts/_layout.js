@@ -18,13 +18,14 @@ import {
 
 const Background = styled.div`
   background-color: ${props => props.theme.bg};
+  font-family: ${props => props.theme.fontFamily};
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-  min-height: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
-  color: #222222;
+  color: ${props => props.theme.color};
 `
 
 export default class Wrapper extends React.Component {
@@ -63,6 +64,8 @@ export default class Wrapper extends React.Component {
     if(pref === null) {
       this.setDefaultPref()
     }
+
+    baseStyles() //  Reset CSS
   }
 
   render() {
@@ -78,8 +81,6 @@ export default class Wrapper extends React.Component {
     const pref = this.getPref()
     const siteTheme = (pref.darkMode) ? Dark : Light;
 
-
-    baseStyles() //  Reset CSS
     return (
       <ThemeProvider theme={siteTheme}>
         <IntlProvider
@@ -88,6 +89,7 @@ export default class Wrapper extends React.Component {
           <Background>
             <Menu
               menu={menu}
+              isHome={isHome}
               langKey={langKey}/>
             <LangNav
               langs={langsMenu}

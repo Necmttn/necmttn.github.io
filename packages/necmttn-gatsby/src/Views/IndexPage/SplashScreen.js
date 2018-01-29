@@ -88,7 +88,6 @@ const TextBodyContainer = styled.div`
 `
 
 const Section = styled.section`
-  background: #1e2328;
   width: 100%;
   height: 95vh;
   display: flex;
@@ -113,6 +112,6 @@ const MagicLink = styled.a`
   border-bottom: 3px solid #9dffc8;
   margin-left: 5px;
   text-decoration: none;
-  color: #fff
+  color: ${props => props.theme.color}
 `
 export default SplashScreen

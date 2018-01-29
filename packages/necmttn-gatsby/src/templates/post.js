@@ -25,14 +25,10 @@ const wrapperShowUp = keyframes`
 
 const Wrapper = styled.main`
   background: ${props => props.theme.post.backgrounds.wrapper};
-  bottom: 0;
-  left: 0;
   opacity: 1;
   overflow: auto;
   padding: 1.5em 1.5em 5.5em;
-  position: absolute;
-  right: 0;
-  top: 0;
+  height: 100%;
   @media screen and (min-width: ${props => props.theme.mediaQueryTresholds.M}) {
     animation-name: ${wrapperShowUp};
     animation-duration: 5s;

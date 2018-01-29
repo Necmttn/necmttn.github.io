@@ -45,9 +45,9 @@ export default class Item extends React.Component {
     } = this.props
     return (
       <ItemWrapper onClick={this.handleClick} active={active} color={color}>
-        <h1>
+        <h3>
           {children}
-        </h1>
+        </h3>
       </ItemWrapper>
     )
   }
@@ -56,9 +56,12 @@ export default class Item extends React.Component {
 
 
 const ItemWrapper = styled.div`
-  border-bottom: 1px solid black;
   display: flex;
   margin: 0 10px;
   justify-content: center;
-  color: ${props => props.theme.colors.green}
+  color: ${props => props.theme.colors.green};
+  font-size: 
+  &:hover {
+    border-bottom: 1px solid ${props => props.theme.colors.green};
+  }
 `

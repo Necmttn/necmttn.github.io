@@ -2,7 +2,7 @@ import React from 'react'
 import { Menu } from 'necmttn-component'
 import Link from 'gatsby-link'
 
-const MainMenu = ({menu, langKey}) => {
+const MainMenu = ({menu, langKey, isHome}) => {
   return (
     <Menu>
       <Link to={`/${langKey}/blog/`}>
@@ -15,6 +15,13 @@ const MainMenu = ({menu, langKey}) => {
           #TIL
         </Menu.Item>
       </Link>
+      { (isHome)? '' :
+        <Link to={`/${langKey}/`}>
+          <Menu.Item>
+            @Necmttn
+          </Menu.Item>
+        </Link>
+      }
       <Link to={`/${langKey}/photography/`}>
         <Menu.Item>
           Photography
@@ -30,4 +37,4 @@ const MainMenu = ({menu, langKey}) => {
 }
 
 
-export default MainMenu 
+export default MainMenu

@@ -20,9 +20,12 @@ const MenuWrapper = styled.div`
   width: 100%;
   height: 100px;
   display: flex;
-  position: absolute;
+  position: relative;
   align-items: center;
   justify-content: center;
+  a:link {
+    text-decoration: none;
+  }
 `
 
 

@@ -62,8 +62,8 @@ const post = {
     linkHover: colors.firstLight,
     meta: colors.middle,
     metaBorder: colors.first,
-    text: colors.dark,
-    title: colors.middle,
+    text: colors.light,
+    title: colors.bright,
     subTitle: colors.superDark
   },
   backgrounds: {
