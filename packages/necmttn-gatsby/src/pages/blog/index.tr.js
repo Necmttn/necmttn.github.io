@@ -2,7 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const Blog = (props) => {
-  const posts = props.data.allMarkdownRemark.edges
+  const data = props.data.allMarkdownRemark
+  const posts = (data) ? data.edges : []
 
   return (
     <div>
@@ -28,7 +29,15 @@ const Blog = (props) => {
 
 export const pageQuery = graphql`
   query BlogTRQuery {
-    allMarkdownRemark{
+    allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          til: {ne: true}
+          draft: {ne: true}
+        }
+        fields: {langKey: {eq: "tr" }}
+      }
+    ){
       edges {
         node{
           id
