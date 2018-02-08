@@ -27,7 +27,6 @@ const Wrapper = styled.main`
   background: ${props => props.theme.post.backgrounds.wrapper};
   opacity: 1;
   overflow: auto;
-  padding: 1.5em 1.5em 5.5em;
   height: 100%;
   @media screen and (min-width: ${props => props.theme.mediaQueryTresholds.M}) {
     animation-name: ${wrapperShowUp};
@@ -41,24 +40,6 @@ const Wrapper = styled.main`
   }
 `;
 
-
-const BlogContainer = styled.div`
-  flex-flow: column nowrap;
-  padding: 30px 10vw;
-  width: 600px;
-  justify-content: center;
-  align-items: center;
-`
-
-
-const TILContainer = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 30px 10vw;
-  height: 100vh;
-  justify-content: flex-start;
-  align-items: flex-start;
-`
 
 export default PostRoute
 

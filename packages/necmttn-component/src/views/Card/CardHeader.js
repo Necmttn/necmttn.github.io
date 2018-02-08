@@ -9,11 +9,10 @@ const Header = ({children, LinkComp, to}) => (
 
 const Wrapper = styled.div`
   display: flex;
-  width: 100%;
   align-items: flex-start;
   padding: 10px;
   & h1 {
-    color: white;
+    color: ${props => props.theme.dark};
     text-decoration: none;
     font-weight: 800;
   }

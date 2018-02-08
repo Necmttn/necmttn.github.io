@@ -40,11 +40,10 @@ const TIL = (props) => {
 
 const Wrapper = styled.div`
   height: 100%;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
-  padding: 50px 30px;
 `
 
 const BigHeader = styled.h1`
