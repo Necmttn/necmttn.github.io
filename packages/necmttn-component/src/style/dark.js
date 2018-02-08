@@ -25,7 +25,7 @@ const colors = {
   black: '#1E2019', // #393E41
   yellow: '#E2C044',
   red: '#FF0000',
-  darkBlue: '#587B7F',
+  darkBlue: '#061F2F', // Docker
   blue: '#1E92CE', //monzilla
   green: '#9dffc8',
   gray: '#393E41',
@@ -112,5 +112,5 @@ export default {
   mediaQuery,
   topBar,
   color: colors.white,
-  bg: colors.black,
+  bg: colors.darkBlue,
 };

@@ -7,6 +7,7 @@ import { Dark, Light, baseStyles } from 'necmttn-component'
 import LangNav from '../components/LangNav'
 import Menu from '../components/Menu'
 import {IntlProvider} from 'react-intl'
+import {Helmet} from "react-helmet";
 require('necmttn-component/src/style/prism-darcula.css')
 
 import {
@@ -27,6 +28,8 @@ const Background = styled.div`
   overflow-x: hidden;
   color: ${props => props.theme.color};
 `
+
+
 
 export default class Wrapper extends React.Component {
   constructor(props){
@@ -94,6 +97,10 @@ export default class Wrapper extends React.Component {
           locale={langKey}
           messages={this.props.i18nMessages}>
           <Background>
+            <Helmet>
+              <meta charSet="utf-8" />
+              <title>Necmettin Karakaya</title>
+            </Helmet>
             <Menu
               menu={menu}
               isHome={isHome}

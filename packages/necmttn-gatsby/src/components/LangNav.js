@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
+const FontAwesome = 'react-fontawesome'
 
 const LangNav = (props) => {
   const links = props.langs.map((lang) => {
@@ -23,7 +24,7 @@ const LangNav = (props) => {
       </LangContainer>
       <ThemeContainer>
         <span onClick={() => props.changeTheme()}>
-          {(props.theme)? 'dark' : 'light'}
+          {(props.theme) ? <span>😎</span> : <span>🌙</span>}
         </span>
       </ThemeContainer>
     </Wrapper>
@@ -46,13 +47,16 @@ const Item = styled.div`
 const LangContainer = styled.div`
   margin-bottom: 20px;
 	text-decoration: none;
-  background: ${props => props.theme.colors.firstDark}
 `
 
 const ThemeContainer = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 	text-decoration: none;
-  background: ${props => props.theme.colors.blue}
+  padding: 3px;
+  color: yellow;
+  margin: 0 auto;
+  font-size: 27px;
+  }
 `
 
 const Wrapper = styled.div`
@@ -62,6 +66,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow:column nowrap;
   z-index: 10;
+  background: ${props => props.theme.colors.firstDark}
 `
 
 export default LangNav

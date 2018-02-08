@@ -33,8 +33,7 @@ class SplashScreen extends React.Component {
             Hello, <br/>
             I am Necmettin Karakaya <br />
             self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </MagicWord> <br/>
-            Currently hacking Drone & IOT at <MagicLink target="_blank" href="http://meshtech.co/"><span className="Mesh">Mesh</span></MagicLink> <br/>
-            building cross platform app for UAV devices. </p>
+          </p>
           <p> Life-long learner, pure geek </p>
         </TextBodyContainer>
       ),
@@ -44,8 +43,7 @@ class SplashScreen extends React.Component {
             你好, <br/>
             I am Necmettin Karakaya <br />
             self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </MagicWord> <br/>
-            Currently working at <MagicLink target="_blank" href="http://kiwiinc.net/"><span className="Mesh">Mesh</span></MagicLink> <br/>
-            building cross platform app for UAV devices. </p>
+          </p>
           <p> Life-long learner, pure geek </p>
         </TextBodyContainer>
       ),
@@ -55,8 +53,7 @@ class SplashScreen extends React.Component {
             Merhaba, <br/>
             I am Necmettin Karakaya <br />
             self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </MagicWord> <br/>
-            Currently working at <MagicLink target="_blank" href="http://kiwiinc.net/"><span className="Mesh">Mesh</span></MagicLink> <br/>
-            building cross platform app for UAV devices. </p>
+          </p>
           <p> Life-long learner, pure geek </p>
         </TextBodyContainer>
       )
@@ -82,12 +79,32 @@ const TextBodyContainer = styled.div`
   margin-left: 10vw;
   display: flex;
   align-items: flex-start;
+  text-align: left;
   justify-content: space-between;
   flex-flow: column nowrap;
-  p {
-    font-size: 4em;
-    line-height: 1.2em;
+  @media ${props => props.theme.mediaQuery.small} {
+    p {
+      font-size: 2em;
+      line-height: 1.05em;
+    }
   }
+  @media ${props => props.theme.mediaQuery.Medium} {
+    p {
+      font-size: 2.5em;
+      line-height: 1.10em;
+    }
+  }
+  @media ${props => props.theme.mediaQuery.Desktop} {
+    p {
+      font-size: 3em;
+      line-height: 1.15em;
+    }
+  }
+  @media ${props => props.theme.mediaQuery.HD} {
+    p {
+      font-size: 4em;
+      line-height: 1.2em;
+    }
 `
 
 const Section = styled.section`
