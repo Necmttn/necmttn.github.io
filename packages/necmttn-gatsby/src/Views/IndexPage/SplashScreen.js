@@ -3,13 +3,19 @@ import styled from 'styled-components'
 import coding from '../../pages/gifs/coding.gif'
 import Link from 'gatsby-link'
 import { FlickerText } from 'necmttn-component'
+import * as t from '../../components/Message'
+
+
+
+
 
 
 class SplashScreen extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      code: false
+      code: false,
+      translate: {}
     }
   }
 
@@ -24,50 +30,28 @@ class SplashScreen extends React.Component {
       [name]: false
     })
   }
+  componentWillMount() {
+    this.setState({
+      translate: ({
+        hello: t.hello
+      })
+    })
+  }
 
-  getWelcomeMsg = () => {
-    return {
-      en: (
-        <TextBodyContainer>
-          <p>
-            Hello, <br/>
-            I am Necmettin Karakaya <br />
-            self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </MagicWord> <br/>
-            Currently hacking Drone & IOT at <MagicLink target="_blank" href="http://meshtech.co/"><span className="Mesh">Mesh</span></MagicLink> <br/>
-            building cross platform app for UAV devices. </p>
-          <p> Life-long learner, pure geek </p>
-        </TextBodyContainer>
-      ),
-      zh: (
-        <TextBodyContainer>
-          <p>
-            你好, <br/>
-            I am Necmettin Karakaya <br />
-            self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </MagicWord> <br/>
-            Currently working at <MagicLink target="_blank" href="http://kiwiinc.net/"><span className="Mesh">Mesh</span></MagicLink> <br/>
-            building cross platform app for UAV devices. </p>
-          <p> Life-long learner, pure geek </p>
-        </TextBodyContainer>
-      ),
-      tr: (
-        <TextBodyContainer>
-          <p>
-            Merhaba, <br/>
-            I am Necmettin Karakaya <br />
-            self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </MagicWord> <br/>
-            Currently working at <MagicLink target="_blank" href="http://kiwiinc.net/"><span className="Mesh">Mesh</span></MagicLink> <br/>
-            building cross platform app for UAV devices. </p>
-          <p> Life-long learner, pure geek </p>
-        </TextBodyContainer>
-      )
-    };
-  };
   render() {
     return (
       <Section>
-        <FlickerText max={20}>
-        {this.getWelcomeMsg()[this.props.currentLangKey]}
+    <TextBodyContainer>
+        <FlickerText max={40}>
+      <p>
+        {this.state.translate.hello}, <br />
+        {t.im} Necmettin Karakaya<br />
+        {t.selfTought}
+        <MagicWord onMouseEnter={() => props.mouseEnter('code')} onMouseLeave={() => props.mouseLeave('code')}> {t.developer} </MagicWord> <br/>
+      </p>
+      <p> {t.lifeLong} </p>
         </FlickerText>
+    </TextBodyContainer>
         <GifBodyContainer>
           <GifWrapper src={coding} display={this.state.code}/>
         </GifBodyContainer>
@@ -84,9 +68,29 @@ const TextBodyContainer = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   flex-flow: column nowrap;
-  p {
-    font-size: 4em;
-    line-height: 1.2em;
+  @media ${props => props.theme.mediaQuery.small} {
+    p {
+      font-size: 2em;
+      line-height: 1.05em;
+    }
+  }
+  @media ${props => props.theme.mediaQuery.Medium} {
+    p {
+      font-size: 2.5em;
+      line-height: 1.10em;
+    }
+  }
+  @media ${props => props.theme.mediaQuery.Desktop} {
+    p {
+      font-size: 3em;
+      line-height: 1.15em;
+    }
+  }
+  @media ${props => props.theme.mediaQuery.HD} {
+    p {
+      font-size: 4em;
+      line-height: 1.2em;
+    }
   }
 `
 
