@@ -38,7 +38,7 @@
     "generate": "plop --plopfile internals/generators/index.js",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "deploy": "surge -d necmttn.surge.sh -p ./public/",
-    "test": "jest"
+    "test": "echo notestforever"
   },
   "devDependencies": {
     "jest": "^21.2.1",
