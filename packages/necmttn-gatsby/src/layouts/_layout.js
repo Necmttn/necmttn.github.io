@@ -52,15 +52,19 @@ export default class Wrapper extends React.Component {
     this.setPref(defaultPref)
   }
   getPref() {
-    return JSON.parse(localStorage.getItem('pref'))
+    if (localStorage) {
+      return JSON.parse(localStorage.getItem('pref'))
+    }
   }
 
   setPref(jsObject) {
-    localStorage.setItem('pref', JSON.stringify(jsObject))
+    if (localStorage) {
+      return localStorage.setItem('pref', JSON.stringify(jsObject))
+    }
   }
 
   componentWillMount() {
-    const pref = JSON.parse(localStorage.getItem('pref'))
+    const pref = this.getPref()
     if(pref === null) {
       this.setDefaultPref()
     }

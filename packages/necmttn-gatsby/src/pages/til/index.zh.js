@@ -53,14 +53,14 @@ const BigHeader = styled.h1`
 
 
 export const tilEnQuery = graphql`
-query tilEnQuery{
+query tilZhQuery{
 	allMarkdownRemark(
     filter: {
       frontmatter: {
         til: {eq: true}
         draft: {ne: true}
       }
-      fields: {langKey: {eq: "en" }}
+      fields: {langKey: {eq: "zh" }}
   	}
   ) {
 	  edges {
