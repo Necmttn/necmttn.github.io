@@ -28,7 +28,15 @@ const Blog = (props) => {
 
 export const pageQuery = graphql`
   query BlogEnQuery {
-    allMarkdownRemark{
+    allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          til: {ne: true}
+          draft: {ne: true}
+        }
+        fields: {langKey: {eq: "en" }}
+      }
+    ){
       edges {
         node{
           id
