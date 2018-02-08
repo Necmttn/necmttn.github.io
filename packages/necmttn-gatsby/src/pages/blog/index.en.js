@@ -2,7 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 const Blog = (props) => {
-  const posts = props.data.allMarkdownRemark.edges
+  const data = props.data.allMarkdownRemark
+  const posts = (data) ? data.edges : []
 
   return (
     <div>

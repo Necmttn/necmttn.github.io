@@ -55,6 +55,9 @@ export default class Wrapper extends React.Component {
     if (typeof window !== 'undefined') {
       return JSON.parse(localStorage.getItem('pref'))
     }
+    return {
+      darkMode: false
+    }
   }
 
   setPref(jsObject) {

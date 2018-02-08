@@ -83,8 +83,11 @@ const TextBodyContainer = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  line-height: 25px;
   flex-flow: column nowrap;
+  p {
+    font-size: 4em;
+    line-height: 1.2em;
+  }
 `
 
 const Section = styled.section`
@@ -97,7 +100,9 @@ const Section = styled.section`
 
 const GifBodyContainer = styled.div`
   margin-left: auto;
-	margin-right: 10vw;
+  margin-right: 10vw;
+  position: absolute;
+
 `
 const GifWrapper = styled.img`
   display: ${props => props.display ? 'block' : 'none' }
