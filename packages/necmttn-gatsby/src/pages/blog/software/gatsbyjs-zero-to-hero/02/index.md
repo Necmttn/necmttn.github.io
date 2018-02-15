@@ -3,7 +3,7 @@ title: Gatsby.JS Zero-to-Hero - Schedule
 date: '2017-10-08'
 layout: post
 draft: false
-tags: gatsby
+tags: ["javascript", "gatsby"]
 ---
 
 As i said earlier we gonna build this website from strach which mean we will not use any premade starters nor css frameworks.

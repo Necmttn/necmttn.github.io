@@ -2,11 +2,7 @@
 title: Social Media post image sizes.
 createdDate: "2017-12-17"
 author: Necmettin Karakaya
-tags:
-- socialmedia
-- facebook
-- twitter
-- instagram
+tags: [ "socialmedia", "facebook", twitter", "instagram" ]
 image: welcoming.png
 draft: true 
 til: true

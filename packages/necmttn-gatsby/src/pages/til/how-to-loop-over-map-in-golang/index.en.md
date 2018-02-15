@@ -1,6 +1,6 @@
 ---
 title: How to loop over map in GoLang
-tags: golang
+tags: ["golang"]
 til: true
 draft: false
 ---

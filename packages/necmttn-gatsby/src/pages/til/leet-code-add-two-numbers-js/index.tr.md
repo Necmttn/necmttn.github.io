@@ -3,8 +3,7 @@ title: LeetCode - Add Two Numbers - JS
 createdDate: "2017-12-22"
 author: Necmettin Karakaya
 
-tags:
-  - javascript
+tags: ["javascript"]
 image: welcoming.png
 draft: true
 til: true

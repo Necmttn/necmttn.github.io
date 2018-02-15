@@ -1,7 +1,7 @@
 ---
 title: GoLang'de Objenin keyleri maplenir ?
 
-tags: golang
+tags: ["golang"]
 til: true
 draft: true
 ---

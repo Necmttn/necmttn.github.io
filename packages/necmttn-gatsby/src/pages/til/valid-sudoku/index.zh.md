@@ -3,8 +3,7 @@ title: Valid Sudoku
 createdDate: "2018-02-01"
 author: Necmettin Karakaya
 
-tags:
-  - javascript
+tags: ["javascript"]
 image: welcoming.png
 draft: true
 til: true

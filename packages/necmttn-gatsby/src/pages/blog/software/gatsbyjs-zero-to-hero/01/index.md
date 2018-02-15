@@ -1,5 +1,8 @@
 ---
+
 title: Gatsby.JS Zero-to-Hero - Introduction
+tags: ["javascript", "gatsby"]
+
 ---
 
 

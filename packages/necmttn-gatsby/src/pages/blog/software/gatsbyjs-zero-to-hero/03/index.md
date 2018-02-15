@@ -3,7 +3,7 @@ title: Gatsby.JS Zero-to-Hero - Styling
 date: '2017-10-26'
 layout: post
 draft: false
-tags: gatsby
+tags: ["javascript", "gatsby"]
 ---
 
 When it's about styling in react community has bunch of alternatives.. and also I'm kind a relatively following this

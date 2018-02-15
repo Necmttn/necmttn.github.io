@@ -2,9 +2,7 @@
 title: Finding Duplicate in JS Array
 createdDate: "2018-01-30"
 author: Necmettin Karakaya
-
-tags:
-  - javascript
+tags: ["javascript"]
 image: welcoming.png
 draft: true
 til: true
