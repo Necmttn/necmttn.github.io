@@ -1,12 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import SplashPhoto from './SplashPhoto'
 // import Author from "./Author/Author";
 // const config = require("../../utils/siteConfig");
 
 const Wrapper = styled.article`
   max-width: ${props => props.theme.post.sizes.maxWidth};
   margin: 0 auto;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
   a {
     border-bottom: 1px solid ${props => props.theme.post.colors.linkHover};
     color: ${props => props.theme.post.colors.link};
@@ -31,6 +35,7 @@ const Wrapper = styled.article`
 
 const Header = styled.header``;
 
+
 const Title = styled.h1`
   color: ${props => props.theme.post.colors.title};
   font-size: 1.9em;
@@ -38,6 +43,7 @@ const Title = styled.h1`
   letter-spacing: -0.02em;
   line-height: 1;
   margin: 0 0 0.4em;
+  text-align: center;
 
   @media screen and (min-width: ${props => props.theme.mediaQueryTresholds.M}) {
     font-size: 2.6em;
@@ -70,19 +76,20 @@ const SubTitle = styled.h2`
 const Meta = styled.div`
   font-size: 0.9em;
   margin: 2rem 0 3rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 `;
 
 const PostDate = styled.span`
-  background: ${props => props.theme.post.backgrounds.meta};
-  border-left: 2px solid ${props => props.theme.post.colors.metaBorder};
   color: ${props => props.theme.post.colors.meta};
-  padding: 0.3em 0.7em 0.4em;
 `;
 
-const Content = styled.div`
+const Content = styled.section`
   color: ${props => props.theme.post.colors.text};
   line-height: 1.5;
-
+  max-width: 800px;
+  flex-flow: column nowrap;
   .gatsby-resp-image-link {
     margin: 2.5em 0;
   }
@@ -188,15 +195,27 @@ const Copyright = styled.p`
 `;
 
 const Article = ({ post }) => {
+  console.log(post)
   return (
     <Wrapper>
       <Header>
         <Title>{post.frontmatter.title}</Title>
         <SubTitle>{post.frontmatter.subTitle}</SubTitle>
         <Meta>
-          <PostDate>{post.frontmatter.date}</PostDate>
+          {
+            (post.frontmatter.createdDate)
+            ? <PostDate>Created: {post.frontmatter.createdDate}</PostDate>
+            : null
+          }
+          {
+            (post.frontmatter.updatedDate)
+            ? <PostDate>Updated: {post.frontmatter.updatedDate}</PostDate>
+            : null
+
+          }
         </Meta>
       </Header>
+      <SplashPhoto image={post.frontmatter.image} credit={post.frontmatter.credit} imageSize={post.frontmatter.imageSize} imageHeight={post.frontmatter.imageHeight}/>
       <Content dangerouslySetInnerHTML={{ __html: post.html }} />
       <Footer>
         {/*<Author />

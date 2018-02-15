@@ -51,7 +51,14 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
+        subTitle
+        createdDate
+        updatedDate
         til
+        credit
+        image
+        imageSize
+        imageHeight
       }
     }
   }

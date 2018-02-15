@@ -71,7 +71,7 @@ const post = {
     meta: colors.light
   },
   sizes: {
-    maxWidth: "50em"
+    maxWidth: "70%"
   }
 }
 
