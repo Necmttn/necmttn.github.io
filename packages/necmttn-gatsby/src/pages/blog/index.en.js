@@ -1,29 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import BlogLayout from './_BlogLayout.js'
 
 const Blog = (props) => {
-  const data = props.data.allMarkdownRemark
-  const posts = (data) ? data.edges : []
-
-  return (
-    <div>
-      <h1> blog pages </h1>
-      <ul>
-      {posts.map(post => {
-        console.log(post)
-        const title = post.node.frontmatter.title
-        const link = post.node.fields.slug
-        const excerpt = post.node.excerpt
-        return (
-        <li>
-          <Link to={link}>{title}</Link>
-          <p>{excerpt}</p>
-        </li>
-        )
-      })}
-      </ul>
-    </div>
-  )
+  return (<BlogLayout {...props} />)
 }
 
 

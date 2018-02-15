@@ -13,6 +13,5 @@ draft: true
 My awesome article
 
 ## TODO
-
 -   [ ] Replace image
 -   [ ] Write an awesome article
