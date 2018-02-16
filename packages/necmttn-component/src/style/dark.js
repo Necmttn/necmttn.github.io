@@ -67,7 +67,7 @@ const post = {
     subTitle: colors.superDark
   },
   backgrounds: {
-    wrapper: colors.superDark,
+    wrapper: colors.darkBlue,
     meta: colors.light
   },
   sizes: {

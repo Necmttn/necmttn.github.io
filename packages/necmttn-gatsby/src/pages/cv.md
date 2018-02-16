@@ -1,6 +1,8 @@
 ---
 layout: cv
 title: Necmettin Karakaya's CV
+draft: true
+
 ---
 # Necmettin Karakaya
 Software Engineer

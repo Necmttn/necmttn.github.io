@@ -32,29 +32,29 @@ class SplashScreen extends React.Component {
           <p>
             Hello, <br/>
             I am Necmettin Karakaya <br />
-            self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </MagicWord> <br/>
+            self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> engineer </MagicWord> <br/>
           </p>
-          <p> Life-long learner, pure geek </p>
+          <p> Life-long learner, Digital Nomad </p>
         </TextBodyContainer>
       ),
       zh: (
         <TextBodyContainer>
           <p>
             你好, <br/>
-            I am Necmettin Karakaya <br />
-            self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </MagicWord> <br/>
+            我是 Necmettin Karakaya <br />
+            自学成才的软件 <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> 工程师 </MagicWord> <br/>
           </p>
-          <p> Life-long learner, pure geek </p>
+          <p> 终身学习者, 数字游牧人</p>
         </TextBodyContainer>
       ),
       tr: (
         <TextBodyContainer>
           <p>
             Merhaba, <br/>
-            I am Necmettin Karakaya <br />
-            self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> developer </MagicWord> <br/>
+            Ben Necmettin Karakaya <br />
+            Alayli yazilim <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> mühendisi </MagicWord> <br/>
           </p>
-          <p> Life-long learner, pure geek </p>
+          <p> Yaşam boyu öğrenci olmaya inan , gezgin. </p>
         </TextBodyContainer>
       )
     };

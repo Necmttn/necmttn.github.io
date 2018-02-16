@@ -1,5 +1,5 @@
 ---
-title: growing up fast
+title: Growing up fast
 subTitle: taking responsibilities, hard times, life lessons
 createdDate: "2017-10-12"
 updatedDate: "2018-02-15"

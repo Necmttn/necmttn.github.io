@@ -60,7 +60,11 @@ const ItemWrapper = styled.div`
   margin: 0 10px;
   justify-content: center;
   color: ${props => props.theme.colors.green};
-  font-size: 
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Open Sans,San Francisco,sans-serif
+  }
   &:hover {
     border-bottom: 1px solid ${props => props.theme.colors.green};
   }

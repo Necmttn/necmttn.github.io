@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import BlogLayout from './_BlogLayout.js'
+import BlogLayout from '../../Views/BlogPage'
 
 const Blog = (props) => {
   return (<BlogLayout {...props} />)
