@@ -26,7 +26,8 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter{
-            title,
+            title
+            createdDate
             tags
           },
           excerpt

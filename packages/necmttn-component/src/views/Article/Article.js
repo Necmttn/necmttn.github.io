@@ -215,7 +215,15 @@ const Article = ({ post }) => {
           }
         </Meta>
       </Header>
-      <SplashPhoto image={post.frontmatter.image} credit={post.frontmatter.credit} imageSize={post.frontmatter.imageSize} imageHeight={post.frontmatter.imageHeight}/>
+      {
+        (post.frontmatter.image)
+          ?  <SplashPhoto
+              image={post.frontmatter.image}
+              credit={post.frontmatter.credit}
+              imageSize={post.frontmatter.imageSize}
+              imageHeight={post.frontmatter.imageHeight}/>
+          : null
+      }
       <Content dangerouslySetInnerHTML={{ __html: post.html }} />
       <Footer>
         {/*<Author />

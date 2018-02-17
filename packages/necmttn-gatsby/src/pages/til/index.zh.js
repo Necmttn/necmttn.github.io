@@ -1,59 +1,13 @@
 import React from 'react'
-import styled from 'styled-components'
-import Link from 'gatsby-link'
-import { Card } from 'necmttn-component'
-import { H1 } from '../../components/Text'
+import TilPage from '../../Views/TILPage'
 
-const TIL = (props) => {
-  const data = props.data.allMarkdownRemark
-  const posts = (data) ? data.edges : [];
-  return (
-    <Wrapper>
-      <BigHeader>
-        TODAY I LEARNED
-      </BigHeader>
-      <ul>
-      {posts.map(post => {
-        const content = post.node.html
-        const title = post.node.frontmatter.title
-        const link = post.node.fields.slug
-        const excerpt = post.node.excerpt
-        return (
-        <li key={link}>
-          <Card>
-            <Card.Header LinkComp={Link} to={link}>
-              <H1>{title}</H1>
-            </Card.Header>
-            <Card.Content>
-              <div dangerouslySetInnerHTML={{ __html: content }}>
-              </div>
-            </Card.Content>
-          </Card>
-        </li>
-        )
-      })}
-      </ul>
-    </Wrapper>
-  )
+const Til = (props) => {
+  return (<TilPage {...props} />)
 }
 
 
-const Wrapper = styled.div`
-  height: 100%;
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  flex-flow: column nowrap;
-`
-
-const BigHeader = styled.h1`
-  font-size: 7vw;
-  text-transform: uppercase;
-`
-
-
 export const tilEnQuery = graphql`
-query tilZhQuery{
+query tilEnQuery{
 	allMarkdownRemark(
     filter: {
       frontmatter: {
@@ -82,4 +36,4 @@ query tilZhQuery{
 }
 `;
 
-export default TIL
+export default Til

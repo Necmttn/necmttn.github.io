@@ -54,6 +54,7 @@ export default class Card extends React.Component {
     return (
       <CardWrapper onClick={this.handleClick} active={active} color={color}>
         {children}
+        <CardFooter />
       </CardWrapper>
     )
   }
@@ -62,7 +63,8 @@ export default class Card extends React.Component {
 
 const CardWrapper = styled.figure`
   padding: 3em 1em;
-  max-width: 600px;
+  max-width: ${props => props.theme.post.sizes.maxWidth};
+  width: 85%;
   border: 1px solid ${props => props.theme.dark};
   display: flex;
   flex-flow: column nowrap;

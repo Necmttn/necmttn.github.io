@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import * as t from '../../i18n'
 
 const BlogLayout = (props) => {
   const data = props.data.allMarkdownRemark
@@ -13,6 +14,7 @@ const BlogLayout = (props) => {
       {posts.map(post => {
         const title = post.node.frontmatter.title
         const tags = post.node.frontmatter.tags
+        const createdDate = post.node.frontmatter.createdDate
         const link = post.node.fields.slug
         const excerpt = post.node.excerpt
         return (
@@ -21,6 +23,7 @@ const BlogLayout = (props) => {
             link={link}
             excerpt={excerpt}
             tags={tags}
+            date={createdDate}
           />
         )
       })}
@@ -32,23 +35,28 @@ const BlogLayout = (props) => {
 
 const Header = () => (
   <HeaderWrapper>
-    <h1>Journal </h1>
-    <h4>Random Toughts, Software and Nomadic life </h4>
+    <h1> {t.JournalHeader} </h1>
+    <h4> {t.JournalSubHeader} </h4>
   </HeaderWrapper>
 )
 
 
 // TODO: tag, date
-const Post = ({title, excerpt, link, tags}) => (
+const Post = ({title, excerpt, link, tags, date}) => (
     <PostWrapper>
       <Link to={link}>
-        <header> {title} </header>
-        <section className="excerpt">
-          <p>{excerpt}</p>
-        </section>
-        <footer>
-          <p> {tags} </p>
-        </footer>
+        <div>
+          {date}
+        </div>
+        <div>
+          <header> {title} </header>
+          <section className="excerpt">
+            <p>{excerpt}</p>
+          </section>
+          <footer>
+            <p> {tags} </p>
+          </footer>
+        </div>
       </Link>
     </PostWrapper>
 )
@@ -61,6 +69,7 @@ const PostWrapper = styled.article`
     text-decoration: none;
     color: ${props => props.theme.color};
   }
+  display: flex;
   header {
     font-weight: 700;
   }
