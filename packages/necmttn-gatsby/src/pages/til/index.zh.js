@@ -7,7 +7,7 @@ const Til = (props) => {
 
 
 export const tilEnQuery = graphql`
-query tilEnQuery{
+query tilZhQuery{
 	allMarkdownRemark(
     filter: {
       frontmatter: {
