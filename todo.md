@@ -2,9 +2,29 @@
 
 
 ## TODO: 
+
+#### TIL Page
+  * [ ] Work on react helmet for SEO.
+  * [ ] - Add a Social Media Meta tags for Picture etc.
+  * [ ] - Generate picture of the content each time creates.
+  * [ ] - Add twitter share api for make the content shared with popular #hastags and @necmttn .
+  * [ ] - Add Disqus in to TIL pages. 
+  * [ ] - Add Likes & Comments Count in to TIL index page.
   * [ ] add auto commit after generate #TIL && push
-  * [ ] Make a decision about color pallette. 
+#### Blog Page
   * [ ] Fix Image size issue. (BUG) all the images converted to link to somewhere.
+  * [ ] Add Footer. 
+  * [ ] - Self Bio
+  * [ ] - Share Buttons
+  * [ ] - Disqus
+  * [ ] - Email Me 
+  * [ ] - Counter
+#### Analytics.
+  * [ ] Facebook Pixel
+  * [ ] Google Analytics
+#### Testimationals.
+  * [ ] Get Reviwed.
+
 
 ## DONE:
   * [ ] Blog post about how use generators.
