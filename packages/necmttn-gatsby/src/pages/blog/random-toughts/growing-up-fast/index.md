@@ -13,4 +13,11 @@ draft: false
 
 ---
 
-Sometimes doesn't to much option to decide when you wanna be man. Sometimes you have to.
+Sometimes life doesn't give to much option to decide when you wanna be grow as a man, You just have to. That's happen to
+me when i decided to buy one way ticket to Shanghai. 
+
+> I you're berave enough to say goodbye, life will awarded you with Hello's.
+
+During the first year of the school in one of the boring classes i realize that. Somehow i need to go oveseas. I was
+about 15-16 years old. I was trying to get Involve AFS (American TODO) but unluckly i never manage the go 
+
