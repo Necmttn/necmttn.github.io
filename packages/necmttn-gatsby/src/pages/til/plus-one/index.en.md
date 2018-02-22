@@ -5,7 +5,7 @@ author: Necmettin Karakaya
 
 tags: ["javascript"]
 image: welcoming.png
-draft: true
+draft: false
 til: true
 ---
 
