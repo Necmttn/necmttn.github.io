@@ -218,8 +218,7 @@ once we restart dev server gatsby will recognize we have changed a config so it 
 
   that past 2 weeks on my free times i was working on [Gatsby Source Trello](https://github.com/Necmttn/gatsby-source-trello)
   and just today i deploy working version. Yay ! 
-  
   next will be about styling. because i wanna start styling my home page.
 
 
-  [NEXT](../03)
+  [next](../03)

@@ -24,7 +24,7 @@ Other then that they are just slow
 ![Who doesn't ? ](./slow.png)
 
 yeah there will other fellow developers will jump in this conversation and say that. if you do it correctly it will be fast.
-etc. etc. but it's just to much work and expenses for get fast website. While theres a better way of doing.  
+etc. etc. but it's just to much work and expenses for get fast website. While theres a better way of doing.
 
 
 ## Introducing Gatsby.js React Based static site generator.
@@ -38,7 +38,7 @@ Let's get started.
 Building Static Website usign gatbsy.js from stracth. i will build everything from zero to hero. while writing blog post and 
 keep updating status with screenshots. I hope it's gonna make cool tutorial.
 
-#### [Let's Start](next)
+#### [Let's Start](../02)
 
 
 

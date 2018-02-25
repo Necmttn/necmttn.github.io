@@ -31,7 +31,6 @@
     ]
   },
   "dependencies": {
-    "react-helmet": "^5.2.0",
     "styled-theming": "^2.2.0"
   }
 }
