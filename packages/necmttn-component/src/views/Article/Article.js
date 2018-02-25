@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import SplashPhoto from './SplashPhoto'
+import Tweet from './Tweet'
+
 // import Author from "./Author/Author";
 // const config = require("../../utils/siteConfig");
 
@@ -195,7 +197,7 @@ const Copyright = styled.p`
 `;
 
 const Article = ({ post }) => {
-  console.log(post)
+  const shouldDisplayImage = post.frontmatter.image && post.frontmatter.til !== true
   return (
     <Wrapper>
       <Header>
@@ -216,7 +218,7 @@ const Article = ({ post }) => {
         </Meta>
       </Header>
       {
-        (post.frontmatter.image)
+        (shouldDisplayImage)
           ?  <SplashPhoto
               image={post.frontmatter.image}
               credit={post.frontmatter.credit}
@@ -228,6 +230,7 @@ const Article = ({ post }) => {
       <Footer>
         {/*<Author />
         <Copyright>{config.copyright}</Copyright> */}
+        <Tweet id="967634687576256512" theme="dark" />
       </Footer>
     </Wrapper>
   );

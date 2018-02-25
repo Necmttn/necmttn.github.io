@@ -14,7 +14,7 @@ const SplashPhotoWrapper = styled.figure`
     background-image: url("${props => props.image}");
     height: ${props => props.imageHeight || "400px"};
     background-size: ${props => props.imageSize || "cover"};
-  }
+    background-position: ${props => props.imagePosition || "center"}
 `
 
 export default SplashPhoto

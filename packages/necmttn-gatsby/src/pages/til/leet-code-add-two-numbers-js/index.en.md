@@ -4,7 +4,7 @@ createdDate: "2017-12-22"
 author: Necmettin Karakaya
 
 tags: ["javascript"]
-image: welcoming.png
+image: https://imgur.com/hJPH0jt.png
 draft: false
 til: true
 ---
