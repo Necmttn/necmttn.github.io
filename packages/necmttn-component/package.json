@@ -24,6 +24,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
+    "react-twitter-widgets": "^1.7.1",
     "styled-components": "^2.2.3"
   }
 }

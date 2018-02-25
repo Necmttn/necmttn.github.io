@@ -17,10 +17,11 @@ const TilPage = (props) => {
       {posts.map(post => {
         const content = post.node.html
         const title = post.node.frontmatter.title
+        const tags = post.node.frontmatter.tags
         const link = post.node.fields.slug
         const excerpt = post.node.excerpt
         return (
-        <Card key={link}>
+        <Card key={link} url={link}>
           <Card.Header LinkComp={Link} to={link}>
             <H1>{title}</H1>
           </Card.Header>
@@ -28,6 +29,10 @@ const TilPage = (props) => {
             <div dangerouslySetInnerHTML={{ __html: content }}>
             </div>
           </Card.Content>
+          <Card.Footer
+            link={link}
+            title={title}
+            tags={tags} />
         </Card>
         )
       })}

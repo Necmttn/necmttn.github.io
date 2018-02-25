@@ -25,13 +25,17 @@ export default class Card extends React.Component {
      * @param {SyntheticEvent} event - React's original SyntheticEvent.
      * @param {object} data - All props.
      */
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    title: PropTypes.string,
+    tags: PropTypes.array,
+    url: PropTypes.string
   }
 
   static defaultProps = {
     active: false,
     color: 'black',
     disabled: false,
+    tags: ["software", "javascript", "devops", "golang"]
   }
 
   handleClick = (e) => {
@@ -49,12 +53,11 @@ export default class Card extends React.Component {
     const {
       active,
       color,
-      children
+      children,
     } = this.props
     return (
       <CardWrapper onClick={this.handleClick} active={active} color={color}>
         {children}
-        <CardFooter />
       </CardWrapper>
     )
   }
