@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FormattedMessage } from 'react-intl'
+import * as t from '../../i18n'
 import { Icon } from 'necmttn-component'
 
 const Quote = ({currentLangKey}) => {
@@ -8,14 +8,7 @@ const Quote = ({currentLangKey}) => {
     <ThickContainer>
       <Icon.Flag	width="64" height="64">
       </Icon.Flag>
-
-			<FormattedMessage id="index.quote" >
-				{
-					(txt) => (
-						<h1>{txt}</h1>
-					)
-				}
-			</FormattedMessage>
+      {t.smoothSea}
     </ThickContainer>
   )
 }

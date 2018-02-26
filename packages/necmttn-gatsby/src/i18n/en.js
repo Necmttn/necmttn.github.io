@@ -1,4 +1,4 @@
 module.exports = {
-  'title': 'Necmttn Software Developer',
-  'index.quote': 'Smooth Sea Never Made a Skilled Sailor'
+  'index.quote.smoothSea': 'Smooth Sea Never Made a Skilled Sailor',
+  'til.header.title': 'TODAY I LEARNED'
 }

@@ -7,10 +7,10 @@
   * [ ] Work on react helmet for SEO.
   * [ ] - Add a Social Media Meta tags for Picture etc.
   * [ ] - Generate picture of the content each time creates.
-  * [ ] - Add twitter share api for make the content shared with popular #hastags and @necmttn .
   * [ ] - Add Disqus in to TIL pages. 
   * [ ] - Add Likes & Comments Count in to TIL index page.
   * [ ] add auto commit after generate #TIL && push
+  * [x] - Add twitter share api for make the content shared with popular #hastags and @necmttn .
 #### Blog Page
   * [ ] Fix Image size issue. (BUG) all the images converted to link to somewhere.
   * [ ] Add Footer. 
@@ -20,14 +20,15 @@
   * [ ] - Email Me 
   * [ ] - Counter
 #### Analytics.
-  * [ ] Facebook Pixel
-  * [ ] Google Analytics
+  * [ ] Get Domain name
+  * [ ] - Facebook Pixel
+  * [ ] - Google Analytics
 #### Testimationals.
   * [ ] Get Reviwed.
-
+#### To Write about:
+  * [ ] how to use generators.
 
 ## DONE:
-  * [ ] Blog post about how use generators.
   * [x] add gatsby-styled-components plugin for styling
   * [x] Create a blog post about Plop generators.
   * [x] Collect Gif Images for use in front page.
