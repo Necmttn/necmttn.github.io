@@ -77,10 +77,17 @@ const post = {
 
 const menu = {
   colors: {
-    menuItem: colors.green
+    menuItem: colors.dark
   }
 }
 
+const mediaQueryTresholds = {
+  XL: "65em",
+  L: "49em",
+  M: "37em",
+  S: "28em",
+  XS: "21em"
+}
 
 export default {
   scale,
@@ -89,6 +96,7 @@ export default {
   post,
   menu,
   mediaQuery,
+  mediaQueryTresholds,
   color: colors.white,
   bg: colors.darkBlue,
 };

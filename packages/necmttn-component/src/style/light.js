@@ -81,6 +81,13 @@ const menu = {
   }
 }
 
+const mediaQueryTresholds = {
+  XL: "65em",
+  L: "49em",
+  M: "37em",
+  S: "28em",
+  XS: "21em"
+}
 export default {
   scale,
   scaleN,
@@ -89,6 +96,7 @@ export default {
   menu,
   fontFamily,
   mediaQuery,
+  mediaQueryTresholds,
   color: colors.black,
   bg: colors.bright,
 };
