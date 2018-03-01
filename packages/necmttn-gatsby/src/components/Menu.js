@@ -1,8 +1,8 @@
 import React from 'react'
-// import { Menu } from 'necmttn-component'
+import { Menu as MenuBar } from 'necmttn-component'
 import { stack as Menu } from 'react-burger-menu'
 import Link from 'gatsby-link'
-
+import styled from 'styled-components'
 
 var styles = {
   bmBurgerButton: {
@@ -40,23 +40,23 @@ var styles = {
 }
 
 
-const MenuItem = ({children}) => (
-  <div>
-      {children}
-  </div>
-)
+const MenuItem = MenuBar.Item
 
-const Logo = ({langKey}) => {
-  render() {
-    <Link to={`/${langKey}/`}>
-      <MenuItem>
-        @Necmttn
-      </MenuItem>
-    </Link>
-  }
+const Logo = ({langKey, logo}) => {
+  const LogoWrapper = styled(Link)`
+    position: relative;
+    img {
+      width: 80px;
+    }
+  `
+
+  return (
+    <LogoWrapper to={`/${langKey}/`}>
+      <img src={logo} />
+    </LogoWrapper>
+  )
 }
 
-const bi
 
 class MainMenu extends React.Component {
   showSettings (event) {
@@ -64,10 +64,11 @@ class MainMenu extends React.Component {
   }
 
   render () {
-    const { children, location, menu, langKey, isHome } = this.props
+    const { children, location, menu, langKey, isHome, logo } = this.props
     return (
       <div id="outer-container">
         <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" } styles={ styles }>
+          <Logo langKey={langKey} logo={logo}/>
           <Link to={`/${langKey}/blog/`}>
             <MenuItem>
               Journal
@@ -90,11 +91,35 @@ class MainMenu extends React.Component {
           </a>
         </Menu>
         <main id="page-wrap">
+          <MenuBar>
+            <Link to={`/${langKey}/blog/`}>
+              <MenuItem>
+                Journal
+              </MenuItem>
+            </Link>
+            <Link to={`/${langKey}/til/`}>
+              <MenuItem>
+                #TIL
+              </MenuItem>
+            </Link>
+            <Logo langKey={langKey} logo={logo}/>
+            <Link to={`/${langKey}/photography/`}>
+              <MenuItem>
+                Photography
+              </MenuItem>
+            </Link>
+            <a href="mailto:necmettin.karakaya@gmail.com">
+              <MenuItem>
+                Email
+              </MenuItem>
+            </a>
+          </MenuBar>
           {children}
         </main>
       </div>
     );
   }
 }
+
 
 export default MainMenu

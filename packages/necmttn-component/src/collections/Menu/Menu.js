@@ -19,7 +19,6 @@ export default class Menu extends React.Component {
 const MenuWrapper = styled.div`
   width: 100%;
   height: 100px;
-  border-bottom: 1px solid white;
   display: flex;
   position: relative;
   align-items: center;

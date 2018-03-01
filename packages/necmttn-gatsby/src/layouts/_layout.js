@@ -8,7 +8,10 @@ import LangNav from '../components/LangNav'
 import Menu from '../components/Menu'
 import {IntlProvider} from 'react-intl'
 import {Helmet} from "react-helmet";
+
 require('necmttn-component/src/style/prism-darcula.css')
+import whiteLogo from './nk-logo-white-200.png'
+import blackLogo from './nk-logo-black-400.png'
 
 import {
   getLangs,
@@ -90,7 +93,7 @@ export default class Wrapper extends React.Component {
     const {menu, author, sourceCodeLink} = this.props.data.site.siteMetadata;
     const pref = this.getPref()
     const siteTheme = (pref.darkMode) ? Dark : Light;
-
+    const siteLogo = (pref.darkMode) ? whiteLogo : blackLogo;
     return (
       <ThemeProvider theme={siteTheme}>
         <IntlProvider
@@ -106,7 +109,8 @@ export default class Wrapper extends React.Component {
             <Menu
               menu={menu}
               isHome={isHome}
-              langKey={langKey}>
+              langKey={langKey}
+              logo={siteLogo}>
               <LangNav
                 langs={langsMenu}
                 homeLink={homeLink}

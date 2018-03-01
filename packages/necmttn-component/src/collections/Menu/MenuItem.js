@@ -59,10 +59,10 @@ const ItemWrapper = styled.div`
   display: flex;
   margin: 0 10px;
   justify-content: center;
-  color: ${props => props.theme.colors.green};
+  color: ${props => props.theme.menu.colors.menuItem};
   h3 {
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 800;
     font-family: Open Sans,San Francisco,sans-serif
   }
   &:hover {

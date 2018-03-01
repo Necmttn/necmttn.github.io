@@ -75,30 +75,10 @@ const post = {
   }
 }
 
-
-const topBar = {
-    colors: {
-      logo: colors.bright,
-      logoPost: colors.first
-    },
-    backgrounds: {
-      wrapper: colors.firstLight,
-      wrapperPost: colors.bright,
-      icon: colors.accent
-    },
-    sizes: {
-      height: 44 //pixels
-    }
-}
-
-
-
-const mediaQueryTresholds = {
-  XL: "65em",
-  L: "49em",
-  M: "37em",
-  S: "28em",
-  XS: "21em"
+const menu = {
+  colors: {
+    menuItem: colors.green
+  }
 }
 
 
@@ -107,10 +87,8 @@ export default {
   scaleN,
   colors,
   post,
-  mediaQueryTresholds,
-  fontFamily,
+  menu,
   mediaQuery,
-  topBar,
   color: colors.white,
   bg: colors.darkBlue,
 };
