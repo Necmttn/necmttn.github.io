@@ -106,16 +106,17 @@ export default class Wrapper extends React.Component {
             <Menu
               menu={menu}
               isHome={isHome}
-              langKey={langKey}/>
-            <LangNav
-              langs={langsMenu}
-              homeLink={homeLink}
-              url={url}
-              menu={menu}
-              theme={pref.darkMode}
-              changeTheme={() => this.changeTheme()}
-              isHome={isHome}/>
-            {children()}
+              langKey={langKey}>
+              <LangNav
+                langs={langsMenu}
+                homeLink={homeLink}
+                url={url}
+                menu={menu}
+                theme={pref.darkMode}
+                changeTheme={() => this.changeTheme()}
+                isHome={isHome}/>
+              {children()}
+            </Menu>
           </Background>
         </IntlProvider>
       </ThemeProvider>
