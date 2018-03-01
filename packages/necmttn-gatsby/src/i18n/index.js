@@ -9,5 +9,5 @@ export const smoothSea = (<FormattedMessage id="index.quote.smoothSea" defaultMe
 export const tilHeader = (<FormattedMessage id="til.header.title" defaultMessage="TODAY I LEARNED" />)
 export const tilSubHeader = (<FormattedMessage id="til.header.subTitle" defaultMessage="Micro blog, Tips & Tricks" />)
 
-export const JournalHeader = (<FormattedMessage id="til.header.title" defaultMessage="Journal" />)
-export const JournalSubHeader = (<FormattedMessage id="til.header.subTitle" defaultMessage="Random Toughts, Software and Nomadic life" />)
+export const JournalHeader = (<FormattedMessage id="journal.header.title" defaultMessage="Journal" />)
+export const JournalSubHeader = (<FormattedMessage id="journal.header.subTitle" defaultMessage="Random Toughts, Software and Nomadic life" />)
