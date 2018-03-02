@@ -77,7 +77,8 @@ const post = {
 
 const menu = {
   colors: {
-    menuItem: colors.dark
+    menuItem: colors.green,
+    bar: colors.white
   }
 }
 

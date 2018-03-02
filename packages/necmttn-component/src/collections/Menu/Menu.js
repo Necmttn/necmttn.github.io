@@ -26,6 +26,9 @@ const MenuWrapper = styled.div`
   a:link {
     text-decoration: none;
   }
+  @media ${props => props.theme.mediaQuery.Small} {
+    display: none;
+  }
 `
 
 

@@ -109,7 +109,7 @@ const TextBodyContainer = styled.div`
 
 const Section = styled.section`
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
