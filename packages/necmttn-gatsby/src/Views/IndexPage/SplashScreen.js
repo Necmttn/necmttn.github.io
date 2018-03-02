@@ -3,14 +3,12 @@ import styled from 'styled-components'
 import coding from '../../pages/gifs/coding.gif'
 import Link from 'gatsby-link'
 import { FlickerText } from 'necmttn-component'
-
+import Typist from 'react-typist'
 
 class SplashScreen extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      code: false
-    }
+  state = {
+    code: false,
+    typing: true,
   }
 
   mouseEnter(name) {
@@ -25,12 +23,17 @@ class SplashScreen extends React.Component {
     })
   }
 
+  done = () => {
+    this.setState({ typing: false }, () => {
+      this.setState({ typing: true })
+    });
+  }
+
   getWelcomeMsg = () => {
     return {
       en: (
         <TextBodyContainer>
           <p>
-            Hello, <br/>
             I am Necmettin Karakaya <br />
             self-tought software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> engineer </MagicWord> <br/>
           </p>
@@ -40,7 +43,6 @@ class SplashScreen extends React.Component {
       zh: (
         <TextBodyContainer>
           <p>
-            你好, <br/>
             我是 Necmettin Karakaya <br />
             自学成才的软件 <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> 工程师 </MagicWord> <br/>
           </p>
@@ -50,7 +52,6 @@ class SplashScreen extends React.Component {
       tr: (
         <TextBodyContainer>
           <p>
-            Merhaba, <br/>
             Ben Necmettin Karakaya <br />
             Alayli yazilim <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> mühendisi </MagicWord> <br/>
           </p>
@@ -62,6 +63,25 @@ class SplashScreen extends React.Component {
   render() {
     return (
       <Section>
+        <TextBodyContainer>
+          <p>
+            {
+              (this.state.typing)
+              ? <Typist  onTypingDone={this.done}>
+                  <Typist.Delay ms={500} />
+                  Hello,
+                  <Typist.Backspace count={6} delay={600} />
+                  你好,
+                  <Typist.Backspace count={3} delay={1200} />
+                  Merhaba,
+                  <Typist.Backspace count={8} delay={1600} />
+                  01001000 01101001
+                  <Typist.Backspace count={17} delay={1700} />
+                </Typist>
+              : null
+            }
+          </p>
+        </TextBodyContainer>
         <FlickerText max={20}>
         {this.getWelcomeMsg()[this.props.currentLangKey]}
         </FlickerText>
@@ -111,14 +131,16 @@ const Section = styled.section`
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 `
 
 const GifBodyContainer = styled.div`
   margin-left: auto;
   margin-right: 10vw;
   position: absolute;
+  right: 10vw;
 
 `
 const GifWrapper = styled.img`

@@ -26,6 +26,7 @@
     "react-burger-menu": "^2.3.0",
     "react-dom": "^16.1.1",
     "react-twitter-widgets": "^1.7.1",
+    "react-typist": "^2.0.4",
     "styled-components": "^2.2.3"
   }
 }

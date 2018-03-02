@@ -15,6 +15,7 @@
     "lodash-id": "^0.14.0",
     "lowdb": "^1.0.0",
     "plop": "^1.9.0",
-    "react-burger-menu": "^2.3.0"
+    "react-burger-menu": "^2.3.0",
+    "react-typist": "^2.0.4"
   }
 }
