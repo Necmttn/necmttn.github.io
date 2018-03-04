@@ -75,8 +75,14 @@ class SplashScreen extends React.Component {
                   <Typist.Backspace count={3} delay={1200} />
                   Merhaba,
                   <Typist.Backspace count={8} delay={1600} />
-                  01001000 01101001
-                  <Typist.Backspace count={17} delay={1700} />
+                  01001000 01101001,
+                  <Typist.Backspace count={18} delay={1700} />
+                  Salut!,
+                  <Typist.Backspace count={7} delay={400} />
+                  Hola,
+                  <Typist.Backspace count={5} delay={300} />
+                  Привет!
+                  <Typist.Backspace count={12} delay={900} />
                 </Typist>
               : null
             }

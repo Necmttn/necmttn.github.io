@@ -1,14 +1,15 @@
 import React from 'react'
-import SplashScreen from './SplashScreen'
 import styled from 'styled-components'
+import SplashScreen from './SplashScreen'
 import Quote from './Quote'
-
+import ToolBox from './ToolBox'
 const Index = (props) => {
   const { langKey }  = props.pathContext;
   return (
     <Intro>
       <SplashScreen currentLangKey={langKey}/>
       <Quote currentLangKey={langKey} />
+      <ToolBox currentLangKey={langKey} />
     </Intro>
   )
 }
