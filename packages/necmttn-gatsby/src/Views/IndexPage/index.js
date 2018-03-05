@@ -9,7 +9,6 @@ const Index = (props) => {
     <Intro>
       <SplashScreen currentLangKey={langKey}/>
       <Quote currentLangKey={langKey} />
-      <ToolBox currentLangKey={langKey} />
     </Intro>
   )
 }
