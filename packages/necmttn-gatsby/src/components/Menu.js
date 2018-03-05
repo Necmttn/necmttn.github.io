@@ -100,11 +100,11 @@ class MainMenu extends React.Component {
                 #TIL
               </MenuItem>
             </Link>
-            <Link to={`/${langKey}/photography/`}>
+            <a href="https://www.instagram.com/necmettinkarakaya/" target="_blank">
               <MenuItem>
                 Photography
               </MenuItem>
-            </Link>
+            </a>
             <a href="mailto:necmettin.karakaya@gmail.com">
               <MenuItem>
                 Email
@@ -124,11 +124,11 @@ class MainMenu extends React.Component {
                 </MenuItem>
               </Link>
               <Logo langKey={langKey} logo={logo}/>
-              <Link to={`/${langKey}/photography/`}>
+              <a href="https://www.instagram.com/necmettinkarakaya/" target="_blank">
                 <MenuItem>
                   Photography
                 </MenuItem>
-              </Link>
+              </a>
               <a href="mailto:necmettin.karakaya@gmail.com">
                 <MenuItem>
                   Email
