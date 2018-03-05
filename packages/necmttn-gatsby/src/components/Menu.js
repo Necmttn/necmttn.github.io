@@ -52,6 +52,9 @@ const StyleWrapper = styled.div`
   .bm-item-list {
     color: #b8b7ad;
     padding: 0.8em;
+    align-items: flex-start;
+    display: flex;
+    flex-flow: column;
   }
 
   /* Styling of overlay */
