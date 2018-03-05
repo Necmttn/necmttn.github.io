@@ -6,9 +6,12 @@ import { FlickerText } from 'necmttn-component'
 import Typist from 'react-typist'
 
 class SplashScreen extends React.Component {
-  state = {
-    code: false,
-    typing: true,
+  constructor(props) {
+    super(props);
+    this.state = {
+      code: false,
+      typing: true,
+    };
   }
 
   mouseEnter(name) {
@@ -67,7 +70,7 @@ class SplashScreen extends React.Component {
           <p>
             {
               (this.state.typing)
-              ? <Typist  onTypingDone={this.done}>
+              ? (<Typist  onTypingDone={() => this.done()}>
                   <Typist.Delay ms={500} />
                   Hello,
                   <Typist.Backspace count={6} delay={600} />
@@ -83,7 +86,7 @@ class SplashScreen extends React.Component {
                   <Typist.Backspace count={5} delay={300} />
                   Привет!
                   <Typist.Backspace count={12} delay={900} />
-                </Typist>
+                </Typist>)
               : null
             }
           </p>
