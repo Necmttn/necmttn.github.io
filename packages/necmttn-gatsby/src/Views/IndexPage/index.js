@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import SplashScreen from './SplashScreen'
 import Quote from './Quote'
-import ToolBox from './ToolBox'
 const Index = (props) => {
   const { langKey }  = props.pathContext;
   return (
