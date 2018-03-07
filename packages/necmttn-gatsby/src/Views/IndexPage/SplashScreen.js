@@ -111,6 +111,7 @@ const TextBodyContainer = styled.div`
   text-align: left;
   justify-content: space-between;
   flex-flow: column nowrap;
+  transition: 1s;
   @media ${props => props.theme.mediaQuery.small} {
     p {
       font-size: 2em;

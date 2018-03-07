@@ -13,7 +13,7 @@
   "main": "n/a",
   "scripts": {
     "postinstall": "lerna bootstrap",
-    "blog:build": "cd packages/necmttn-gatsby && yarn build",
+    "blog:build": "cd packages/necmttn-gatsby && npm run build",
     "blog:dev": "cd packages/necmttn-gatsby && yarn dev",
     "comp:dev": "cd packages/necmttn-component && npm run storybook",
     "generate": "cd packages/necmttn-devtool && yarn generate",

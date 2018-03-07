@@ -80,7 +80,6 @@ const Logo = ({langKey, logo}) => {
   )
 }
 
-
 class MainMenu extends React.Component {
   showSettings (event) {
     event.preventDefault();

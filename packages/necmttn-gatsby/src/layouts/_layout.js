@@ -6,6 +6,7 @@ import { Dark, Light, baseStyles } from 'necmttn-component'
 
 import LangNav from '../components/LangNav'
 import Menu from '../components/Menu'
+import Footer from '../components/Footer'
 import {IntlProvider} from 'react-intl'
 import {Helmet} from "react-helmet";
 
@@ -120,6 +121,9 @@ export default class Wrapper extends React.Component {
                 changeTheme={() => this.changeTheme()}
                 isHome={isHome}/>
               {children()}
+              <Footer
+                langKey={langKey}
+              />
             </Menu>
           </Background>
         </IntlProvider>

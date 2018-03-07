@@ -67,6 +67,9 @@ const Wrapper = styled.div`
   flex-flow:column nowrap;
   z-index: 10;
   background: ${props => props.theme.colors.firstDark}
+  @media ${props => props.theme.mediaQuery.Small} {
+    display: none;
+  }
 `
 
 export default LangNav
