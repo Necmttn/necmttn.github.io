@@ -10,25 +10,20 @@ const Footer = ({langKey}) => {
     <FooterWrapper>
       <div className="menu">
         <Link to={`/${langKey}/blog/`}>
-          <MenuItem>
-            Journal
-          </MenuItem>
+          Journal
         </Link>
         <Link to={`/${langKey}/til/`}>
-          <MenuItem>
-            #TIL
-          </MenuItem>
+          #TIL
         </Link>
         <a href="https://www.instagram.com/necmettinkarakaya/" target="_blank">
-          <MenuItem>
-            Photography
-          </MenuItem>
+          Photography
         </a>
         <a href="mailto:necmettin.karakaya@gmail.com">
-          <MenuItem>
-            Email
-          </MenuItem>
+          Email
         </a>
+      </div>
+      <div className="social">
+        
       </div>
     </FooterWrapper>
   )
@@ -37,6 +32,16 @@ const Footer = ({langKey}) => {
 const FooterWrapper = styled.footer`
   position: relative;
   padding: 2em 10vw;
+  border-top: 1px solid rgba(0,0,0, 0.4);
+  display: flex;
+  flex-flow: row wrap;
+  min-height: 100px;
+  .menu {
+    flex: 3;
+  }
+  .social {
+    flex: 1;
+  }
 `
 
 export default Footer

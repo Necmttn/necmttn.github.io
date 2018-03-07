@@ -122,5 +122,6 @@ const Wrapper = styled.div`
   align-items: center;
   flex-flow: column nowrap;
   padding: 20px 10vw;
+  min-height: 100vh;
 `
 export default BlogLayout
