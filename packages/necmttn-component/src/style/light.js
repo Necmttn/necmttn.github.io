@@ -82,6 +82,12 @@ const menu = {
   }
 }
 
+const footer = {
+  socialIcon: colors.white,
+  quote: colors.gray,
+  menuLink: colors.gray
+}
+
 const mediaQueryTresholds = {
   XL: "65em",
   L: "49em",
@@ -95,6 +101,7 @@ export default {
   colors,
   post,
   menu,
+  footer,
   fontFamily,
   mediaQuery,
   mediaQueryTresholds,

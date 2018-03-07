@@ -106,6 +106,7 @@ export default class Wrapper extends React.Component {
               <title>Necmettin Karakaya</title>
               <link rel="canonical" href={url || "http://necmttn.com"} />
               <link rel="icon" type="image/png" href="https://avatars0.githubusercontent.com/u/5212808?s=40&v=4" />
+              <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
             </Helmet>
             <Menu
               menu={menu}

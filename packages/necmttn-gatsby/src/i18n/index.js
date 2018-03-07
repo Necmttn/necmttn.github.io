@@ -11,3 +11,11 @@ export const tilSubHeader = (<FormattedMessage id="til.header.subTitle" defaultM
 
 export const JournalHeader = (<FormattedMessage id="journal.header.title" defaultMessage="Journal" />)
 export const JournalSubHeader = (<FormattedMessage id="journal.header.subTitle" defaultMessage="Random Toughts, Software and Nomadic life" />)
+
+
+
+export const Homepage = (<FormattedMessage id="menu.homepage" defaultMessage="HOMEPAGE" />)
+export const Journal = (<FormattedMessage id="menu.journal" defaultMessage="JOURNAL" />)
+export const TIL = (<FormattedMessage id="menu.til" defaultMessage="#TIL" />)
+export const Photography = (<FormattedMessage id="menu.photography" defaultMessage="PHOTOGRAPHY" />)
+export const Email = (<FormattedMessage id="menu.email" defaultMessage="EMAIL" />)
