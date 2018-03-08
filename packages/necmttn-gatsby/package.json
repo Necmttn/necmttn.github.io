@@ -7,6 +7,7 @@
     "gatsby": "^1.9.45",
     "gatsby-image": "^1.0.12",
     "gatsby-link": "^1.6.17",
+    "gatsby-plugin-google-analytics": "^1.0.22",
     "gatsby-plugin-i18n": "^0.3.2",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-sharp": "^1.6.9",

@@ -20,6 +20,7 @@
     "@storybook/react": "^3.2.16"
   },
   "dependencies": {
+    "gatsby-plugin-google-analytics": "^1.0.22",
     "lodash.invoke": "^4.5.2",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
