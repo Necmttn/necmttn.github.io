@@ -90,6 +90,12 @@ const FooterWrapper = styled.footer`
   .social {
     flex: 1;
     padding: 0 20px;
+    max-width: 380px;
+    margin-left: auto;
+    @media ${props => props.theme.mediaQuery.Small} {
+      margin-left: auto;
+      margin-right: auto;
+    }
     .quote {
       font: 14px/28px Open Sans,sans-serif;
       margin-bottom: 10px;

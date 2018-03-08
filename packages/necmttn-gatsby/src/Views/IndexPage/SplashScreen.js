@@ -59,7 +59,7 @@ class SplashScreen extends React.Component {
             Ben Necmettin Karakaya <br />
             Alayli yazilim <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> mühendisi </MagicWord> <br/>
           </p>
-          <p> Yaşam boyu öğrenci olmaya inan , gezgin. </p>
+          <p> Yaşam boyu öğrenci olan , gezgin. </p>
         </TextBodyContainer>
       )
     };
