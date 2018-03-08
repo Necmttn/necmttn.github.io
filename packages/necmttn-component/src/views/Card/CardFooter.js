@@ -122,6 +122,7 @@ const FooterWrapper = styled.footer`
         opacity: .5;
         text-decoration: none;
         font-weight: bold;
+
         &:hover {
           opacity: 1;
         }
@@ -134,8 +135,11 @@ const FooterWrapper = styled.footer`
     display: flex;
     flex-flow: row nowrap;
     @media ${props => props.theme.mediaQuery.Medium} {
-      width: 100%;
       justify-content: center;
+      padding: .2rem .2rem .6rem;
+    }
+    @media ${props => props.theme.mediaQuery.Small} {
+      width: 100%;
     }
     .SocialMediaShareButton {
       padding: 0.4rem .4rem;

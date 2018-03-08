@@ -54,6 +54,9 @@ const Wrapper = styled.div`
 
 const HeaderWrapper = styled.div`
   text-align: center;
+  @media ${props => props.theme.mediaQuery.Medium} {
+    padding: 2em 0;
+  }
   h1 {
     font-weight: bold;
     text-transform: uppercase;
