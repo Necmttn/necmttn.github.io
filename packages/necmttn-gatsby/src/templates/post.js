@@ -1,40 +1,46 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Article } from 'necmttn-component'
 import { Helmet } from 'react-helmet'
 import ReactPixel from 'react-facebook-pixel';
 
 
-const PostRoute = (props) => {
-  const data = props.data.markdownRemark
-  const isTIL = data.frontmatter.til
-  // const Wrapper = (isTIL) ? TILContainer : BlogContainer
-  ReactPixel.track("ViewContent", {
-    ...data.frontmatter
+class PostRoute extends Component {
+  componentDidMount() {
+    const ReactPixel =  require('react-facebook-pixel');
+    ReactPixel.track("ViewContent", {
+      ...data.frontmatter
     })
-  return (
-    <Wrapper>
-      <Helmet title={data.frontmatter.title}>
-        <title>Necmttn - {data.frontmatter.title}</title>
-        <meta name="description" content={data.excerpt} />
-        <meta property="og:type" content={data.frontmatter.type || "article"} />
-        <meta property="og:title" content={data.frontmatter.title} />
-        <meta property="og:url" content={props.url || "http://necmttn.com"} />
-        <meta property="og:description" content={data.frontmatter.desc || data.excerpt} />
-        <meta property="og:image" content={data.frontmatter.image} />
+  }
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@necmttn" />
-        <meta name="twitter:creator" content="@necmttn" />
-        <meta name="twitter:title" content={data.frontmatter.title} />
-        <meta name="twitter:description" content={data.frontmatter.desc || data.excerpt} />
-        <meta name="twitter:image" content={data.frontmatter.image} />
-        <link rel="canonical" href={props.url || "http://necmttn.com"} />
-        <link rel="icon" type="image/png" href="https://avatars0.githubusercontent.com/u/5212808?s=40&v=4" />
-      </Helmet>
-      <Article post={data}></Article>
-    </Wrapper>
-  )
+  render() {
+    const data = this.props.data.markdownRemark
+    const isTIL = data.frontmatter.til
+    // const Wrapper = (isTIL) ? TILContainer : BlogContainer
+    return (
+      <Wrapper>
+        <Helmet title={data.frontmatter.title}>
+          <title>Necmttn - {data.frontmatter.title}</title>
+          <meta name="description" content={data.excerpt} />
+          <meta property="og:type" content={data.frontmatter.type || "article"} />
+          <meta property="og:title" content={data.frontmatter.title} />
+          <meta property="og:url" content={props.url || "http://necmttn.com"} />
+          <meta property="og:description" content={data.frontmatter.desc || data.excerpt} />
+          <meta property="og:image" content={data.frontmatter.image} />
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@necmttn" />
+          <meta name="twitter:creator" content="@necmttn" />
+          <meta name="twitter:title" content={data.frontmatter.title} />
+          <meta name="twitter:description" content={data.frontmatter.desc || data.excerpt} />
+          <meta name="twitter:image" content={data.frontmatter.image} />
+          <link rel="canonical" href={props.url || "http://necmttn.com"} />
+          <link rel="icon" type="image/png" href="https://avatars0.githubusercontent.com/u/5212808?s=40&v=4" />
+        </Helmet>
+        <Article post={data}></Article>
+      </Wrapper>
+    )
+  }
 }
 
 // TODO: add rss
