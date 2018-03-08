@@ -11,7 +11,6 @@ class SplashScreen extends React.Component {
     super(props);
     this.state = {
       code: false,
-      typing: true,
     };
   }
 
@@ -27,25 +26,12 @@ class SplashScreen extends React.Component {
     })
   }
 
-  done = () => {
-    this.setState({ typing: false }, () => {
-        this.timeoutes.push(
-             setTimeout(() => this.setState({ typing: true }), this.props.timeout || 1200)
-        )
-    });
-  }
-  componentWillMount() {
-    this.timeouts = [];
-  }
-
-  componentWillUnmount() {
-    this.timeouts.forEach(window.clearTimeout);
-  }
   getWelcomeMsg = () => {
     return {
       en: (
         <TextBodyContainer>
           <div>
+            Hello, <br />
             I am Necmettin Karakaya <br />
             self-taught software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> engineer </MagicWord> <br/>
           </div>
@@ -55,6 +41,7 @@ class SplashScreen extends React.Component {
       zh: (
         <TextBodyContainer>
           <div>
+            你好, <br />
             我是 Necmettin Karakaya <br />
             自学成才的软件 <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> 工程师 </MagicWord> <br/>
           </div>
@@ -64,6 +51,7 @@ class SplashScreen extends React.Component {
       tr: (
         <TextBodyContainer>
           <div>
+            Merhaba, <br />
             Ben Necmettin Karakaya <br />
             Alayli yazilim <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> mühendisi </MagicWord> <br/>
           </div>
@@ -75,33 +63,8 @@ class SplashScreen extends React.Component {
   render() {
     return (
       <Section>
-        <TextBodyContainer>
-          <div className="text">
-            {
-              (this.state.typing)
-              ? (<Typist  onTypingDone={() => this.done()}>
-                    <Typist.Delay ms={500} />
-                    Hello,
-                    <Typist.Backspace count={6} delay={600} />
-                    你好,
-                    <Typist.Backspace count={3} delay={1200} />
-                    Merhaba,
-                    <Typist.Backspace count={8} delay={1600} />
-                    01001000 01101001,
-                    <Typist.Backspace count={18} delay={700} />
-                    Salut!,
-                    <Typist.Backspace count={7} delay={400} />
-                    Hola,
-                    <Typist.Backspace count={5} delay={300} />
-                    Привет!
-                    <Typist.Backspace count={12} delay={900} />
-                  </Typist>)
-              : <span>Hello,</span>
-            }
-          </div>
-        </TextBodyContainer>
         <FlickerText max={20}>
-        {this.getWelcomeMsg()[this.props.currentLangKey]}
+          {this.getWelcomeMsg()[this.props.currentLangKey]}
         </FlickerText>
         <GifBodyContainer>
           <GifWrapper src={coding} display={this.state.code}/>

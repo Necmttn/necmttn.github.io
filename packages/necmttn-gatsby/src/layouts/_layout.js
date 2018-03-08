@@ -23,8 +23,6 @@ import {
 } from 'ptz-i18n'
 
 
-ReactPixel.init('886158241544879');
-
 const Background = styled.div`
   background-color: ${props => props.theme.bg};
   font-family: ${props => props.theme.fontFamily};
@@ -83,6 +81,7 @@ export default class Wrapper extends React.Component {
       this.setDefaultPref()
     }
 
+    ReactPixel.init('886158241544879');
     baseStyles() //  Reset CSS
   }
 
