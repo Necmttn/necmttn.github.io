@@ -17,6 +17,7 @@
     "lowdb": "^1.0.0",
     "plop": "^1.9.0",
     "react-burger-menu": "^2.3.0",
+    "react-facebook-pixel": "^0.1.0",
     "react-typist": "^2.0.4"
   }
 }

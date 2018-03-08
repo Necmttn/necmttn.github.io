@@ -13,6 +13,7 @@ import {Helmet} from "react-helmet";
 require('necmttn-component/src/style/prism-darcula.css')
 import whiteLogo from './nk-logo-white-200.png'
 import blackLogo from './nk-logo-black-400.png'
+import ReactPixel from 'react-facebook-pixel';
 
 import {
   getLangs,
@@ -20,6 +21,9 @@ import {
   getCurrentLangKey,
   isHomePage
 } from 'ptz-i18n'
+
+
+ReactPixel.init('886158241544879');
 
 const Background = styled.div`
   background-color: ${props => props.theme.bg};

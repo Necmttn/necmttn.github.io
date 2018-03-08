@@ -2,11 +2,14 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { Article } from 'necmttn-component'
 import { Helmet } from 'react-helmet'
+import ReactPixel from 'react-facebook-pixel';
+
+
 const PostRoute = (props) => {
   const data = props.data.markdownRemark
   const isTIL = data.frontmatter.til
   // const Wrapper = (isTIL) ? TILContainer : BlogContainer
-  console.log(props)
+  ReactPixel.track("ViewContent", data.frontmatter.title)
   return (
     <Wrapper>
       <Helmet title={data.frontmatter.title}>
