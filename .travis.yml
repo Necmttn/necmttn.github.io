@@ -28,7 +28,7 @@ deploy:
     domain: necmttn.surge.sh
     skip_cleanup: true
   - provider: script
-    script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./build
+    script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./packages/necmttn-gatsby/public/
     skip_cleanup: true
     on:
       branch: master
