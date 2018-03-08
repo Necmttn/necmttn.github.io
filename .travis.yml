@@ -19,11 +19,19 @@ install:
   - cd packages/necmttn-gatsby
   - yarn run build
 
+before_deploy:
+  - npm install netlify-cli -g
+
 deploy:
   - provider: surge
     project: ./packages/necmttn-gatsby/public/
     domain: necmttn.surge.sh
     skip_cleanup: true
+  - provider: script
+    script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./build
+    skip_cleanup: true
+    on:
+      branch: master
 
 notifications:
   slack: baseglobal:KxtArmRFfzZ7DGi1zVABMJ9s:KxtArmRFfzZ7DGi1zVABMJ9s#deployment
