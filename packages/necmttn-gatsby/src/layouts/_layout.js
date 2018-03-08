@@ -80,8 +80,6 @@ export default class Wrapper extends React.Component {
     if(pref === null) {
       this.setDefaultPref()
     }
-
-    ReactPixel.init('886158241544879');
     baseStyles() //  Reset CSS
   }
   componentDidMount() {
