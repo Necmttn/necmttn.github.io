@@ -8,6 +8,7 @@ module.exports = {
   'menu.journal': '博客',
   'menu.til': "#TIL",
   'menu.photography': '摄影',
-  'menu.email': '电邮'
+  'menu.email': '电邮',
+  'splash.hello': '你好,'
 
 }

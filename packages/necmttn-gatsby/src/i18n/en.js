@@ -8,5 +8,6 @@ module.exports = {
   'menu.journal':  'JOURNAL',
   'menu.til': "#TIL",
   'menu.photography': 'PHOTOGRAPHY',
-  'menu.email': 'EMAIL'
+  'menu.email': 'EMAIL',
+  'splash.hello': 'Hello,'
 }

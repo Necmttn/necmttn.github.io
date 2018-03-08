@@ -8,5 +8,7 @@ module.exports = {
   'menu.journal':  'SEYIR DEFTERI',
   'menu.til': "#BNO",
   'menu.photography': 'FOTOGRAF',
-  'menu.email': 'EMAIL'
+  'menu.email': 'EMAIL',
+  'splash.hello': 'Merhaba,'
+
 }

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import coding from '../../pages/gifs/coding.gif'
 import Link from 'gatsby-link'
 import { FlickerText } from 'necmttn-component'
+import * as t from '../../i18n'
 import Typist from 'react-typist'
 
 class SplashScreen extends React.Component {
@@ -79,7 +80,7 @@ class SplashScreen extends React.Component {
                   Merhaba,
                   <Typist.Backspace count={8} delay={1600} />
                   01001000 01101001,
-                  <Typist.Backspace count={18} delay={1700} />
+                  <Typist.Backspace count={18} delay={700} />
                   Salut!,
                   <Typist.Backspace count={7} delay={400} />
                   Hola,
@@ -87,7 +88,7 @@ class SplashScreen extends React.Component {
                   Привет!
                   <Typist.Backspace count={12} delay={900} />
                 </Typist>)
-              : null
+              : <span> {t.Hello} </span>
             }
           </p>
         </TextBodyContainer>
