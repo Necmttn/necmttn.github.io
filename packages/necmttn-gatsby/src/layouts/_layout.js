@@ -83,6 +83,7 @@ export default class Wrapper extends React.Component {
     baseStyles() //  Reset CSS
   }
   componentDidMount() {
+    const ReactPixel =  require('react-facebook-pixel');
     ReactPixel.init('886158241544879');
   }
 
