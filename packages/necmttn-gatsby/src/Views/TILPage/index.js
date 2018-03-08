@@ -23,7 +23,7 @@ const TilPage = (props) => {
         return (
         <Card key={link} url={link}>
           <Card.Header LinkComp={Link} to={link}>
-            <H1>{title}</H1>
+            {title}
           </Card.Header>
           <Card.Content>
             <div dangerouslySetInnerHTML={{ __html: content }}>
@@ -32,6 +32,7 @@ const TilPage = (props) => {
           <Card.Footer
             link={link}
             title={title}
+            linkComponent={Link}
             tags={tags} />
         </Card>
         )

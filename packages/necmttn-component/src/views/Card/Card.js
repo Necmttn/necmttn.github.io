@@ -65,12 +65,12 @@ export default class Card extends React.Component {
 
 
 const CardWrapper = styled.figure`
-  padding: 3em 1em;
+  padding: 1em 1em .5em  1em;
   max-width: ${props => props.theme.post.sizes.maxWidth};
   width: 85%;
   border: 1px solid ${props => props.theme.dark};
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  margin: 2em 0;
+  margin: 2em 0 .5em 0;
 `

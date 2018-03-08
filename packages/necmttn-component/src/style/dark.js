@@ -89,6 +89,12 @@ const footer = {
   border: colors.bright,
 }
 
+const card = {
+  colors: {
+    header: colors.bright,
+    headerHover: colors.darkRed
+  }
+}
 const mediaQueryTresholds = {
   XL: "65em",
   L: "49em",
@@ -104,6 +110,7 @@ export default {
   post,
   menu,
   footer,
+  card,
   mediaQuery,
   mediaQueryTresholds,
   color: colors.white,

@@ -25,6 +25,7 @@ const colors = {
   black: '#1E2019', // #393E41
   yellow: '#E2C044',
   red: '#FF0000',
+  darkRed: '#ae1f23', //hashrocket.com
   darkBlue: '#587B7F',
   blue: '#1E92CE', //monzilla
   green: '#9dffc8',
@@ -89,6 +90,13 @@ const footer = {
   border: colors.bright,
 }
 
+const card = {
+  colors: {
+    header: colors.gray,
+    headerHover: colors.darkRed
+  }
+}
+
 const mediaQueryTresholds = {
   XL: "65em",
   L: "49em",
@@ -103,6 +111,7 @@ export default {
   post,
   menu,
   footer,
+  card,
   fontFamily,
   mediaQuery,
   mediaQueryTresholds,
