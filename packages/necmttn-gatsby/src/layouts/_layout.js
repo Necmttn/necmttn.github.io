@@ -84,6 +84,9 @@ export default class Wrapper extends React.Component {
     ReactPixel.init('886158241544879');
     baseStyles() //  Reset CSS
   }
+  componentDidMount() {
+    ReactPixel.init('886158241544879');
+  }
 
   render() {
     const { children, location } = this.props
