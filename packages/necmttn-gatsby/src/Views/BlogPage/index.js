@@ -14,6 +14,7 @@ const BlogLayout = (props) => {
         const excerpt = post.node.excerpt
         return (
           <Post
+            key={link}
             title={title}
             link={link}
             excerpt={excerpt}
@@ -41,9 +42,9 @@ const Header = () => (
 
 // TODO: tag, date
 const Post = ({title, excerpt, link, tags, date}) => {
-  const tagsGroup = tags && tags.map(tag => <Tag title={tag} link={`/tag/${tag}`} />)
+  const tagsGroup = tags && tags.map(tag => <Tag key={tag} title={tag} link={`/tag/${tag}`} />)
   return (
-    <PostWrapper>
+    <PostWrapper key={link}>
       <Link to={link} className="content">
         <div className="date">
           {date}
@@ -53,13 +54,13 @@ const Post = ({title, excerpt, link, tags, date}) => {
           <section className="excerpt">
             <p>{excerpt}</p>
           </section>
-          <footer>
-            <div className="tags">
-              {tagsGroup}
-            </div>
-          </footer>
         </div>
       </Link>
+      <footer>
+        <div className="tags">
+          {tagsGroup}
+        </div>
+      </footer>
     </PostWrapper>
   )
 }
@@ -90,13 +91,14 @@ const PostWrapper = styled.article`
     .excerpt p {
       line-height: 18px;
     }
-    footer {
-      .tags {
-        .tag a {
-          color: #555555;
-          border-bottom: 1px dashed purple;
-          margin: 5px 10px 0 0;
-        }
+  }
+  footer {
+    margin-left: 10px;
+    .tags {
+      .tag a {
+        color: #555555;
+        border-bottom: 1px dashed purple;
+        margin: 5px 10px 0 0;
       }
     }
   }

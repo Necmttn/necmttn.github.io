@@ -6,7 +6,7 @@ module.exports = {
   'journal.header.subTitle': 'Rasgele Düşünceler, Yazılım ve Nomadic yaşam',
   'menu.homepage': 'ANA SAYFA',
   'menu.journal':  'SEYIR DEFTERI',
-  'menu.til': "#BNO",
+  'menu.til': "#TIL",
   'menu.photography': 'FOTOGRAF',
   'menu.email': 'EMAIL',
   'splash.hello': 'Merhaba,'

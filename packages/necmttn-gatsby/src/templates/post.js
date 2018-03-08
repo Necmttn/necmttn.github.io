@@ -9,7 +9,9 @@ const PostRoute = (props) => {
   const data = props.data.markdownRemark
   const isTIL = data.frontmatter.til
   // const Wrapper = (isTIL) ? TILContainer : BlogContainer
-  ReactPixel.track("ViewContent", data.frontmatter.title)
+  ReactPixel.track("ViewContent", {
+    ...data.frontmatter
+    })
   return (
     <Wrapper>
       <Helmet title={data.frontmatter.title}>

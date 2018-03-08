@@ -3,6 +3,7 @@ import { Menu as MenuBar } from 'necmttn-component'
 import { stack as Menu } from 'react-burger-menu'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+import * as t from '../i18n'
 
 
 const StyleWrapper = styled.div`
@@ -94,22 +95,22 @@ class MainMenu extends React.Component {
             <Logo langKey={langKey} logo={logo}/>
             <Link to={`/${langKey}/blog/`}>
               <MenuItem>
-                Journal
+                {t.Journal}
               </MenuItem>
             </Link>
             <Link to={`/${langKey}/til/`}>
               <MenuItem>
-                #TIL
+                {t.TIL}
               </MenuItem>
             </Link>
             <a href="https://www.instagram.com/necmettinkarakaya/" target="_blank">
               <MenuItem>
-                Photography
+                {t.Photography}
               </MenuItem>
             </a>
             <a href="mailto:necmettin.karakaya@gmail.com">
               <MenuItem>
-                Email
+                {t.Email}
               </MenuItem>
             </a>
           </Menu>
@@ -117,23 +118,23 @@ class MainMenu extends React.Component {
             <MenuBar>
               <Link to={`/${langKey}/blog/`}>
                 <MenuItem>
-                  Journal
+                  {t.Journal}
                 </MenuItem>
               </Link>
               <Link to={`/${langKey}/til/`}>
                 <MenuItem>
-                  #TIL
+                  {t.TIL}
                 </MenuItem>
               </Link>
               <Logo langKey={langKey} logo={logo}/>
               <a href="https://www.instagram.com/necmettinkarakaya/" target="_blank">
                 <MenuItem>
-                  Photography
+                  {t.Photography}
                 </MenuItem>
               </a>
               <a href="mailto:necmettin.karakaya@gmail.com">
                 <MenuItem>
-                  Email
+                  {t.Email}
                 </MenuItem>
               </a>
             </MenuBar>
