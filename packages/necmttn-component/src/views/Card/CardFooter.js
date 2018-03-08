@@ -38,6 +38,7 @@ class Footer extends Component {
         <div className="tags">
           {tags.map(tag => {
            return(<Tag
+              key={tag}
               title={`#${tag.toUpperCase()} `}
               link={`/tag/${tag}`}
               LinkComponent={linkComponent} />

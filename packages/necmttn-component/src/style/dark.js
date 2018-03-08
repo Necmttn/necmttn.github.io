@@ -25,6 +25,7 @@ const colors = {
   black: '#1E2019', // #393E41
   yellow: '#E2C044',
   red: '#FF0000',
+  darkRed: '#ae1f23', //hashrocket.com
   darkBlue: '#061F2F', // Docker
   blue: '#1E92CE', //monzilla
   green: '#9dffc8',
