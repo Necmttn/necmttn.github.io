@@ -43,7 +43,7 @@ const fontFamily = 'Open Sans, "Cambo", serif';
 export const mediaQuery = {
   HD: 'only screen and (min-width: 1440px)',  //Use
   Desktop: 'only screen and (min-width: 1024px)', //Use
-  Medium: 'only screen and (min-width: 768px)', //Use
+  Medium: 'only screen and (max-width: 768px)', //Use
   Small: 'only screen and (max-width: 767px)',  // Use
   TabletPortrait: 'only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)',
   TabletLandscape: 'only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)',

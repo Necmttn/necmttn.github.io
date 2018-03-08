@@ -25,7 +25,6 @@ var twoSum = function(nums, target) {
     }
 };
 ```
-basically what we doing in here; create dictinary with items. create `dict` with every number `n` in array. with their
-pairs as a key. so if the pairkey different then `undefined` it's a exist pair. the value of the key will be the second
-pair.
+basically what we doing in here; create dictinary with items. create `dict` with every number `n` in array. with their  
+pairs as a key. so if the pairkey different then `undefined` it's a exist pair. the value of the key will be the second pair.
 

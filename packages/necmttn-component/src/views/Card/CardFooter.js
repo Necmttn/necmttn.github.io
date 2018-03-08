@@ -20,7 +20,7 @@ class Footer extends Component {
   static defaultProps = {
     title: "Today I learned",
     link: "http://necmttn.io",
-    tags: ["software", "javascript", "devops", "golang"],
+    tags: ["software", "devops", "code"],
     via: "necmttn"
   }
 
@@ -99,7 +99,10 @@ const Tag = ({title, link, LinkComponent}) => (
 const FooterWrapper = styled.footer`
   padding: 10px;
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
+  @media ${props => props.theme.mediaQuery.Medium} {
+    flex-flow: wrap-reverse;
+  }
   .tags {
     display: flex;
     .tag {
@@ -109,13 +112,18 @@ const FooterWrapper = styled.footer`
       text-align: center;
       min-width: 120px;
       font-size: 1rem;
+      @media ${props => props.theme.mediaQuery.Medium} {
+        min-width: 90px;
+        font-size: .8rem;
+        padding: 1rem .2rem;
+      }
       a {
         color: #10ca97;
         opacity: .5;
         text-decoration: none;
         font-weight: bold;
         &:hover {
-        opacity: 1;
+          opacity: 1;
         }
       }
     }
@@ -125,6 +133,10 @@ const FooterWrapper = styled.footer`
     margin-left: auto;
     display: flex;
     flex-flow: row nowrap;
+    @media ${props => props.theme.mediaQuery.Medium} {
+      width: 100%;
+      justify-content: center;
+    }
     .SocialMediaShareButton {
       padding: 0.4rem .4rem;
       margin-right: 5px;

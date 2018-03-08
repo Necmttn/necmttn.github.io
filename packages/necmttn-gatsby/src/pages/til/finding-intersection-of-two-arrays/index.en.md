@@ -11,7 +11,7 @@ til: true
 
 The way i solved; 
 
-```
+```javascript
 /**
  * @param {number[]} nums1
  * @param {number[]} nums2
@@ -40,7 +40,7 @@ which is about 100ms.
 
 fastest solution out there,
 
-```
+```javascript
 /**
  * @param {number[]} nums1
  * @param {number[]} nums2
