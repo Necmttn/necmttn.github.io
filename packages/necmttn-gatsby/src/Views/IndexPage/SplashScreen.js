@@ -29,37 +29,45 @@ class SplashScreen extends React.Component {
 
   done = () => {
     this.setState({ typing: false }, () => {
-      this.setState({ typing: true })
+        this.timeoutes.push(
+             setTimeout(() => this.setState({ typing: true }), this.props.timeout || 1200)
+        )
     });
   }
+  componentWillMount() {
+    this.timeouts = [];
+  }
 
+  componentWillUnmount() {
+    this.timeouts.forEach(window.clearTimeout);
+  }
   getWelcomeMsg = () => {
     return {
       en: (
         <TextBodyContainer>
-          <p>
+          <div>
             I am Necmettin Karakaya <br />
             self-taught software <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> engineer </MagicWord> <br/>
-          </p>
-          <p> Life-long learner, Digital Nomad </p>
+          </div>
+          <div> Life-long learner, Digital Nomad </div>
         </TextBodyContainer>
       ),
       zh: (
         <TextBodyContainer>
-          <p>
+          <div>
             我是 Necmettin Karakaya <br />
             自学成才的软件 <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> 工程师 </MagicWord> <br/>
-          </p>
-          <p> 终身学习者, 数字游牧人</p>
+          </div>
+          <div> 终身学习者, 数字游牧人</div>
         </TextBodyContainer>
       ),
       tr: (
         <TextBodyContainer>
-          <p>
+          <div>
             Ben Necmettin Karakaya <br />
             Alayli yazilim <MagicWord onMouseEnter={() => this.mouseEnter('code')} onMouseLeave={() => this.mouseLeave('code')}> mühendisi </MagicWord> <br/>
-          </p>
-          <p> Yaşam boyu öğrenci olan , gezgin. </p>
+          </div>
+          <div> Yaşam boyu öğrenci olan , gezgin. </div>
         </TextBodyContainer>
       )
     };
@@ -68,29 +76,29 @@ class SplashScreen extends React.Component {
     return (
       <Section>
         <TextBodyContainer>
-          <p>
+          <div className="text">
             {
               (this.state.typing)
               ? (<Typist  onTypingDone={() => this.done()}>
-                  <Typist.Delay ms={500} />
-                  Hello,
-                  <Typist.Backspace count={6} delay={600} />
-                  你好,
-                  <Typist.Backspace count={3} delay={1200} />
-                  Merhaba,
-                  <Typist.Backspace count={8} delay={1600} />
-                  01001000 01101001,
-                  <Typist.Backspace count={18} delay={700} />
-                  Salut!,
-                  <Typist.Backspace count={7} delay={400} />
-                  Hola,
-                  <Typist.Backspace count={5} delay={300} />
-                  Привет!
-                  <Typist.Backspace count={12} delay={900} />
-                </Typist>)
-              : <span> {t.Hello} </span>
+                    <Typist.Delay ms={500} />
+                    Hello,
+                    <Typist.Backspace count={6} delay={600} />
+                    你好,
+                    <Typist.Backspace count={3} delay={1200} />
+                    Merhaba,
+                    <Typist.Backspace count={8} delay={1600} />
+                    01001000 01101001,
+                    <Typist.Backspace count={18} delay={700} />
+                    Salut!,
+                    <Typist.Backspace count={7} delay={400} />
+                    Hola,
+                    <Typist.Backspace count={5} delay={300} />
+                    Привет!
+                    <Typist.Backspace count={12} delay={900} />
+                  </Typist>)
+              : <span>Hello,</span>
             }
-          </p>
+          </div>
         </TextBodyContainer>
         <FlickerText max={20}>
         {this.getWelcomeMsg()[this.props.currentLangKey]}
@@ -113,29 +121,22 @@ const TextBodyContainer = styled.div`
   justify-content: space-between;
   flex-flow: column nowrap;
   transition: 1s;
+
   @media ${props => props.theme.mediaQuery.small} {
-    p {
-      font-size: 2em;
-      line-height: 1.05em;
-    }
+    font-size: 2em;
+    line-height: 1.05em;
   }
   @media ${props => props.theme.mediaQuery.Medium} {
-    p {
-      font-size: 2.5em;
-      line-height: 1.10em;
-    }
+    font-size: 2.5em;
+    line-height: 1.10em;
   }
   @media ${props => props.theme.mediaQuery.Desktop} {
-    p {
-      font-size: 3em;
-      line-height: 1.15em;
-    }
+    font-size: 3em;
+    line-height: 1.15em;
   }
   @media ${props => props.theme.mediaQuery.HD} {
-    p {
-      font-size: 4em;
-      line-height: 1.2em;
-    }
+    font-size: 4em;
+    line-height: 1.2em;
 `
 
 const Section = styled.section`

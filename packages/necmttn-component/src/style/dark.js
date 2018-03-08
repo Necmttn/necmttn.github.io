@@ -87,7 +87,6 @@ const footer = {
   quote: colors.firstLight,
   menuLink: colors.bright,
   border: colors.bright,
-
 }
 
 const mediaQueryTresholds = {

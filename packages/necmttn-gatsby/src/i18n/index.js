@@ -18,7 +18,6 @@ export const Homepage = (<FormattedMessage id="menu.homepage" defaultMessage="HO
 export const Journal = (<FormattedMessage id="menu.journal" defaultMessage="JOURNAL" />)
 export const TIL = (<FormattedMessage id="menu.til" defaultMessage="#TIL" />)
 export const Photography = (<FormattedMessage id="menu.photography" defaultMessage="PHOTOGRAPHY" />)
-export const Email = (<formattedmessage id="menu.email" defaultmessage="email" />)
+export const Email = (<FormattedMessage id="menu.email" defaultMessage="EMAIL" />)
 
-export const Hello = (<formattedmessage id="splash.hello" defaultmessage="Hello," />)
-
+export const Hello = (<FormattedMessage id="splash.hello" defaultMessage="Hello," />)
