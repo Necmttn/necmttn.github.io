@@ -118,7 +118,7 @@ const HeaderWrapper = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-flow: column nowrap;
   padding: 20px 10vw;
