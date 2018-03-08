@@ -58,7 +58,7 @@ const Footer = ({langKey}) => {
 const FooterWrapper = styled.footer`
   position: relative;
   padding: 5em 10vw;
-  border-top: 1px solid rgba(0,0,0, 0.1);
+  border-top: 1px solid rgba(0,0,0, 0.2);
   display: flex;
   flex-flow: row wrap;
   min-height: 100px;
@@ -77,7 +77,11 @@ const FooterWrapper = styled.footer`
       text-align: left;
       font-weight: 700;
       font: 600 12px Open Sans,sans-serif;
-      color: ${props => props.theme.footer.menuLink}
+      color: ${props => props.theme.footer.menuLink};
+      opacity: .6;
+      &:hover {
+        opacity: 1;
+      }
     }
     @media ${props => props.theme.mediaQuery.Small} {
       display: none;
@@ -85,6 +89,7 @@ const FooterWrapper = styled.footer`
   }
   .social {
     flex: 1;
+    padding: 0 20px;
     .quote {
       font: 14px/28px Open Sans,sans-serif;
       margin-bottom: 10px;

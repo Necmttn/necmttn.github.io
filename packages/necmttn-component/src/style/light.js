@@ -85,7 +85,8 @@ const menu = {
 const footer = {
   socialIcon: colors.white,
   quote: colors.gray,
-  menuLink: colors.gray
+  menuLink: colors.gray,
+  border: colors.bright,
 }
 
 const mediaQueryTresholds = {

@@ -66,7 +66,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow:column nowrap;
   z-index: 10;
-  background: ${props => props.theme.colors.firstDark}
+  background: ${props => props.theme.colors.firstDark};
   @media ${props => props.theme.mediaQuery.Small} {
     display: none;
   }
