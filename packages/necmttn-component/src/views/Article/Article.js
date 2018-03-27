@@ -197,7 +197,7 @@ const Copyright = styled.p`
 `;
 
 const Article = ({ post }) => {
-  const shouldDisplayImage = post.frontmatter.image && post.frontmatter.til !== true
+  const shouldDisplayImage = post.frontmatter.image || "https://source.unsplash.com/collection/786022/1600x900"  && post.frontmatter.til !== true
   return (
     <Wrapper>
       <Header>

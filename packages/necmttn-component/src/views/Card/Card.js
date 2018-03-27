@@ -67,6 +67,7 @@ export default class Card extends React.Component {
 const CardWrapper = styled.figure`
   padding: 1em 1em .5em  1em;
   max-width: ${props => props.theme.post.sizes.maxWidth};
+  background: ${props => props.theme.card.colors.bg};
   min-width: 820px;
   @media ${props => props.theme.mediaQuery.Medium} {
     width: 85%;

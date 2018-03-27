@@ -85,6 +85,7 @@ const menu = {
 
 const footer = {
   socialIcon: colors.white,
+  bgline: "111111",
   quote: colors.gray,
   menuLink: colors.gray,
   border: colors.bright,
@@ -93,7 +94,8 @@ const footer = {
 const card = {
   colors: {
     header: colors.gray,
-    headerHover: colors.darkRed
+    headerHover: colors.darkRed,
+    bg: colors.bright
   }
 }
 

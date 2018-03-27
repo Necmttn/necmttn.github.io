@@ -85,6 +85,7 @@ const menu = {
 
 const footer = {
   socialIcon: colors.firstSuperLight,
+  bgline: "ffffff",
   quote: colors.firstLight,
   menuLink: colors.bright,
   border: colors.bright,
@@ -93,7 +94,8 @@ const footer = {
 const card = {
   colors: {
     header: colors.bright,
-    headerHover: colors.darkRed
+    headerHover: colors.darkRed,
+    bg: colors.darkBlue
   }
 }
 const mediaQueryTresholds = {
