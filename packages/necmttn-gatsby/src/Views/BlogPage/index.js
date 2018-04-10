@@ -46,9 +46,11 @@ const Post = ({title, excerpt, link, tags, date}) => {
   return (
     <PostWrapper key={link}>
       <Link to={link} className="content">
+        {/*
         <div className="date">
           {date}
-        </div>
+         </div>
+        */}
         <div>
           <header> {title} </header>
           <section className="excerpt">
@@ -73,7 +75,7 @@ const Tag = ({title, link}) => (
 
 
 const PostWrapper = styled.article`
-  padding: 10px 0;
+  padding: 20px 0;
   max-width: 40em;
   font-family: Gotham SSm,Helvetica,Arial,sans-serif;
   .content {
@@ -83,10 +85,11 @@ const PostWrapper = styled.article`
     align-items: center;
     .date {
       color: rgba(255, 0, 0, .7);
-      padding-right: 10px
+      padding-right: 30px
     }
     header {
       font-weight: 700;
+      font-size: 120%;
     }
     .excerpt p {
       line-height: 18px;
@@ -123,7 +126,7 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-flow: column nowrap;
-  padding: 20px 10vw;
+  padding: 50px 10vw;
   min-height: 100vh;
 `
 export default BlogLayout

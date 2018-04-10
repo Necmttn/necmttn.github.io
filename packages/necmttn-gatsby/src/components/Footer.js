@@ -26,6 +26,7 @@ const Footer = ({langKey}) => {
         <a href="mailto:necmettin.karakaya@gmail.com">
           {t.Email}
         </a>
+        <a href="https://www.codementor.io/necmttn?utm_source=github&utm_medium=button&utm_term=necmttn&utm_campaign=github"><img src="https://cdn.codementor.io/badges/i_am_a_codementor_dark.svg" alt="I am a codementor" style={{maxWidth: "100%", right: 0}}/></a>
       </div>
       <div className="social">
         <div className="quote">

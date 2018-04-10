@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import SplashScreen from './SplashScreen'
-
 const Index = (props) => {
   const { langKey }  = props.pathContext;
   return (

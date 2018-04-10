@@ -1,6 +1,7 @@
 import React from 'react'
 import { Menu as MenuBar } from 'necmttn-component'
 import { stack as Menu } from 'react-burger-menu'
+import LangNav from './LangNav'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import * as t from '../i18n'
@@ -39,7 +40,7 @@ const StyleWrapper = styled.div`
 
   /* General sidebar styles */
   .bm-menu {
-    background: #373a47;
+    background: ${props => props.theme.menu.colors.bar};
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
   }
@@ -51,11 +52,15 @@ const StyleWrapper = styled.div`
 
   /* Wrapper for item list */
   .bm-item-list {
-    color: #b8b7ad;
+    color: ${props => props.theme.menu.colors.MenuItem};
     padding: 0.8em;
     align-items: flex-start;
     display: flex;
     flex-flow: column;
+    a {
+      text-decoration: none;
+      color: ${props => props.theme.menu.colors.MenuItem};
+    }
   }
 
   /* Styling of overlay */

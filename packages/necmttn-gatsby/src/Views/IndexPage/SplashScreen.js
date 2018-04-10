@@ -5,6 +5,7 @@ import Link from 'gatsby-link'
 import { FlickerText } from 'necmttn-component'
 import * as t from '../../i18n'
 import Typist from 'react-typist'
+import neco from './neco.png'
 
 class SplashScreen extends React.Component {
   constructor(props) {
@@ -63,6 +64,9 @@ class SplashScreen extends React.Component {
   render() {
     return (
       <Section>
+        <Picture>
+          <img src={neco} />
+        </Picture>
         <FlickerText max={20}>
           {this.getWelcomeMsg()[this.props.currentLangKey]}
         </FlickerText>
@@ -74,6 +78,25 @@ class SplashScreen extends React.Component {
   }
 }
 
+const Picture = styled.figure`
+  position: relative;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px 10vw;
+  width: 80%;
+  img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+  }
+  @media ${props => props.theme.mediaQuery.Small} {
+    margin: 20px;
+    justify-content: center;
+  }
+`
 
 
 const TextBodyContainer = styled.div`
@@ -84,22 +107,25 @@ const TextBodyContainer = styled.div`
   justify-content: space-between;
   flex-flow: column nowrap;
   transition: 1s;
-
-  @media ${props => props.theme.mediaQuery.small} {
+  div {
     font-size: 2em;
-    line-height: 1.05em;
+    @media ${props => props.theme.mediaQuery.HD} {
+      font-size: 4em;
+      line-height: 1.2em;
+    }
+    @media ${props => props.theme.mediaQuery.Desktop} {
+      font-size: 3em;
+      line-height: 1.15em;
+    }
+    @media ${props => props.theme.mediaQuery.Medium} {
+      font-size: 2.5em;
+      line-height: 1.10em;
+    }
+    @media ${props => props.theme.mediaQuery.Small} {
+      font-size: 1.6em;
+      line-height: 1.05em;
+    }
   }
-  @media ${props => props.theme.mediaQuery.Medium} {
-    font-size: 2.5em;
-    line-height: 1.10em;
-  }
-  @media ${props => props.theme.mediaQuery.Desktop} {
-    font-size: 3em;
-    line-height: 1.15em;
-  }
-  @media ${props => props.theme.mediaQuery.HD} {
-    font-size: 4em;
-    line-height: 1.2em;
 `
 
 const Section = styled.section`

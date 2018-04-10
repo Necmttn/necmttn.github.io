@@ -68,7 +68,10 @@ const Wrapper = styled.div`
   z-index: 10;
   background: ${props => props.theme.colors.firstDark};
   @media ${props => props.theme.mediaQuery.Small} {
-    display: none;
+    top: auto;
+    left: auto;
+    bottom: 0;
+    right: 0;
   }
 `
 
