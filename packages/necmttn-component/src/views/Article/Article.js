@@ -10,9 +10,10 @@ const Wrapper = styled.article`
   max-width: ${props => props.theme.post.sizes.maxWidth};
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-flow: column nowrap;
+  min-height: 100vh;
   a {
     border-bottom: 1px solid ${props => props.theme.post.colors.linkHover};
     color: ${props => props.theme.post.colors.link};
@@ -197,7 +198,7 @@ const Copyright = styled.p`
 `;
 
 const Article = ({ post }) => {
-  const shouldDisplayImage = post.frontmatter.image || "https://source.unsplash.com/collection/786022/1600x900"  && post.frontmatter.til !== true
+  const shouldDisplayImage = post.frontmatter.til !== true
   return (
     <Wrapper>
       <Header>
@@ -220,7 +221,7 @@ const Article = ({ post }) => {
       {
         (shouldDisplayImage)
           ?  <SplashPhoto
-              image={post.frontmatter.image}
+              image={post.frontmatter.image || "https://source.unsplash.com/collection/786022/1600x900"}
               credit={post.frontmatter.credit}
               imageSize={post.frontmatter.imageSize}
               imageHeight={post.frontmatter.imageHeight}/>
@@ -230,7 +231,6 @@ const Article = ({ post }) => {
       <Footer>
         {/*<Author />
         <Copyright>{config.copyright}</Copyright> */}
-        <Tweet id="967634687576256512" theme="dark" />
       </Footer>
     </Wrapper>
   );
