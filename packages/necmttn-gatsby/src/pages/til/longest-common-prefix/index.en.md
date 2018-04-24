@@ -2,7 +2,7 @@
 title: Longest Common Prefix
 createdDate: "2018-04-24"
 author: Necmettin Karakaya
-
+image: longestCommonPrefix.png
 tags:
   - javascript
 draft: false

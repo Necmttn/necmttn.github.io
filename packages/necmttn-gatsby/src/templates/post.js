@@ -9,13 +9,14 @@ class PostRoute extends Component {
   componentDidMount() {
     const ReactPixel =  require('react-facebook-pixel');
     ReactPixel.track("ViewContent", {
-      ...data.frontmatter
+      ...this.props.data.markdownRemark.frontmatter
     })
   }
 
   render() {
     const data = this.props.data.markdownRemark
     const isTIL = data.frontmatter.til
+    console.log(this.props)
     // const Wrapper = (isTIL) ? TILContainer : BlogContainer
     return (
       <Wrapper>
@@ -37,7 +38,7 @@ class PostRoute extends Component {
           <link rel="canonical" href={this.props.url || "http://necmttn.com"} />
           <link rel="icon" type="image/png" href="https://avatars0.githubusercontent.com/u/5212808?s=40&v=4" />
         </Helmet>
-        <Article post={data}></Article>
+        <Article post={data} url={`${this.props.location.pathname}`}></Article>
       </Wrapper>
     )
   }

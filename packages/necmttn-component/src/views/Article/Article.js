@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import SplashPhoto from './SplashPhoto'
 import Tweet from './Tweet'
-
+import Disqus from '../../elements/Disqus'
+import Card from '../Card'
+import Link from 'gatsby-link'
 // import Author from "./Author/Author";
 // const config = require("../../utils/siteConfig");
 
@@ -188,7 +190,11 @@ const Content = styled.section`
   }
 `;
 
-const Footer = styled.footer``;
+const Footer = styled.footer`
+  margin-top: 20px;
+  flex-flow: column nowrap;
+  width: 100%;
+`;
 
 const Copyright = styled.p`
   color: ${props => props.theme.post.colors.copyright};
@@ -197,8 +203,10 @@ const Copyright = styled.p`
   text-align: right;
 `;
 
-const Article = ({ post }) => {
+const Article = (props) => {
+  const { post, url } = props
   const shouldDisplayImage = post.frontmatter.til !== true
+  console.log(url)
   return (
     <Wrapper>
       <Header>
@@ -229,6 +237,13 @@ const Article = ({ post }) => {
       }
       <Content dangerouslySetInnerHTML={{ __html: post.html }} />
       <Footer>
+        <Disqus title={post.frontmatter.title} url={url} config={{disqusShortname: "necmttn"}}/>
+        <Card.Footer
+          link={url}
+          title={post.frontmatter.title}
+          linkComponent={Link}
+          tags={post.frontmatter.tags} />
+
         {/*<Author />
         <Copyright>{config.copyright}</Copyright> */}
       </Footer>
