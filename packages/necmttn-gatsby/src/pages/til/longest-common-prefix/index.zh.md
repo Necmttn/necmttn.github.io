@@ -2,6 +2,7 @@
 title: Longest Common Prefix
 createdDate: "2018-04-24"
 author: Necmettin Karakaya
+image: "https://farm1.staticflickr.com/832/26797176137_29c1d4e8a3_b.jpg"
 
 tags:
   - javascript

@@ -206,7 +206,6 @@ const Copyright = styled.p`
 const Article = (props) => {
   const { post, url } = props
   const shouldDisplayImage = post.frontmatter.til !== true
-  console.log(url)
   return (
     <Wrapper>
       <Header>
