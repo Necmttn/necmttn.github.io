@@ -32,7 +32,7 @@ class Footer extends Component {
       linkComponent,
       tags
     } = this.props
-    const url = `http://necmttn.io${link}`
+    const url = `https://necmttn.io${link}`
     return (
       <FooterWrapper>
         <div className="tags">
