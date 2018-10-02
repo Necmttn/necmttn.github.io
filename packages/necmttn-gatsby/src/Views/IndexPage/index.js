@@ -14,7 +14,7 @@ const Index = (props) => {
 const Intro = styled.article`
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
